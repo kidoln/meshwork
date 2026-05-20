@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <meta
+      name="description"
+      content="MeshWork is a local-first creative workspace where notes, discussions, AI, and Git-native sharing become one thinking system."
+    >
+    <title>MeshWork</title>
+    <link rel="preload" as="image" href="images/poster_2_zh.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <canvas class="starfield" aria-hidden="true"></canvas>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="MeshWork">
+        <span class="brand-mark">∞</span>
+        <span>MeshWork</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#principles" data-i18n="nav.principles"></a>
+        <a href="#flow" data-i18n="nav.flow"></a>
+        <a href="#gallery" data-i18n="nav.gallery"></a>
+        <a href="manual.html" data-i18n="nav.manual"></a>
+      </nav>
+      <div class="language-switch" aria-label="Language switch">
+        <button type="button" class="lang-button is-active" data-lang="zh">中文</button>
+        <button type="button" class="lang-button" data-lang="en">EN</button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="hero-content" data-reveal>
+          <p class="eyebrow" data-i18n="hero.eyebrow"></p>
+          <h1 id="hero-title" data-i18n="hero.title"></h1>
+          <p class="hero-subtitle" data-i18n="hero.subtitle"></p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#principles" data-i18n="hero.primary"></a>
+            <a class="secondary-action" href="manual.html" data-i18n="hero.secondary"></a>
+          </div>
+          <div class="hero-points" aria-label="Product highlights">
+            <span data-i18n="hero.pointOne"></span>
+            <span data-i18n="hero.pointTwo"></span>
+            <span data-i18n="hero.pointThree"></span>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true" data-reveal>
+          <div class="graph-shell">
+            <div class="graph-aura"></div>
+            <svg class="graph-lines" viewBox="0 0 640 640" role="img" aria-hidden="true">
+              <defs>
+                <linearGradient id="line-gradient" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#7de8ff" />
+                  <stop offset="46%" stop-color="#ff75ca" />
+                  <stop offset="100%" stop-color="#ffb15d" />
+                </linearGradient>
+                <filter id="line-glow">
+                  <feGaussianBlur stdDeviation="4" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+              <path class="graph-path path-one" d="M320 320 C220 220 150 188 82 235 C145 314 205 360 320 320 C430 286 480 210 560 146" />
+              <path class="graph-path path-two" d="M320 320 C410 382 485 400 562 486 C438 520 360 460 320 320 C262 438 178 500 86 468" />
+              <path class="graph-path path-three" d="M320 320 C334 212 278 130 205 88 C260 178 382 186 320 320 C228 310 154 374 104 548" />
+              <path class="graph-path path-four" d="M320 320 C398 254 474 298 560 318 C452 350 392 424 320 320" />
+            </svg>
+            <span class="graph-node core-node">MeshWork</span>
+            <span class="graph-node node-one" data-i18n="graph.private"></span>
+            <span class="graph-node node-two" data-i18n="graph.discussion"></span>
+            <span class="graph-node node-three" data-i18n="graph.ai"></span>
+            <span class="graph-node node-four" data-i18n="graph.git"></span>
+            <span class="graph-node node-five" data-i18n="graph.markdown"></span>
+            <span class="pulse-dot dot-one"></span>
+            <span class="pulse-dot dot-two"></span>
+            <span class="pulse-dot dot-three"></span>
+          </div>
+          <div class="floating-note note-one">
+            <span data-i18n="graph.noteOneTitle"></span>
+            <strong data-i18n="graph.noteOne"></strong>
+          </div>
+          <div class="floating-note note-two">
+            <span data-i18n="graph.noteTwoTitle"></span>
+            <strong data-i18n="graph.noteTwo"></strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro-section section-wrap" data-reveal>
+        <div class="section-kicker" data-i18n="intro.kicker"></div>
+        <div class="intro-grid">
+          <h2 data-i18n="intro.title"></h2>
+          <p data-i18n="intro.body"></p>
+        </div>
+      </section>
+
+      <section id="principles" class="principles section-wrap" aria-labelledby="principles-title">
+        <div class="section-heading" data-reveal>
+          <span class="section-kicker" data-i18n="principles.kicker"></span>
+          <h2 id="principles-title" data-i18n="principles.title"></h2>
+        </div>
+        <div class="principle-grid">
+          <article class="principle-card" data-reveal>
+            <span class="card-index">01</span>
+            <h3 data-i18n="principles.local.title"></h3>
+            <p data-i18n="principles.local.body"></p>
+          </article>
+          <article class="principle-card" data-reveal>
+            <span class="card-index">02</span>
+            <h3 data-i18n="principles.git.title"></h3>
+            <p data-i18n="principles.git.body"></p>
+          </article>
+          <article class="principle-card" data-reveal>
+            <span class="card-index">03</span>
+            <h3 data-i18n="principles.ai.title"></h3>
+            <p data-i18n="principles.ai.body"></p>
+          </article>
+          <article class="principle-card" data-reveal>
+            <span class="card-index">04</span>
+            <h3 data-i18n="principles.apple.title"></h3>
+            <p data-i18n="principles.apple.body"></p>
+          </article>
+        </div>
+      </section>
+
+      <section id="flow" class="flow section-wrap" aria-labelledby="flow-title">
+        <div class="section-heading centered" data-reveal>
+          <span class="section-kicker" data-i18n="flow.kicker"></span>
+          <h2 id="flow-title" data-i18n="flow.title"></h2>
+          <p data-i18n="flow.body"></p>
+        </div>
+        <div class="flow-stage" data-reveal>
+          <div class="orbit" aria-hidden="true">
+            <span class="orbit-ring ring-one"></span>
+            <span class="orbit-ring ring-two"></span>
+            <span class="orbit-node node-private" data-i18n="flow.private"></span>
+            <span class="orbit-node node-shared" data-i18n="flow.shared"></span>
+            <span class="orbit-node node-discussion" data-i18n="flow.discussion"></span>
+            <span class="orbit-node node-git" data-i18n="flow.git"></span>
+            <span class="orbit-core">MeshWork</span>
+          </div>
+          <div class="flow-copy">
+            <div class="flow-item">
+              <strong data-i18n="flow.privateTitle"></strong>
+              <span data-i18n="flow.privateBody"></span>
+            </div>
+            <div class="flow-item">
+              <strong data-i18n="flow.sharedTitle"></strong>
+              <span data-i18n="flow.sharedBody"></span>
+            </div>
+            <div class="flow-item">
+              <strong data-i18n="flow.discussionTitle"></strong>
+              <span data-i18n="flow.discussionBody"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="experience section-wrap" aria-labelledby="experience-title">
+        <div class="experience-copy" data-reveal>
+          <span class="section-kicker" data-i18n="experience.kicker"></span>
+          <h2 id="experience-title" data-i18n="experience.title"></h2>
+          <p data-i18n="experience.body"></p>
+        </div>
+        <div class="poster-frame" data-reveal>
+          <picture>
+            <source srcset="images/poster_zh.png" data-src-zh="images/poster_zh.png" data-src-en="images/poster_en.png">
+            <img src="images/poster_zh.png" alt="" data-image-key="workspacePoster">
+          </picture>
+        </div>
+      </section>
+
+      <section id="gallery" class="gallery section-wrap" aria-labelledby="gallery-title">
+        <div class="section-heading" data-reveal>
+          <span class="section-kicker" data-i18n="gallery.kicker"></span>
+          <h2 id="gallery-title" data-i18n="gallery.title"></h2>
+        </div>
+        <div class="gallery-grid">
+          <figure class="gallery-item wide" data-reveal>
+            <img src="images/poster_3_zh.png" alt="" data-image-key="githubPoster">
+            <figcaption data-i18n="gallery.github"></figcaption>
+          </figure>
+          <figure class="gallery-item" data-reveal>
+            <img src="images/poster_2_zh.png" alt="" data-image-key="graphPoster">
+            <figcaption data-i18n="gallery.graph"></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="closing section-wrap" data-reveal>
+        <div class="closing-panel">
+          <span class="section-kicker" data-i18n="closing.kicker"></span>
+          <h2 data-i18n="closing.title"></h2>
+          <p data-i18n="closing.body"></p>
+          <a class="primary-action" href="https://github.com/" rel="noreferrer" data-i18n="closing.action"></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>MeshWork</span>
+      <span data-i18n="footer.note"></span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

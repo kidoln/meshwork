@@ -1,0 +1,286 @@
+:root {
+  --ink: #171421;
+  --muted: #655f72;
+  --line: #e7e0ed;
+  --paper: #fbf9ff;
+  --panel: #ffffff;
+  --accent: #8d4cff;
+  --pink: #e94fac;
+  --amber: #db7d23;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "SF Pro Text", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+    sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 82% -10%, rgba(141, 76, 255, 0.16), transparent 28%),
+    radial-gradient(circle at 8% 12%, rgba(233, 79, 172, 0.11), transparent 30%),
+    var(--paper);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.manual-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 68px;
+  padding: 0 max(22px, calc((100vw - 1080px) / 2));
+  border-bottom: 1px solid rgba(23, 20, 33, 0.08);
+  background: rgba(251, 249, 255, 0.82);
+  backdrop-filter: blur(20px);
+}
+
+.manual-brand {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 18px;
+}
+
+.manual-brand span {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border-radius: 10px;
+  color: white;
+  background: linear-gradient(135deg, var(--accent), var(--pink), #ffad58);
+  font-size: 25px;
+  line-height: 1;
+}
+
+.manual-header nav {
+  display: flex;
+  gap: 8px;
+}
+
+.manual-header nav a {
+  padding: 9px 12px;
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.manual-header nav a:hover {
+  color: var(--ink);
+  background: rgba(141, 76, 255, 0.08);
+}
+
+main {
+  width: min(1080px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.manual-hero {
+  padding: 96px 0 64px;
+}
+
+.manual-kicker {
+  margin: 0 0 12px;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.manual-hero h1 {
+  max-width: 760px;
+  margin: 0;
+  font-size: clamp(46px, 7vw, 86px);
+  line-height: 1.02;
+  letter-spacing: 0;
+}
+
+.manual-hero p:last-child {
+  max-width: 780px;
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1.75;
+}
+
+.manual-section {
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  gap: 46px;
+  padding: 58px 0;
+  border-top: 1px solid var(--line);
+}
+
+.manual-section aside {
+  position: sticky;
+  top: 96px;
+  align-self: start;
+}
+
+.manual-section aside span {
+  color: var(--pink);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.manual-section h2 {
+  margin: 10px 0 0;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.manual-content {
+  display: grid;
+  gap: 20px;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.manual-content h3 {
+  margin: 0;
+  font-size: 25px;
+}
+
+.manual-content p,
+.manual-content ol,
+.manual-content ul {
+  margin: 0;
+  color: var(--muted);
+}
+
+.manual-content li + li {
+  margin-top: 8px;
+}
+
+.two-column {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.two-column article,
+.tip,
+.steps div,
+.workflow span {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 18px 48px rgba(35, 20, 66, 0.06);
+}
+
+.two-column article {
+  padding: 24px;
+}
+
+.two-column article p {
+  margin-top: 12px;
+}
+
+.two-column article ul {
+  padding-left: 20px;
+  margin-top: 16px;
+}
+
+.tip {
+  padding: 18px 20px;
+  border-color: rgba(141, 76, 255, 0.22);
+  color: #342151;
+  background: linear-gradient(135deg, rgba(141, 76, 255, 0.1), rgba(233, 79, 172, 0.07));
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.steps div {
+  display: grid;
+  gap: 8px;
+  padding: 20px;
+}
+
+.steps strong {
+  font-size: 18px;
+}
+
+.steps span {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.workflow {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.workflow span {
+  display: grid;
+  min-height: 76px;
+  place-items: center;
+  padding: 12px;
+  color: #2e1d44;
+  text-align: center;
+  font-weight: 800;
+}
+
+.manual-footer {
+  display: flex;
+  justify-content: space-between;
+  width: min(1080px, calc(100% - 40px));
+  margin: 36px auto 0;
+  padding: 28px 0 44px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.manual-footer a {
+  color: var(--accent);
+  font-weight: 800;
+}
+
+@media (max-width: 820px) {
+  .manual-header nav {
+    display: none;
+  }
+
+  .manual-section {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .manual-section aside {
+    position: static;
+  }
+
+  .two-column,
+  .steps,
+  .workflow {
+    grid-template-columns: 1fr;
+  }
+
+  .manual-footer {
+    display: grid;
+    gap: 10px;
+  }
+}
