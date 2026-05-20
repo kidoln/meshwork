@@ -178,6 +178,7 @@ main {
 .two-column article,
 .tip,
 .steps div,
+.branch-model div,
 .workflow span {
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -211,20 +212,29 @@ main {
   gap: 14px;
 }
 
-.steps div {
+.steps div,
+.branch-model div {
   display: grid;
   gap: 8px;
   padding: 20px;
 }
 
-.steps strong {
+.steps strong,
+.branch-model strong {
   font-size: 18px;
 }
 
-.steps span {
+.steps span,
+.branch-model span {
   color: var(--muted);
   font-size: 15px;
   line-height: 1.65;
+}
+
+.branch-model {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
 }
 
 .workflow {
@@ -275,6 +285,7 @@ main {
 
   .two-column,
   .steps,
+  .branch-model,
   .workflow {
     grid-template-columns: 1fr;
   }

@@ -253,8 +253,17 @@ button {
   font-weight: 900;
   letter-spacing: 0;
   line-height: 0.96;
+  white-space: pre-line;
   text-wrap: balance;
   text-shadow: 0 24px 70px rgba(0, 0, 0, 0.58);
+}
+
+html[lang="zh-CN"] .hero h1 {
+  max-width: 11ch;
+  font-size: clamp(44px, 6.3vw, 78px);
+  line-height: 1.08;
+  overflow-wrap: normal;
+  word-break: keep-all;
 }
 
 .hero-subtitle {
@@ -544,7 +553,18 @@ button {
   font-weight: 900;
   letter-spacing: 0;
   line-height: 1.04;
+  white-space: pre-line;
   text-wrap: balance;
+}
+
+html[lang="zh-CN"] .intro-grid h2,
+html[lang="zh-CN"] .section-heading h2,
+html[lang="zh-CN"] .experience-copy h2,
+html[lang="zh-CN"] .closing h2 {
+  font-size: clamp(31px, 4.1vw, 52px);
+  line-height: 1.14;
+  overflow-wrap: normal;
+  word-break: keep-all;
 }
 
 .intro-grid p,
@@ -1028,6 +1048,10 @@ button {
     font-size: clamp(46px, 13vw, 76px);
   }
 
+  html[lang="zh-CN"] .hero h1 {
+    font-size: clamp(42px, 11vw, 68px);
+  }
+
   .intro-grid,
   .section-heading,
   .experience,
@@ -1129,8 +1153,16 @@ button {
   .experience-copy h2,
   .closing h2 {
     font-size: 29px;
-    overflow-wrap: anywhere;
-    word-break: break-all;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  html[lang="zh-CN"] .intro-grid h2,
+  html[lang="zh-CN"] .section-heading h2,
+  html[lang="zh-CN"] .experience-copy h2,
+  html[lang="zh-CN"] .closing h2 {
+    font-size: 27px;
+    line-height: 1.2;
   }
 
   .principles,

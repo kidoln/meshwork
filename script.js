@@ -1,8 +1,8 @@
 const content = {
   zh: {
-    metaTitle: "MeshWork｜让讨论沉淀为知识",
+    metaTitle: "MeshWork｜让 AI 参与讨论",
     metaDescription:
-      "MeshWork 是一个本地优先的创作工作台，让笔记、讨论、AI 与 Git 原生共享形成同一个思考系统。",
+      "MeshWork 是一个本地优先的创作工作台，让笔记、讨论、AI 参与和 Git 原生共享形成同一个思考系统。",
     nav: {
       principles: "核心理念",
       flow: "工作流",
@@ -11,9 +11,9 @@ const content = {
     },
     hero: {
       eyebrow: "为 Apple 生态而生",
-      title: "让讨论沉淀为知识",
+      title: "让 AI 参与讨论\n让共识沉淀为知识",
       subtitle:
-        "MeshWork 把笔记、异步讨论、AI 伙伴与 Git 原生共享放进同一个创作工作台。知识属于你，协作不依赖服务器，想法可以被反复打磨、引用和沉淀。",
+        "MeshWork 把笔记、异步讨论、AI 参与者与 Git 原生共享放进同一个创作工作台。AI 不只是旁边的助手，而是可以进入人类讨论，补充视角、追问分歧、推动共识，但知识边界和最终判断始终由你掌握。",
       primary: "了解产品理念",
       secondary: "打开操作手册",
       pointOne: "Local-first",
@@ -23,23 +23,23 @@ const content = {
     graph: {
       private: "私有知识库",
       discussion: "异步讨论",
-      ai: "AI 伙伴",
+      ai: "AI 参与者",
       git: "Git 共享",
       markdown: "Markdown",
       noteOneTitle: "Insight",
-      noteOne: "讨论中的共识，自动沉淀为可复用知识。",
+      noteOne: "AI 进入讨论，让分歧更快变成清晰共识。",
       noteTwoTitle: "Ownership",
       noteTwo: "文件在本地，边界由你决定。",
     },
     intro: {
       kicker: "Product Philosophy",
-      title: "不是另一个在线文档，而是创作者的思考基础设施。",
+      title: "不是另一个在线文档，\n而是人与 AI 的思考空间。",
       body:
-        "MeshWork 的核心不是把所有人推向实时协同，而是给个人与小团队一个更安静、更可控的创作节奏：先在私有知识库中沉淀，再在共享空间里讨论，最后把共识回流成可长期保存的 Markdown 知识。",
+        "MeshWork 的核心不是把所有人推向实时协同，而是让个人、小团队和 AI 在同一个材料上下文里讨论：人提出问题和判断方向，AI 参与分析、追问和总结，最后把共识回流成可长期保存的 Markdown 知识。",
     },
     principles: {
       kicker: "Principles",
-      title: "四个原则定义 MeshWork 的边界。",
+      title: "AI 参与讨论，\n但决策权始终在人。",
       local: {
         title: "本地优先",
         body:
@@ -51,9 +51,9 @@ const content = {
           "Git 是版本、历史、同步和共享的底层能力。普通用户不需要理解 commit、branch 或 merge，产品负责把复杂性变成可理解的状态。",
       },
       ai: {
-        title: "AI 是参与者",
+        title: "AI 进入讨论",
         body:
-          "AI 不只是改写按钮，而是在讨论中提供观点、总结共识、关联知识。它可以建议方向，但最终决策和写入始终由人确认。",
+          "AI 不只是改写按钮，而是可以进入人类讨论，提供观点、追问分歧、总结共识并关联已有知识。它推动思考，但最终决策和写入始终由人确认。",
       },
       apple: {
         title: "Apple 原生体验",
@@ -63,7 +63,7 @@ const content = {
     },
     flow: {
       kicker: "Thinking Loop",
-      title: "私有知识、共享空间和讨论区形成一个闭环。",
+      title: "从私有笔记到团队讨论，\n再回到知识库。",
       body:
         "工作台不是一个巨大的仓库，而是组合视图：你的私有知识库长期独立存在；每个共享空间拥有自己的公共知识库、讨论区与 Git 边界。",
       private: "私有知识库",
@@ -75,29 +75,29 @@ const content = {
       sharedTitle: "共享空间承载团队项目",
       sharedBody: "公共知识库负责沉淀，讨论区负责碰撞，边界清晰，不混入私人材料。",
       discussionTitle: "讨论可以回流为文档",
-      discussionBody: "AI 与成员一起围绕材料讨论，结论被整理成可引用、可版本化的知识。",
+      discussionBody: "AI 作为讨论参与者和成员一起围绕材料推理，结论被整理成可引用、可版本化的知识。",
     },
     experience: {
       kicker: "Creative Workspace",
-      title: "像聊天一样发起讨论，像写笔记一样沉淀结论。",
+      title: "人类提出问题，\nAI 参与推理。",
       body:
-        "MeshWork 把讨论流和知识空间放在同一个上下文中。你可以把文档片段放入讨论，让 AI 和团队成员一起分析，再把经过确认的结论保存回笔记。",
+        "MeshWork 把讨论流和知识空间放在同一个上下文中。你可以把文档片段放入讨论，让 AI 以参与者身份和团队成员一起分析，再把经过确认的结论保存回笔记。",
     },
     gallery: {
       kicker: "Visual Story",
-      title: "面向小团队知识协作的暗色视觉系统。",
+      title: "AI 参与讨论，\n共识进入知识库。",
       github: "通过 GitHub 分享，但数据仍由你掌控。",
       graph: "讨论自动连接成可复用的知识图谱。",
     },
     closing: {
       kicker: "GitHub Pages Ready",
-      title: "一个静态主页，可以直接发布到独立仓库。",
+      title: "一个静态主页，\n可以直接发布到独立仓库。",
       body:
         "当前页面不依赖构建工具或后端服务。把 docs/website 作为独立仓库内容推送到 GitHub，并启用 GitHub Pages 即可发布。",
       action: "前往 GitHub",
     },
     footer: {
-      note: "Local-first creative workspace for notes, discussions, AI, and Git-native sharing.",
+      note: "Local-first creative workspace for notes, discussions, AI participation, and Git-native sharing.",
     },
     images: {
       heroPoster: "images/poster_2_zh.png",
@@ -115,7 +115,7 @@ const content = {
   en: {
     metaTitle: "MeshWork | Turn discussion into knowledge",
     metaDescription:
-      "MeshWork is a local-first creative workspace where notes, discussions, AI, and Git-native sharing become one thinking system.",
+      "MeshWork is a local-first creative workspace where notes, discussions, AI participation, and Git-native sharing become one thinking system.",
     nav: {
       principles: "Principles",
       flow: "Workflow",
@@ -126,7 +126,7 @@ const content = {
       eyebrow: "Built for the Apple ecosystem",
       title: "Turn discussion into knowledge",
       subtitle:
-        "MeshWork brings notes, asynchronous discussion, AI partners, and Git-native sharing into one creative workspace. Your knowledge stays yours, collaboration needs no central server, and ideas can be refined, referenced, and preserved.",
+        "MeshWork brings notes, asynchronous discussion, AI participants, and Git-native sharing into one creative workspace. AI can join human discussion to add perspectives, surface disagreements, and shape alignment while ownership and final judgment stay with you.",
       primary: "Explore the idea",
       secondary: "Open manual",
       pointOne: "Local-first",
@@ -148,7 +148,7 @@ const content = {
       kicker: "Product Philosophy",
       title: "Not another online document tool. A thinking infrastructure for creators.",
       body:
-        "MeshWork is not designed to push everyone into real-time co-editing. It gives individuals and small teams a calmer rhythm: develop thoughts in a private library, discuss them inside shared spaces, then preserve decisions as durable Markdown knowledge.",
+        "MeshWork is not designed to push everyone into real-time co-editing. It gives individuals, small teams, and AI a shared material context: develop thoughts in a private library, let AI analyze, question, and summarize inside shared spaces, then preserve decisions as durable Markdown knowledge.",
     },
     principles: {
       kicker: "Principles",
@@ -166,7 +166,7 @@ const content = {
       ai: {
         title: "AI as participant",
         body:
-          "AI is more than a rewrite button. It joins discussions, offers perspectives, summarizes alignment, and links existing knowledge while humans keep final control.",
+          "AI is more than a rewrite button. It joins human discussion, offers perspectives, asks about disagreements, summarizes alignment, and links existing knowledge while humans keep final control.",
       },
       apple: {
         title: "Native Apple experience",
@@ -188,17 +188,17 @@ const content = {
       sharedTitle: "Shared spaces carry team projects",
       sharedBody: "The public library preserves decisions, the discussion area creates alignment, and private material stays outside the boundary.",
       discussionTitle: "Discussions flow back into documents",
-      discussionBody: "AI and teammates reason around source material, then confirmed conclusions become referenceable, versioned knowledge.",
+      discussionBody: "AI participates with teammates around source material, then confirmed conclusions become referenceable, versioned knowledge.",
     },
     experience: {
       kicker: "Creative Workspace",
       title: "Start a discussion like chat. Preserve the result like notes.",
       body:
-        "MeshWork keeps discussion flow and knowledge space in the same context. Drop document fragments into a topic, let AI and teammates analyze them, then save confirmed conclusions back into notes.",
+        "MeshWork keeps discussion flow and knowledge space in the same context. Drop document fragments into a topic, let AI participate alongside teammates, then save confirmed conclusions back into notes.",
     },
     gallery: {
       kicker: "Visual Story",
-      title: "A dark visual system for small-team knowledge work.",
+      title: "AI joins the discussion. Alignment becomes knowledge.",
       github: "Share through GitHub while keeping ownership of your data.",
       graph: "Discussions connect into reusable knowledge maps.",
     },
@@ -210,7 +210,7 @@ const content = {
       action: "Open GitHub",
     },
     footer: {
-      note: "Local-first creative workspace for notes, discussions, AI, and Git-native sharing.",
+      note: "Local-first creative workspace for notes, discussions, AI participation, and Git-native sharing.",
     },
     images: {
       heroPoster: "images/poster_2_en.png",
