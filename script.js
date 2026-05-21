@@ -80,6 +80,13 @@ const content = {
         title: "多人讨论与多 AI 智能体",
         body: "讨论区支持多人围绕同一份材料持续讨论，也可以引入多个 AI 智能体作为参与者，从不同角度追问、分析和总结。",
       },
+      commands: {
+        title: "智能对话命令系统",
+        body: "在讨论中直接使用 @提及智能体或成员、#引用知识库文件、/触发自定义命令。让对话与知识自然连接，操作流畅高效。",
+        atExample: "@智能体名 或 @成员名 — 提及某人参与对话",
+        hashExample: "#文件名 — 引用知识库中的文档内容",
+        slashExample: "/命令名 — 执行预定义的自定义命令",
+      },
       shell: {
         title: "AI 友好的安全工具环境",
         body: "MeshWork 为文档处理构建了原生应用内的虚拟 Shell。它保留 Apple 生态的安全边界，同时提供大模型熟悉的工具接口，让 AI 更可靠地读取、整理和操作知识材料。",
@@ -269,6 +276,13 @@ const content = {
       discussion: {
         title: "Multi-person and multi-agent discussion",
         body: "Discussion spaces support ongoing collaboration around the same material, with multiple AI agents joining as participants to question, analyze, and summarize from different angles.",
+      },
+      commands: {
+        title: "Smart conversation commands",
+        body: "Use @ to mention agents or members, # to reference knowledge files, and / to trigger custom commands. Connect conversation with knowledge seamlessly.",
+        atExample: "@agent or @member — Mention someone to join the conversation",
+        hashExample: "#filename — Reference document content from the knowledge base",
+        slashExample: "/command — Execute predefined custom commands",
       },
       shell: {
         title: "Safe tools built for AI",

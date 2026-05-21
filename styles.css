@@ -732,6 +732,14 @@ html[lang="zh-CN"] .feature-copy h2 {
   gap: 16px;
 }
 
+.highlight-list {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .highlight-card {
   position: relative;
   display: flex;
@@ -1186,6 +1194,10 @@ html[lang="zh-CN"] .feature-copy h2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .highlight-list {
+    max-width: 100%;
+  }
+
   .highlight-card-large {
     grid-row: auto;
     min-height: 300px;
@@ -1307,6 +1319,10 @@ html[lang="zh-CN"] .feature-copy h2 {
 
   .highlight-grid {
     grid-template-columns: 1fr;
+  }
+
+  .highlight-list {
+    gap: 16px;
   }
 
   .principle-card {
@@ -1592,4 +1608,72 @@ html[lang="zh-CN"] .feature-copy h2 {
   border-color: rgba(255, 62, 62, 0.25);
   background: rgba(255, 62, 62, 0.1);
   color: #ffb5b5;
+}
+
+/* Command examples highlight */
+.command-examples {
+  display: grid;
+  gap: 14px;
+  margin-top: auto;
+  padding-top: 24px;
+}
+
+.command-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 14px;
+  align-items: center;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.command-item code {
+  display: grid;
+  min-width: 36px;
+  min-height: 36px;
+  place-items: center;
+  border: 1px solid rgba(125, 232, 255, 0.3);
+  border-radius: 8px;
+  color: #7de8ff;
+  background: rgba(125, 232, 255, 0.12);
+  font-size: 18px;
+  font-weight: 900;
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+}
+
+.command-item span {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.feature-commands {
+  border-color: rgba(125, 232, 255, 0.25) !important;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(125, 232, 255, 0.1),
+      rgba(125, 232, 255, 0.03)
+    ),
+    rgba(21, 14, 42, 0.56) !important;
+}
+
+.feature-commands::before {
+  background:
+    radial-gradient(
+      circle at 18% 18%,
+      rgba(125, 232, 255, 0.15),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 84% 82%,
+      rgba(255, 177, 93, 0.12),
+      transparent 34%
+    ) !important;
+}
+
+.feature-commands::after {
+  background: linear-gradient(90deg, #7de8ff, #ff75ca, #ffb15d) !important;
 }

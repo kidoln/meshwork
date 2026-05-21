@@ -23,6 +23,7 @@
         <a href="#start" data-i18n="nav.start">快速开始</a>
         <a href="#library" data-i18n="nav.library">知识库</a>
         <a href="#discussion" data-i18n="nav.discussion">讨论</a>
+        <a href="#commands" data-i18n="nav.commands">对话命令</a>
         <a href="#sharing" data-i18n="nav.sharing">共享</a>
       </nav>
       <div class="language-switch" aria-label="Language switch">
@@ -111,6 +112,93 @@
           <div class="tip" data-i18n="discussion.tip">
             操作细节：当你在讨论中 @ 一个智能体并让它回答后，接下来的两分钟内，你继续发送的消息不需要再次 @ 它。这个智能体会自动跟进并回复，适合连续追问、补充背景或要求它展开上一轮回答。
           </div>
+        </div>
+      </section>
+
+      <section id="commands" class="manual-section">
+        <aside>
+          <span>04</span>
+          <h2 data-i18n="commands.title">智能对话命令系统</h2>
+        </aside>
+        <div class="manual-content">
+          <h3 data-i18n="commands.heading">三种对话增强命令</h3>
+          <p data-i18n="commands.body">
+            MeshWork 的讨论区支持三类预定义命令，让对话更高效、与知识库连接更紧密。
+          </p>
+
+          <div class="command-block">
+            <h4 data-i18n="commands.atTitle">@ 提及命令</h4>
+            <p data-i18n="commands.atBody">
+              使用 @ 符号可以提及智能体或其他对话参与者，让他们参与到当前对话中。
+            </p>
+            <div class="command-examples">
+              <div class="example-item">
+                <code>@claude</code>
+                <span data-i18n="commands.atExampleOne">邀请 Claude 智能体参与对话</span>
+              </div>
+              <div class="example-item">
+                <code>@张三</code>
+                <span data-i18n="commands.atExampleTwo">提及团队成员张三</span>
+              </div>
+            </div>
+            <div class="tip" data-i18n="commands.atTip">
+              提及智能体后，两分钟内的后续消息会自动发送给该智能体，无需重复 @。
+            </div>
+          </div>
+
+          <div class="command-block">
+            <h4 data-i18n="commands.hashTitle"># 文件引用</h4>
+            <p data-i18n="commands.hashBody">
+              使用 # 符号可以直接引用知识库中的文档内容，让 AI 能够基于具体材料进行分析和讨论。
+            </p>
+            <div class="command-examples">
+              <div class="example-item">
+                <code>#产品设计</code>
+                <span data-i18n="commands.hashExampleOne">引用"产品设计"文档</span>
+              </div>
+              <div class="example-item">
+                <code>#会议记录/2024-01</code>
+                <span data-i18n="commands.hashExampleTwo">引用子目录中的文档</span>
+              </div>
+            </div>
+            <div class="tip" data-i18n="commands.hashTip">
+              引用文件时，支持自动补全。输入 # 后会弹出匹配的文件列表供选择。
+            </div>
+          </div>
+
+          <div class="command-block">
+            <h4 data-i18n="commands.slashTitle">/ 自定义命令</h4>
+            <p data-i18n="commands.slashBody">
+              使用 / 符号触发预定义的自定义命令，快速执行常见操作或调用特定功能。
+            </p>
+            <div class="command-examples">
+              <div class="example-item">
+                <code>/summarize</code>
+                <span data-i18n="commands.slashExampleOne">总结当前讨论内容</span>
+              </div>
+              <div class="example-item">
+                <code>/action</code>
+                <span data-i18n="commands.slashExampleTwo">提取待办事项</span>
+              </div>
+              <div class="example-item">
+                <code>/template</code>
+                <span data-i18n="commands.slashExampleThree">使用预设模板回复</span>
+              </div>
+            </div>
+            <div class="tip" data-i18n="commands.slashTip">
+              自定义命令可以在设置中配置，创建符合团队工作流程的快捷操作。
+            </div>
+          </div>
+
+          <h3 data-i18n="commands.comboHeading">组合使用技巧</h3>
+          <p data-i18n="commands.comboBody">
+            三种命令可以组合使用，创建更丰富的对话场景：
+          </p>
+          <ul>
+            <li data-i18n="commands.comboPointOne">@claude 请分析 #产品需求 文档中的技术可行性</li>
+            <li data-i18n="commands.comboPointTwo">@产品经理 #设计稿 #原型 基于 #竞品分析 给出建议</li>
+            <li data-i18n="commands.comboPointThree">/summarize 并 @全体成员 确认下一步行动计划</li>
+          </ul>
         </div>
       </section>
 

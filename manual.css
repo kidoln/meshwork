@@ -326,3 +326,57 @@ main {
     gap: 10px;
   }
 }
+
+/* Command blocks for manual */
+.command-block {
+  display: grid;
+  gap: 16px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 18px 48px rgba(35, 20, 66, 0.06);
+}
+
+.command-block h4 {
+  margin: 0;
+  font-size: 20px;
+  color: var(--accent);
+}
+
+.command-examples {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.example-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 14px;
+  align-items: center;
+  padding: 14px 16px;
+  border: 1px solid rgba(141, 76, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(141, 76, 255, 0.04);
+}
+
+.example-item code {
+  display: grid;
+  min-width: 48px;
+  min-height: 48px;
+  place-items: center;
+  border: 1px solid rgba(141, 76, 255, 0.3);
+  border-radius: 8px;
+  color: var(--accent);
+  background: rgba(141, 76, 255, 0.1);
+  font-size: 20px;
+  font-weight: 900;
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+}
+
+.example-item span {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.5;
+}
