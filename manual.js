@@ -92,6 +92,7 @@ const manualContent = {
     },
     footer: {
       home: "返回首页",
+      privacy: "隐私政策",
     },
   },
   en: {
@@ -187,6 +188,7 @@ const manualContent = {
     },
     footer: {
       home: "Back to home",
+      privacy: "Privacy Policy",
     },
   },
 };

@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="MeshWork 隐私政策：了解我们如何保护您的数据安全和隐私。"
+    />
+    <title>MeshWork 隐私政策</title>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="apple-touch-icon" href="images/favicon.png" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB",
+          "Microsoft YaHei", sans-serif;
+        line-height: 1.7;
+        color: #c4c9d4;
+        background: linear-gradient(135deg, #0d0e12 0%, #161821 100%);
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 840px;
+        margin: 0 auto;
+        padding: 60px 24px;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      h1 {
+        font-size: 42px;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 16px;
+        letter-spacing: -0.02em;
+      }
+
+      .subtitle {
+        font-size: 18px;
+        color: #7de8ff;
+      }
+
+      section {
+        margin-bottom: 48px;
+      }
+
+      h2 {
+        font-size: 24px;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 16px;
+      }
+
+      h3 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 12px;
+        margin-top: 24px;
+      }
+
+      p {
+        margin-bottom: 16px;
+      }
+
+      ul {
+        margin-left: 24px;
+        margin-bottom: 16px;
+      }
+
+      li {
+        margin-bottom: 8px;
+      }
+
+      a {
+        color: #7de8ff;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .highlight {
+        background: rgba(125, 232, 255, 0.1);
+        border-left: 3px solid #7de8ff;
+        padding: 16px 20px;
+        border-radius: 0 8px 8px 0;
+        margin: 24px 0;
+      }
+
+      .highlight p {
+        margin-bottom: 0;
+      }
+
+      footer {
+        margin-top: 80px;
+        padding-top: 32px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        text-align: center;
+        font-size: 14px;
+        color: #6b7280;
+      }
+
+      footer a {
+        color: #6b7280;
+      }
+
+      .lang-switch {
+        position: fixed;
+        top: 24px;
+        right: 24px;
+        display: flex;
+        gap: 8px;
+        z-index: 100;
+      }
+
+      .lang-button {
+        padding: 8px 16px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 6px;
+        color: #c4c9d4;
+        font-size: 14px;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      .lang-button:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .lang-button.is-active {
+        background: rgba(125, 232, 255, 0.2);
+        border-color: rgba(125, 232, 255, 0.4);
+        color: #7de8ff;
+      }
+
+      .content-zh {
+        display: block;
+      }
+
+      .content-en {
+        display: none;
+      }
+
+      body.lang-en .content-zh {
+        display: none;
+      }
+
+      body.lang-en .content-en {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="lang-switch" aria-label="Language switch">
+      <button type="button" class="lang-button is-active" data-lang="zh">
+        中文
+      </button>
+      <button type="button" class="lang-button" data-lang="en">EN</button>
+    </div>
+
+    <div class="container">
+      <!-- 中文内容 -->
+      <div class="content-zh">
+        <header>
+          <h1>MeshWork 隐私政策</h1>
+          <p class="subtitle">最后更新：2026年5月</p>
+        </header>
+
+        <section>
+          <h2>概述</h2>
+          <p>
+            MeshWork
+            是一款本地优先的创作工作台应用。我们深知隐私的重要性，并致力于保护您的数据安全。本隐私政策说明了我们如何处理您的数据。
+          </p>
+          <div class="highlight">
+            <p><strong>核心原则：</strong>您的数据存储在您的设备上，您完全掌控自己的信息。</p>
+          </div>
+        </section>
+
+        <section>
+          <h2>我们收集哪些信息</h2>
+          <h3>1. 本地数据</h3>
+          <p>MeshWork 在您的本地设备上存储以下数据：</p>
+          <ul>
+            <li>您创建的文档和笔记内容</li>
+            <li>讨论区的消息和话题</li>
+            <li>应用设置和偏好配置</li>
+            <li>AI 提供商配置信息（API 密钥等）</li>
+            <li>网络搜索提供商配置信息</li>
+            <li>Git 仓库的访问凭据</li>
+          </ul>
+          <p>所有这些数据都存储在您的本地设备上，MeshWork 不会将这些数据上传到我们的服务器。</p>
+
+          <h3>2. 网络活动</h3>
+          <p>
+            当您使用 AI 功能或网络搜索功能时，应用会向第三方服务发送请求。这些请求直接发送到您配置的服务提供商：
+          </p>
+          <ul>
+            <li>AI 服务提供商（如 OpenAI、Claude 等）</li>
+            <li>网络搜索服务提供商（如 Brave Search、Serper、Tavily 等）</li>
+            <li>Git 仓库托管平台（如 GitHub）</li>
+          </ul>
+          <p>
+            这些网络请求直接在您的设备和第三方服务之间进行，MeshWork
+            不充当中介或代理，我们不会记录或访问这些通信的内容。
+          </p>
+        </section>
+
+        <section>
+          <h2>我们如何使用您的信息</h2>
+          <p>MeshWork 不会收集、存储或使用您的数据用于任何商业目的。您的数据：</p>
+          <ul>
+            <li>仅存储在您的本地设备上</li>
+            <li>仅用于您在应用中的直接操作</li>
+            <li>仅在您主动启用时才会通过 Git 同步到您指定的远程仓库</li>
+            <li>仅在您主动调用时才会发送到您配置的 AI 或搜索服务</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>数据共享</h2>
+          <p>MeshWork 不会与第三方共享您的数据，除非：</p>
+          <ul>
+            <li>您主动选择将数据通过 Git 推送到远程仓库</li>
+            <li>您主动使用 AI 功能，将内容发送到您配置的 AI 服务提供商</li>
+            <li>您主动使用网络搜索功能，向搜索服务提供商发送查询请求</li>
+          </ul>
+          <p>
+            在这些情况下，数据传输直接发生在您的设备与您选择的服务之间，MeshWork
+            不会访问或存储传输的内容。
+          </p>
+        </section>
+
+        <section>
+          <h2>数据安全</h2>
+          <p>我们采取以下措施保护您的数据安全：</p>
+          <ul>
+            <li>所有敏感配置信息（如 API 密钥）均加密存储在本地钥匙串中</li>
+            <li>应用运行在 macOS 应用沙盒中，限制了文件系统访问</li>
+            <li>网络通信仅用于您明确配置的服务</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>儿童隐私</h2>
+          <p>
+            MeshWork
+            不面向 13
+            岁以下儿童。如果我们发现无意中收集了儿童的个人信息，将采取措施删除该信息。
+          </p>
+        </section>
+
+        <section>
+          <h2>隐私政策的变更</h2>
+          <p>
+            我们可能会不时更新本隐私政策。更新后的政策将在本页面发布，并在页顶标注更新日期。
+          </p>
+        </section>
+
+        <section>
+          <h2>联系我们</h2>
+          <p>如果您对本隐私政策有任何疑问或建议，欢迎通过以下方式联系：</p>
+          <ul>
+            <li>在 GitHub 上提出 Issue 或 Pull Request</li>
+            <li>通过应用内的反馈功能联系我们</li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- 英文内容 -->
+      <div class="content-en">
+        <header>
+          <h1>MeshWork Privacy Policy</h1>
+          <p class="subtitle">Last Updated: May 2026</p>
+        </header>
+
+        <section>
+          <h2>Overview</h2>
+          <p>
+            MeshWork is a local-first creative workspace application. We understand
+            the importance of privacy and are committed to protecting your data.
+            This privacy policy explains how we handle your data.
+          </p>
+          <div class="highlight">
+            <p>
+              <strong>Core Principle:</strong> Your data stays on your device. You
+              are in complete control of your information.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h2>Information We Collect</h2>
+          <h3>1. Local Data</h3>
+          <p>MeshWork stores the following data locally on your device:</p>
+          <ul>
+            <li>Documents and notes you create</li>
+            <li>Discussion messages and topics</li>
+            <li>App settings and preferences</li>
+            <li>AI provider configurations (API keys, etc.)</li>
+            <li>Web search provider configurations</li>
+            <li>Git repository access credentials</li>
+          </ul>
+          <p>
+            All this data is stored on your local device. MeshWork does not upload
+            this data to our servers.
+          </p>
+
+          <h3>2. Network Activity</h3>
+          <p>
+            When you use AI features or web search features, the app sends requests
+            to third-party services. These requests are sent directly to the service
+            providers you configure:
+          </p>
+          <ul>
+            <li>AI service providers (such as OpenAI, Claude, etc.)</li>
+            <li>Web search providers (such as Brave Search, Serper, Tavily, etc.)</li>
+            <li>Git hosting platforms (such as GitHub)</li>
+          </ul>
+          <p>
+            These network requests occur directly between your device and the
+            third-party services. MeshWork does not act as an intermediary or proxy,
+            and we do not log or access the content of these communications.
+          </p>
+        </section>
+
+        <section>
+          <h2>How We Use Your Information</h2>
+          <p>
+            MeshWork does not collect, store, or use your data for any commercial
+            purposes. Your data:
+          </p>
+          <ul>
+            <li>Is stored only on your local device</li>
+            <li>Is used only for your direct actions within the app</li>
+            <li>Is synced to remote repositories via Git only when you explicitly enable it</li>
+            <li>Is sent to AI or search services only when you actively invoke them</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Data Sharing</h2>
+          <p>
+            MeshWork does not share your data with third parties, except when:
+          </p>
+          <ul>
+            <li>You choose to push data to a remote repository via Git</li>
+            <li>You actively use AI features, sending content to your configured AI service provider</li>
+            <li>You actively use web search features, sending queries to your search provider</li>
+          </ul>
+          <p>
+            In these cases, data transfer occurs directly between your device and
+            the services you choose. MeshWork does not access or store the
+            transmitted content.
+          </p>
+        </section>
+
+        <section>
+          <h2>Data Security</h2>
+          <p>We take the following measures to protect your data:</p>
+          <ul>
+            <li>All sensitive configuration information (such as API keys) is encrypted and stored in the local keychain</li>
+            <li>The app runs within the macOS application sandbox, limiting file system access</li>
+            <li>Network communication is only used for services you explicitly configure</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Children's Privacy</h2>
+          <p>
+            MeshWork is not directed at children under 13 years of age. If we
+            become aware that we have inadvertently collected personal information
+            from a child, we will take steps to delete that information.
+          </p>
+        </section>
+
+        <section>
+          <h2>Changes to This Privacy Policy</h2>
+          <p>
+            We may update this privacy policy from time to time. Updated policies
+            will be posted on this page with the revision date noted at the top.
+          </p>
+        </section>
+
+        <section>
+          <h2>Contact Us</h2>
+          <p>If you have any questions or suggestions about this privacy policy, please contact us:</p>
+          <ul>
+            <li>Submit an Issue or Pull Request on GitHub</li>
+            <li>Use the in-app feedback feature to contact us</li>
+          </ul>
+        </section>
+      </div>
+
+      <footer>
+        <a href="index.html">← MeshWork</a>
+        <span style="margin: 0 16px; color: rgba(255,255,255,0.2)">|</span>
+        <span data-i18n="footer.note">Local-first creative workspace</span>
+      </footer>
+    </div>
+
+    <script>
+      // 语言切换逻辑
+      const langButtons = document.querySelectorAll('.lang-button');
+      const body = document.body;
+
+      langButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const lang = button.getAttribute('data-lang');
+          body.classList.remove('lang-zh', 'lang-en');
+          body.classList.add('lang-' + lang);
+          document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+          langButtons.forEach(btn => btn.classList.remove('is-active'));
+          button.classList.add('is-active');
+        });
+      });
+
+      // 国际化文本
+      const i18n = {
+        zh: {
+          'footer.note': 'Local-first creative workspace'
+        },
+        en: {
+          'footer.note': 'Local-first creative workspace'
+        }
+      };
+    </script>
+  </body>
+</html>

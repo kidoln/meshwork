@@ -166,6 +166,7 @@ const content = {
     },
     footer: {
       note: "Local-first creative workspace for notes, discussions, AI participation, and Git-native sharing.",
+      privacy: "隐私政策",
     },
     images: {
       heroPoster: "images/poster_2_zh.png",
@@ -350,6 +351,7 @@ const content = {
     },
     footer: {
       note: "Local-first creative workspace for notes, discussions, AI participation, and Git-native sharing.",
+      privacy: "Privacy Policy",
     },
     images: {
       heroPoster: "images/poster_2_en.png",
