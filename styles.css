@@ -748,7 +748,7 @@ html[lang="zh-CN"] .feature-copy h2 {
   flex-direction: column;
   padding: 20px 24px;
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: 16px;
   background:
     linear-gradient(
       180deg,
@@ -809,8 +809,8 @@ html[lang="zh-CN"] .feature-copy h2 {
 .highlight-card p {
   margin: 0;
   color: var(--muted);
-  font-size: 15px;
-  line-height: 1.72;
+  font-size: 17px;
+  line-height: 1.65;
 }
 
 .highlight-tags {
@@ -1345,6 +1345,10 @@ html[lang="zh-CN"] .feature-copy h2 {
   .highlight-card h3 {
     margin-top: 12px;
     font-size: 20px;
+  }
+
+  .highlight-card p {
+    font-size: 16px;
   }
 
   .orbit {
