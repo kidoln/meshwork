@@ -50,6 +50,11 @@ a {
   backdrop-filter: blur(20px);
 }
 
+.manual-header nav,
+.language-switch {
+  flex-shrink: 0;
+}
+
 .manual-brand {
   display: inline-flex;
   gap: 10px;
@@ -85,6 +90,32 @@ a {
 .manual-header nav a:hover {
   color: var(--ink);
   background: rgba(141, 76, 255, 0.08);
+}
+
+.language-switch {
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid rgba(23, 20, 33, 0.08);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.64);
+}
+
+.lang-button {
+  border: 0;
+  border-radius: 999px;
+  padding: 7px 10px;
+  color: var(--muted);
+  background: transparent;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.lang-button.is-active {
+  color: white;
+  background: var(--ink);
 }
 
 main {

@@ -5,8 +5,10 @@ const content = {
       "MeshWork 是一个本地优先的创作工作台，让笔记、讨论、AI 参与和 Git 原生共享形成同一个思考系统。",
     nav: {
       principles: "核心理念",
+      highlights: "功能亮点",
       flow: "工作流",
-      gallery: "海报",
+      gallery: "知识沉淀",
+      comparison: "产品对比",
       manual: "操作手册",
     },
     hero: {
@@ -34,38 +36,67 @@ const content = {
     intro: {
       kicker: "Product Philosophy",
       title: "不是另一个在线文档，\n而是人与 AI 的思考空间。",
-      body:
-        "MeshWork 的核心不是把所有人推向实时协同，而是让个人、小团队和 AI 在同一个材料上下文里讨论：人提出问题和判断方向，AI 参与分析、追问和总结，最后把共识回流成可长期保存的 Markdown 知识。",
+      body: "MeshWork 的核心不是把所有人推向实时协同，而是让个人、小团队和 AI 在同一个材料上下文里讨论：人提出问题和判断方向，AI 参与分析、追问和总结，最后把共识回流成可长期保存的 Markdown 知识。",
     },
     principles: {
       kicker: "Principles",
       title: "AI 参与讨论，\n但决策权始终在人。",
       local: {
         title: "本地优先",
-        body:
-          "内容首先保存为你能直接访问的本地文件。产品不应该成为数据黑盒，笔记、附件和讨论都要能脱离软件长期存在。",
+        body: "内容首先保存为你能直接访问的本地文件。产品不应该成为数据黑盒，笔记、附件和讨论都要能脱离软件长期存在。",
       },
       git: {
         title: "Git 原生，但不打扰",
-        body:
-          "Git 是版本、历史、同步和共享的底层能力。普通用户不需要理解 commit、branch 或 merge，产品负责把复杂性变成可理解的状态。",
+        body: "Git 是版本、历史、同步和共享的底层能力。普通用户不需要理解 commit、branch 或 merge，产品负责把复杂性变成可理解的状态。",
       },
       ai: {
         title: "AI 进入讨论",
-        body:
-          "AI 不只是改写按钮，而是可以进入人类讨论，提供观点、追问分歧、总结共识并关联已有知识。它推动思考，但最终决策和写入始终由人确认。",
+        body: "AI 不只是改写按钮，而是可以进入人类讨论，提供观点、追问分歧、总结共识并关联已有知识。它推动思考，但最终决策和写入始终由人确认。",
       },
       apple: {
         title: "Apple 原生体验",
-        body:
-          "MeshWork 服务 macOS、iPadOS 与 iOS。交互应该像系统应用一样自然，同时保留开放格式、可迁移和可扩展的底层结构。",
+        body: "MeshWork 服务 macOS、iPadOS 与 iOS。交互应该像系统应用一样自然，同时保留开放格式、可迁移和可扩展的底层结构。",
+      },
+    },
+    highlights: {
+      kicker: "Feature Highlights",
+      title: "从文档编辑到讨论协作，\n每一步都可沉淀。",
+      body: "MeshWork 的功能围绕开放文档、可追溯讨论和本地数据边界展开。文档可以被编辑、引用、渲染和讨论；讨论结论可以回到知识库；同步与共享交给 Git 完成。",
+      editor: {
+        title: "双栏与所见即所得编辑",
+        body: "文档编辑同时支持双栏工作区和所见即所得体验，既保留结构化 Markdown 的开放性，也让创作过程接近最终阅读效果。",
+        tagOne: "双栏编辑",
+        tagTwo: "WYSIWYG",
+      },
+      rendering: {
+        title: "丰富的文档渲染",
+        body: "渲染层支持 Mermaid、Graphviz 等图形表达，也支持数学公式，让架构图、流程图、关系图和推导内容都能直接进入文档。",
+      },
+      links: {
+        title: "WikiLink 文件引用",
+        body: "文档内可以通过 WikiLink 引用其他文件并快速跳转，让笔记从孤立页面变成可导航、可回溯的知识网络。",
+      },
+      discussion: {
+        title: "多人讨论与多 AI 智能体",
+        body: "讨论区支持多人围绕同一份材料持续讨论，也可以引入多个 AI 智能体作为参与者，从不同角度追问、分析和总结。",
+      },
+      shell: {
+        title: "AI 友好的安全工具环境",
+        body: "MeshWork 为文档处理构建了原生应用内的虚拟 Shell。它保留 Apple 生态的安全边界，同时提供大模型熟悉的工具接口，让 AI 更可靠地读取、整理和操作知识材料。",
+      },
+      search: {
+        title: "全局拼音搜索",
+        body: "产品中的搜索功能都支持拼音搜索。查找中文内容时，不需要频繁切换输入法，用拼音也能快速定位文档、讨论和知识条目。",
+      },
+      git: {
+        title: "Git 同步与隐私边界",
+        body: "所有内容通过 Git 同步和共享。数据首先保存在本地，私有知识库和共享空间保持清晰边界，隐私保护建立在开放文件和可控同步之上。",
       },
     },
     flow: {
       kicker: "Thinking Loop",
       title: "从私有笔记到团队讨论，\n再回到知识库。",
-      body:
-        "工作台不是一个巨大的仓库，而是组合视图：你的私有知识库长期独立存在；每个共享空间拥有自己的公共知识库、讨论区与 Git 边界。",
+      body: "工作台不是一个巨大的仓库，而是组合视图：你的私有知识库长期独立存在；每个共享空间拥有自己的公共知识库、讨论区与 Git 边界。",
       private: "私有知识库",
       shared: "共享空间",
       discussion: "讨论区",
@@ -73,28 +104,65 @@ const content = {
       privateTitle: "先私有，后共享",
       privateBody: "把尚未成型的材料留在自己的知识库中，等待它变得值得分享。",
       sharedTitle: "共享空间承载团队项目",
-      sharedBody: "公共知识库负责沉淀，讨论区负责碰撞，边界清晰，不混入私人材料。",
+      sharedBody:
+        "公共知识库负责沉淀，讨论区负责碰撞，边界清晰，不混入私人材料。",
       discussionTitle: "讨论可以回流为文档",
-      discussionBody: "AI 作为讨论参与者和成员一起围绕材料推理，结论被整理成可引用、可版本化的知识。",
+      discussionBody:
+        "AI 作为讨论参与者和成员一起围绕材料推理，结论被整理成可引用、可版本化的知识。",
     },
     experience: {
       kicker: "Creative Workspace",
       title: "人类提出问题，\nAI 参与推理。",
-      body:
-        "MeshWork 把讨论流和知识空间放在同一个上下文中。你可以把文档片段放入讨论，让 AI 以参与者身份和团队成员一起分析，再把经过确认的结论保存回笔记。",
+      body: "MeshWork 把讨论流和知识空间放在同一个上下文中。你可以把文档片段放入讨论，让 AI 以参与者身份和团队成员一起分析，再把经过确认的结论保存回笔记。",
+      caption: "像聊天一样发起讨论，像写笔记一样沉淀结论。",
     },
-    gallery: {
-      kicker: "Visual Story",
+    sharing: {
+      kicker: "Git-native Sharing",
+      title: "通过 Git 共享，\n但数据仍由你掌控。",
+      body: "私有知识库和共享空间都有清晰的数据边界。需要协作时，把对应资源绑定到远端仓库；同类资源可以通过不同分支隔离，既方便共享，也避免混入不该公开的材料。",
+      caption: "通过 GitHub、Gitee、GitLab 或自建 Git 服务共享知识库。",
+    },
+    knowledge: {
+      kicker: "Knowledge Graph",
       title: "AI 参与讨论，\n共识进入知识库。",
-      github: "通过 GitHub 分享，但数据仍由你掌控。",
-      graph: "讨论自动连接成可复用的知识图谱。",
+      body: "讨论不是一次性的聊天记录。AI 和成员围绕材料形成的结论，可以继续连接到文档、引用和知识图谱中，成为后续创作可复用的上下文。",
+      caption: "讨论自动连接成可复用的知识图谱。",
     },
-    closing: {
-      kicker: "GitHub Pages Ready",
-      title: "一个静态主页，\n可以直接发布到独立仓库。",
-      body:
-        "当前页面不依赖构建工具或后端服务。把 docs/website 作为独立仓库内容推送到 GitHub，并启用 GitHub Pages 即可发布。",
-      action: "前往 GitHub",
+    comparison: {
+      kicker: "Product Comparison",
+      title: "与同类产品的差异",
+      body: "MeshWork 结合了聊天软件的协作能力和笔记软件的知识沉淀能力，但核心差异在于：通过 GitHub 进行多人协作，隐私和数据始终由你掌控。",
+      chatTitle: "通用聊天软件",
+      chatDesc:
+        "钉钉、飞书等通用聊天软件通过在群聊中添加智能机器人来实现 AI 辅助功能。机器人可以参与讨论、总结内容并生成文档。但所有数据都存储在平台服务器上，依赖外部服务，隐私由平台掌控。",
+      notesTitle: "传统笔记软件",
+      notesDesc:
+        "Obsidian 等传统笔记软件通过插件支持 AI 功能，但核心是为单人设计的笔记工具。多人协作能力有限，AI 无法参与团队讨论，更适合个人知识管理而非团队协作场景。",
+      table: {
+        feature: "功能特性",
+        chatApps: "聊天软件",
+        noteApps: "笔记软件",
+        privacy: "数据隐私",
+        collaboration: "多人协作",
+        aiDiscussion: "AI 参与讨论",
+        dataControl: "数据控制",
+        openSource: "开放格式",
+        platform: "平台支持",
+        localFirst: "本地优先 ✓",
+        cloudBased: "云端存储 ✗",
+        gitNative: "Git 原生 ✓",
+        realtime: "实时协同 ✓",
+        limited: "功能受限 ✗",
+        multiAgent: "多 AI 智能体 ✓",
+        botBased: "机器人模式 ○",
+        singleUser: "单人模式 ✗",
+        fullControl: "完全掌控 ✓",
+        platformControl: "平台掌控 ✗",
+        openFormat: "Markdown ✓",
+        closedFormat: "封闭格式 ✗",
+        appleOnly: "Apple 生态",
+        crossPlatform: "跨平台",
+      },
     },
     footer: {
       note: "Local-first creative workspace for notes, discussions, AI participation, and Git-native sharing.",
@@ -118,8 +186,10 @@ const content = {
       "MeshWork is a local-first creative workspace where notes, discussions, AI participation, and Git-native sharing become one thinking system.",
     nav: {
       principles: "Principles",
+      highlights: "Highlights",
       flow: "Workflow",
-      gallery: "Posters",
+      gallery: "Knowledge",
+      comparison: "Compare",
       manual: "Manual",
     },
     hero: {
@@ -146,68 +216,137 @@ const content = {
     },
     intro: {
       kicker: "Product Philosophy",
-      title: "Not another online document tool. A thinking infrastructure for creators.",
-      body:
-        "MeshWork is not designed to push everyone into real-time co-editing. It gives individuals, small teams, and AI a shared material context: develop thoughts in a private library, let AI analyze, question, and summarize inside shared spaces, then preserve decisions as durable Markdown knowledge.",
+      title:
+        "Not another online document tool. A thinking infrastructure for creators.",
+      body: "MeshWork is not designed to push everyone into real-time co-editing. It gives individuals, small teams, and AI a shared material context: develop thoughts in a private library, let AI analyze, question, and summarize inside shared spaces, then preserve decisions as durable Markdown knowledge.",
     },
     principles: {
       kicker: "Principles",
       title: "Four principles define MeshWork.",
       local: {
         title: "Local-first",
-        body:
-          "Content starts as local files you can directly access. Notes, assets, and discussions should outlive the app and never become trapped inside a black box.",
+        body: "Content starts as local files you can directly access. Notes, assets, and discussions should outlive the app and never become trapped inside a black box.",
       },
       git: {
         title: "Git-native, without the noise",
-        body:
-          "Git powers history, sync, recovery, and sharing. Users should not need to understand commits, branches, or merges; the product translates complexity into clear state.",
+        body: "Git powers history, sync, recovery, and sharing. Users should not need to understand commits, branches, or merges; the product translates complexity into clear state.",
       },
       ai: {
         title: "AI as participant",
-        body:
-          "AI is more than a rewrite button. It joins human discussion, offers perspectives, asks about disagreements, summarizes alignment, and links existing knowledge while humans keep final control.",
+        body: "AI is more than a rewrite button. It joins human discussion, offers perspectives, asks about disagreements, summarizes alignment, and links existing knowledge while humans keep final control.",
       },
       apple: {
         title: "Native Apple experience",
-        body:
-          "MeshWork serves macOS, iPadOS, and iOS. It should feel like a first-party app while keeping the underlying structure open, portable, and extensible.",
+        body: "MeshWork serves macOS, iPadOS, and iOS. It should feel like a first-party app while keeping the underlying structure open, portable, and extensible.",
+      },
+    },
+    highlights: {
+      kicker: "Feature Highlights",
+      title: "Documents, discussions, and sync stay connected.",
+      body: "MeshWork features are built around open documents, traceable discussion, and local data boundaries. Documents can be edited, referenced, rendered, and discussed; conclusions return to the knowledge base; Git handles sync and sharing.",
+      editor: {
+        title: "Two-pane and WYSIWYG editing",
+        body: "The editor supports both a two-pane workspace and WYSIWYG writing, keeping Markdown open while making the writing flow close to the final reading experience.",
+        tagOne: "Two-pane",
+        tagTwo: "WYSIWYG",
+      },
+      rendering: {
+        title: "Rich document rendering",
+        body: "The rendering layer supports visual formats such as Mermaid and Graphviz, plus mathematical formulas, so diagrams, flows, relationships, and derivations can live directly inside documents.",
+      },
+      links: {
+        title: "WikiLink file references",
+        body: "Documents can reference other files with WikiLinks and jump between them quickly, turning notes from isolated pages into a navigable knowledge network.",
+      },
+      discussion: {
+        title: "Multi-person and multi-agent discussion",
+        body: "Discussion spaces support ongoing collaboration around the same material, with multiple AI agents joining as participants to question, analyze, and summarize from different angles.",
+      },
+      shell: {
+        title: "Safe tools built for AI",
+        body: "MeshWork provides a virtual Shell inside the native app for document work. It keeps Apple-platform safety boundaries while exposing a tool interface that language models understand well.",
+      },
+      search: {
+        title: "Pinyin-aware search",
+        body: "Search across the product supports Pinyin matching, so Chinese documents, discussions, and knowledge items can be found quickly without constantly switching input methods.",
+      },
+      git: {
+        title: "Git sync with privacy boundaries",
+        body: "All content syncs and shares through Git. Data starts local, private libraries and shared spaces keep clear boundaries, and privacy protection is built on open files plus controlled synchronization.",
       },
     },
     flow: {
       kicker: "Thinking Loop",
       title: "Private knowledge, shared spaces, and discussions form one loop.",
-      body:
-        "A workbench is not a single giant repository. It is a composed view: your private library stays independent, while each shared space owns its public knowledge base, discussions, and Git boundary.",
+      body: "A workbench is not a single giant repository. It is a composed view: your private library stays independent, while each shared space owns its public knowledge base, discussions, and Git boundary.",
       private: "Private library",
       shared: "Shared space",
       discussion: "Discussion",
       git: "Git history",
       privateTitle: "Private first, shared when ready",
-      privateBody: "Keep early material in your own library until it is mature enough to share.",
+      privateBody:
+        "Keep early material in your own library until it is mature enough to share.",
       sharedTitle: "Shared spaces carry team projects",
-      sharedBody: "The public library preserves decisions, the discussion area creates alignment, and private material stays outside the boundary.",
+      sharedBody:
+        "The public library preserves decisions, the discussion area creates alignment, and private material stays outside the boundary.",
       discussionTitle: "Discussions flow back into documents",
-      discussionBody: "AI participates with teammates around source material, then confirmed conclusions become referenceable, versioned knowledge.",
+      discussionBody:
+        "AI participates with teammates around source material, then confirmed conclusions become referenceable, versioned knowledge.",
     },
     experience: {
       kicker: "Creative Workspace",
       title: "Start a discussion like chat. Preserve the result like notes.",
-      body:
-        "MeshWork keeps discussion flow and knowledge space in the same context. Drop document fragments into a topic, let AI participate alongside teammates, then save confirmed conclusions back into notes.",
+      body: "MeshWork keeps discussion flow and knowledge space in the same context. Drop document fragments into a topic, let AI participate alongside teammates, then save confirmed conclusions back into notes.",
+      caption: "Start discussions like chat, preserve conclusions like notes.",
     },
-    gallery: {
-      kicker: "Visual Story",
+    sharing: {
+      kicker: "Git-native Sharing",
+      title: "Share through Git while keeping ownership of your data.",
+      body: "Private libraries and shared spaces keep clear data boundaries. When collaboration is needed, bind the resource to a remote repository; resources of the same type can stay isolated through separate branches.",
+      caption:
+        "Share knowledge through GitHub, Gitee, GitLab, or a self-hosted Git service.",
+    },
+    knowledge: {
+      kicker: "Knowledge Graph",
       title: "AI joins the discussion. Alignment becomes knowledge.",
-      github: "Share through GitHub while keeping ownership of your data.",
-      graph: "Discussions connect into reusable knowledge maps.",
+      body: "Discussions are not disposable chat logs. Conclusions formed by AI and teammates can stay connected to documents, references, and knowledge maps as reusable context for future work.",
+      caption: "Discussions connect into reusable knowledge maps.",
     },
-    closing: {
-      kicker: "GitHub Pages Ready",
-      title: "A static homepage ready for an independent repository.",
-      body:
-        "This page does not need a build tool or backend. Push docs/website as the content of a standalone repository, enable GitHub Pages, and publish.",
-      action: "Open GitHub",
+    comparison: {
+      kicker: "Product Comparison",
+      title: "How MeshWork is different",
+      body: "MeshWork combines the collaboration features of chat apps with the knowledge preservation of note-taking tools, but with a key difference: multi-person collaboration through GitHub with privacy and data always under your control.",
+      chatTitle: "General Chat Apps",
+      chatDesc:
+        "General chat apps like DingTalk and Feishu implement AI features through smart bots in group chats. Bots can participate in discussions, summarize content, and generate documents. However, all data is stored on platform servers, relies on external services, and privacy is controlled by the platform.",
+      notesTitle: "Traditional Note Apps",
+      notesDesc:
+        "Traditional note-taking apps like Obsidian support AI through plugins, but are designed primarily for individual use. Multi-person collaboration is limited, AI cannot participate in team discussions, making them better suited for personal knowledge management rather than team collaboration scenarios.",
+      table: {
+        feature: "Features",
+        chatApps: "Chat Apps",
+        noteApps: "Note Apps",
+        privacy: "Data Privacy",
+        collaboration: "Collaboration",
+        aiDiscussion: "AI in Discussion",
+        dataControl: "Data Control",
+        openSource: "Open Format",
+        platform: "Platform",
+        localFirst: "Local-first ✓",
+        cloudBased: "Cloud-based ✗",
+        gitNative: "Git-native ✓",
+        realtime: "Real-time ✓",
+        limited: "Limited ✗",
+        multiAgent: "Multi-agent ✓",
+        botBased: "Bot-based ○",
+        singleUser: "Single-user ✗",
+        fullControl: "Full control ✓",
+        platformControl: "Platform control ✗",
+        openFormat: "Markdown ✓",
+        closedFormat: "Closed format ✗",
+        appleOnly: "Apple only",
+        crossPlatform: "Cross-platform",
+      },
     },
     footer: {
       note: "Local-first creative workspace for notes, discussions, AI participation, and Git-native sharing.",
@@ -219,10 +358,14 @@ const content = {
       graphPoster: "images/poster_2_en.png",
     },
     alt: {
-      heroPoster: "MeshWork English product poster showing a team discussing with AI around a knowledge graph",
-      workspacePoster: "MeshWork English product poster showing a native macOS discussion and note interface",
-      githubPoster: "MeshWork English product poster showing GitHub-based knowledge sharing",
-      graphPoster: "MeshWork English product poster showing discussions becoming a knowledge graph",
+      heroPoster:
+        "MeshWork English product poster showing a team discussing with AI around a knowledge graph",
+      workspacePoster:
+        "MeshWork English product poster showing a native macOS discussion and note interface",
+      githubPoster:
+        "MeshWork English product poster showing GitHub-based knowledge sharing",
+      graphPoster:
+        "MeshWork English product poster showing discussions becoming a knowledge graph",
     },
   },
 };
@@ -232,17 +375,40 @@ const metaDescription = document.querySelector('meta[name="description"]');
 const langButtons = document.querySelectorAll("[data-lang]");
 const translatableNodes = document.querySelectorAll("[data-i18n]");
 const imageNodes = document.querySelectorAll("[data-image-key]");
-let currentLanguage = localStorage.getItem("meshwork-site-language") || "zh";
+const languageKey = "meshwork-site-language";
+let currentLanguage = browserPreferredLanguage();
 
 function resolvePath(dictionary, path) {
   return path.split(".").reduce((value, key) => value?.[key], dictionary) ?? "";
 }
 
-function setLanguage(language) {
-  const dictionary = content[language] ?? content.zh;
-  currentLanguage = language;
-  localStorage.setItem("meshwork-site-language", language);
-  html.lang = language === "zh" ? "zh-CN" : "en";
+function browserPreferredLanguage() {
+  try {
+    const languages = navigator.languages?.length
+      ? navigator.languages
+      : [navigator.language];
+    return languages.some((language) =>
+      language?.toLowerCase().startsWith("zh"),
+    )
+      ? "zh"
+      : "en";
+  } catch {
+    return "en";
+  }
+}
+
+function normalizedLanguage(language) {
+  return language === "zh" ? "zh" : "en";
+}
+
+function setLanguage(language, options = {}) {
+  const normalized = normalizedLanguage(language);
+  const dictionary = content[normalized];
+  currentLanguage = normalized;
+  if (options.persist) {
+    localStorage.setItem(languageKey, normalized);
+  }
+  html.lang = normalized === "zh" ? "zh-CN" : "en";
   document.title = dictionary.metaTitle;
   metaDescription.setAttribute("content", dictionary.metaDescription);
 
@@ -257,17 +423,31 @@ function setLanguage(language) {
   });
 
   document.querySelectorAll("source[data-src-zh]").forEach((source) => {
-    source.srcset = source.dataset[language === "zh" ? "srcZh" : "srcEn"];
+    source.srcset = source.dataset[normalized === "zh" ? "srcZh" : "srcEn"];
   });
 
   langButtons.forEach((button) => {
-    button.classList.toggle("is-active", button.dataset.lang === language);
-    button.setAttribute("aria-pressed", String(button.dataset.lang === language));
+    button.classList.toggle("is-active", button.dataset.lang === normalized);
+    button.setAttribute(
+      "aria-pressed",
+      String(button.dataset.lang === normalized),
+    );
+  });
+
+  document.querySelectorAll('a[href^="manual.html"]').forEach((link) => {
+    const url = new URL(link.getAttribute("href"), window.location.href);
+    url.searchParams.set("lang", normalized);
+    link.setAttribute(
+      "href",
+      `${url.pathname.split("/").pop()}${url.search}${url.hash}`,
+    );
   });
 }
 
 langButtons.forEach((button) => {
-  button.addEventListener("click", () => setLanguage(button.dataset.lang));
+  button.addEventListener("click", () =>
+    setLanguage(button.dataset.lang, { persist: true }),
+  );
 });
 
 const revealObserver = new IntersectionObserver(
@@ -282,11 +462,15 @@ const revealObserver = new IntersectionObserver(
   { threshold: 0.16 },
 );
 
-document.querySelectorAll("[data-reveal]").forEach((node) => revealObserver.observe(node));
+document
+  .querySelectorAll("[data-reveal]")
+  .forEach((node) => revealObserver.observe(node));
 
 const canvas = document.querySelector(".starfield");
 const context = canvas.getContext("2d");
-const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const reduceMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)",
+).matches;
 let stars = [];
 let animationFrame = 0;
 
@@ -297,14 +481,17 @@ function resizeCanvas() {
   canvas.style.width = `${window.innerWidth}px`;
   canvas.style.height = `${window.innerHeight}px`;
   context.setTransform(ratio, 0, 0, ratio, 0, 0);
-  stars = Array.from({ length: Math.min(150, Math.floor(window.innerWidth / 9)) }, () => ({
-    x: Math.random() * window.innerWidth,
-    y: Math.random() * window.innerHeight,
-    radius: Math.random() * 1.4 + 0.3,
-    speed: Math.random() * 0.24 + 0.04,
-    phase: Math.random() * Math.PI * 2,
-    hue: Math.random() > 0.55 ? "255, 117, 202" : "255, 210, 150",
-  }));
+  stars = Array.from(
+    { length: Math.min(150, Math.floor(window.innerWidth / 9)) },
+    () => ({
+      x: Math.random() * window.innerWidth,
+      y: Math.random() * window.innerHeight,
+      radius: Math.random() * 1.4 + 0.3,
+      speed: Math.random() * 0.24 + 0.04,
+      phase: Math.random() * Math.PI * 2,
+      hue: Math.random() > 0.55 ? "255, 117, 202" : "255, 210, 150",
+    }),
+  );
 }
 
 function drawStars(time = 0) {

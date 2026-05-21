@@ -1,16 +1,18 @@
 <!doctype html>
 <html lang="zh-CN">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="dark">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
     <meta
       name="description"
       content="MeshWork is a local-first creative workspace where notes, discussions, AI, and Git-native sharing become one thinking system."
-    >
+    />
     <title>MeshWork</title>
-    <link rel="preload" as="image" href="images/poster_2_zh.png">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="apple-touch-icon" href="images/favicon.png" />
+    <link rel="preload" as="image" href="images/poster_2_zh.png" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <canvas class="starfield" aria-hidden="true"></canvas>
@@ -22,12 +24,16 @@
       </a>
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="#principles" data-i18n="nav.principles"></a>
+        <a href="#highlights" data-i18n="nav.highlights"></a>
         <a href="#flow" data-i18n="nav.flow"></a>
         <a href="#gallery" data-i18n="nav.gallery"></a>
+        <a href="#comparison" data-i18n="nav.comparison"></a>
         <a href="manual.html" data-i18n="nav.manual"></a>
       </nav>
       <div class="language-switch" aria-label="Language switch">
-        <button type="button" class="lang-button is-active" data-lang="zh">中文</button>
+        <button type="button" class="lang-button is-active" data-lang="zh">
+          中文
+        </button>
         <button type="button" class="lang-button" data-lang="en">EN</button>
       </div>
     </header>
@@ -40,8 +46,16 @@
           <h1 id="hero-title" data-i18n="hero.title"></h1>
           <p class="hero-subtitle" data-i18n="hero.subtitle"></p>
           <div class="hero-actions">
-            <a class="primary-action" href="#principles" data-i18n="hero.primary"></a>
-            <a class="secondary-action" href="manual.html" data-i18n="hero.secondary"></a>
+            <a
+              class="primary-action"
+              href="#principles"
+              data-i18n="hero.primary"
+            ></a>
+            <a
+              class="secondary-action"
+              href="manual.html"
+              data-i18n="hero.secondary"
+            ></a>
           </div>
           <div class="hero-points" aria-label="Product highlights">
             <span data-i18n="hero.pointOne"></span>
@@ -52,7 +66,12 @@
         <div class="hero-visual" aria-hidden="true" data-reveal>
           <div class="graph-shell">
             <div class="graph-aura"></div>
-            <svg class="graph-lines" viewBox="0 0 640 640" role="img" aria-hidden="true">
+            <svg
+              class="graph-lines"
+              viewBox="0 0 640 640"
+              role="img"
+              aria-hidden="true"
+            >
               <defs>
                 <linearGradient id="line-gradient" x1="0" y1="0" x2="1" y2="1">
                   <stop offset="0%" stop-color="#7de8ff" />
@@ -67,17 +86,35 @@
                   </feMerge>
                 </filter>
               </defs>
-              <path class="graph-path path-one" d="M320 320 C220 220 150 188 82 235 C145 314 205 360 320 320 C430 286 480 210 560 146" />
-              <path class="graph-path path-two" d="M320 320 C410 382 485 400 562 486 C438 520 360 460 320 320 C262 438 178 500 86 468" />
-              <path class="graph-path path-three" d="M320 320 C334 212 278 130 205 88 C260 178 382 186 320 320 C228 310 154 374 104 548" />
-              <path class="graph-path path-four" d="M320 320 C398 254 474 298 560 318 C452 350 392 424 320 320" />
+              <path
+                class="graph-path path-one"
+                d="M320 320 C220 220 150 188 82 235 C145 314 205 360 320 320 C430 286 480 210 560 146"
+              />
+              <path
+                class="graph-path path-two"
+                d="M320 320 C410 382 485 400 562 486 C438 520 360 460 320 320 C262 438 178 500 86 468"
+              />
+              <path
+                class="graph-path path-three"
+                d="M320 320 C334 212 278 130 205 88 C260 178 382 186 320 320 C228 310 154 374 104 548"
+              />
+              <path
+                class="graph-path path-four"
+                d="M320 320 C398 254 474 298 560 318 C452 350 392 424 320 320"
+              />
             </svg>
             <span class="graph-node core-node">MeshWork</span>
             <span class="graph-node node-one" data-i18n="graph.private"></span>
-            <span class="graph-node node-two" data-i18n="graph.discussion"></span>
+            <span
+              class="graph-node node-two"
+              data-i18n="graph.discussion"
+            ></span>
             <span class="graph-node node-three" data-i18n="graph.ai"></span>
             <span class="graph-node node-four" data-i18n="graph.git"></span>
-            <span class="graph-node node-five" data-i18n="graph.markdown"></span>
+            <span
+              class="graph-node node-five"
+              data-i18n="graph.markdown"
+            ></span>
             <span class="pulse-dot dot-one"></span>
             <span class="pulse-dot dot-two"></span>
             <span class="pulse-dot dot-three"></span>
@@ -101,7 +138,11 @@
         </div>
       </section>
 
-      <section id="principles" class="principles section-wrap" aria-labelledby="principles-title">
+      <section
+        id="principles"
+        class="principles section-wrap"
+        aria-labelledby="principles-title"
+      >
         <div class="section-heading" data-reveal>
           <span class="section-kicker" data-i18n="principles.kicker"></span>
           <h2 id="principles-title" data-i18n="principles.title"></h2>
@@ -130,6 +171,59 @@
         </div>
       </section>
 
+      <section
+        id="highlights"
+        class="highlights section-wrap"
+        aria-labelledby="highlights-title"
+      >
+        <div class="section-heading" data-reveal>
+          <span class="section-kicker" data-i18n="highlights.kicker"></span>
+          <h2 id="highlights-title" data-i18n="highlights.title"></h2>
+          <p data-i18n="highlights.body"></p>
+        </div>
+        <div class="highlight-grid">
+          <article class="highlight-card highlight-card-large" data-reveal>
+            <span class="card-index">01</span>
+            <h3 data-i18n="highlights.editor.title"></h3>
+            <p data-i18n="highlights.editor.body"></p>
+            <div class="highlight-tags" aria-label="Editor capabilities">
+              <span data-i18n="highlights.editor.tagOne"></span>
+              <span data-i18n="highlights.editor.tagTwo"></span>
+            </div>
+          </article>
+          <article class="highlight-card" data-reveal>
+            <span class="card-index">02</span>
+            <h3 data-i18n="highlights.rendering.title"></h3>
+            <p data-i18n="highlights.rendering.body"></p>
+          </article>
+          <article class="highlight-card" data-reveal>
+            <span class="card-index">03</span>
+            <h3 data-i18n="highlights.links.title"></h3>
+            <p data-i18n="highlights.links.body"></p>
+          </article>
+          <article class="highlight-card highlight-card-wide" data-reveal>
+            <span class="card-index">04</span>
+            <h3 data-i18n="highlights.discussion.title"></h3>
+            <p data-i18n="highlights.discussion.body"></p>
+          </article>
+          <article class="highlight-card" data-reveal>
+            <span class="card-index">05</span>
+            <h3 data-i18n="highlights.shell.title"></h3>
+            <p data-i18n="highlights.shell.body"></p>
+          </article>
+          <article class="highlight-card" data-reveal>
+            <span class="card-index">06</span>
+            <h3 data-i18n="highlights.search.title"></h3>
+            <p data-i18n="highlights.search.body"></p>
+          </article>
+          <article class="highlight-card" data-reveal>
+            <span class="card-index">07</span>
+            <h3 data-i18n="highlights.git.title"></h3>
+            <p data-i18n="highlights.git.body"></p>
+          </article>
+        </div>
+      </section>
+
       <section id="flow" class="flow section-wrap" aria-labelledby="flow-title">
         <div class="section-heading centered" data-reveal>
           <span class="section-kicker" data-i18n="flow.kicker"></span>
@@ -140,9 +234,15 @@
           <div class="orbit" aria-hidden="true">
             <span class="orbit-ring ring-one"></span>
             <span class="orbit-ring ring-two"></span>
-            <span class="orbit-node node-private" data-i18n="flow.private"></span>
+            <span
+              class="orbit-node node-private"
+              data-i18n="flow.private"
+            ></span>
             <span class="orbit-node node-shared" data-i18n="flow.shared"></span>
-            <span class="orbit-node node-discussion" data-i18n="flow.discussion"></span>
+            <span
+              class="orbit-node node-discussion"
+              data-i18n="flow.discussion"
+            ></span>
             <span class="orbit-node node-git" data-i18n="flow.git"></span>
             <span class="orbit-core">MeshWork</span>
           </div>
@@ -163,43 +263,224 @@
         </div>
       </section>
 
-      <section class="experience section-wrap" aria-labelledby="experience-title">
-        <div class="experience-copy" data-reveal>
+      <section
+        id="experience"
+        class="feature-section section-wrap"
+        aria-labelledby="experience-title"
+      >
+        <div class="feature-copy" data-reveal>
           <span class="section-kicker" data-i18n="experience.kicker"></span>
           <h2 id="experience-title" data-i18n="experience.title"></h2>
           <p data-i18n="experience.body"></p>
         </div>
-        <div class="poster-frame" data-reveal>
+        <figure class="poster-frame" data-reveal>
           <picture>
-            <source srcset="images/poster_zh.png" data-src-zh="images/poster_zh.png" data-src-en="images/poster_en.png">
-            <img src="images/poster_zh.png" alt="" data-image-key="workspacePoster">
+            <source
+              srcset="images/poster_zh.png"
+              data-src-zh="images/poster_zh.png"
+              data-src-en="images/poster_en.png"
+            />
+            <img
+              src="images/poster_zh.png"
+              alt=""
+              data-image-key="workspacePoster"
+            />
           </picture>
-        </div>
+          <figcaption data-i18n="experience.caption"></figcaption>
+        </figure>
       </section>
 
-      <section id="gallery" class="gallery section-wrap" aria-labelledby="gallery-title">
-        <div class="section-heading" data-reveal>
-          <span class="section-kicker" data-i18n="gallery.kicker"></span>
-          <h2 id="gallery-title" data-i18n="gallery.title"></h2>
+      <section
+        class="feature-section feature-section-reverse section-wrap"
+        aria-labelledby="sharing-title"
+      >
+        <div class="feature-copy" data-reveal>
+          <span class="section-kicker" data-i18n="sharing.kicker"></span>
+          <h2 id="sharing-title" data-i18n="sharing.title"></h2>
+          <p data-i18n="sharing.body"></p>
         </div>
-        <div class="gallery-grid">
-          <figure class="gallery-item wide" data-reveal>
-            <img src="images/poster_3_zh.png" alt="" data-image-key="githubPoster">
-            <figcaption data-i18n="gallery.github"></figcaption>
-          </figure>
-          <figure class="gallery-item" data-reveal>
-            <img src="images/poster_2_zh.png" alt="" data-image-key="graphPoster">
-            <figcaption data-i18n="gallery.graph"></figcaption>
-          </figure>
-        </div>
+        <figure class="poster-frame" data-reveal>
+          <picture>
+            <source
+              srcset="images/poster_3_zh.png"
+              data-src-zh="images/poster_3_zh.png"
+              data-src-en="images/poster_3_en.png"
+            />
+            <img
+              src="images/poster_3_zh.png"
+              alt=""
+              data-image-key="githubPoster"
+            />
+          </picture>
+          <figcaption data-i18n="sharing.caption"></figcaption>
+        </figure>
       </section>
 
-      <section class="closing section-wrap" data-reveal>
-        <div class="closing-panel">
-          <span class="section-kicker" data-i18n="closing.kicker"></span>
-          <h2 data-i18n="closing.title"></h2>
-          <p data-i18n="closing.body"></p>
-          <a class="primary-action" href="https://github.com/" rel="noreferrer" data-i18n="closing.action"></a>
+      <section
+        id="gallery"
+        class="feature-section section-wrap"
+        aria-labelledby="knowledge-title"
+      >
+        <div class="feature-copy" data-reveal>
+          <span class="section-kicker" data-i18n="knowledge.kicker"></span>
+          <h2 id="knowledge-title" data-i18n="knowledge.title"></h2>
+          <p data-i18n="knowledge.body"></p>
+        </div>
+        <figure class="poster-frame" data-reveal>
+          <picture>
+            <source
+              srcset="images/poster_2_zh.png"
+              data-src-zh="images/poster_2_zh.png"
+              data-src-en="images/poster_2_en.png"
+            />
+            <img
+              src="images/poster_2_zh.png"
+              alt=""
+              data-image-key="graphPoster"
+            />
+          </picture>
+          <figcaption data-i18n="knowledge.caption"></figcaption>
+        </figure>
+      </section>
+
+      <section
+        id="comparison"
+        class="comparison-section section-wrap"
+        aria-labelledby="comparison-title"
+      >
+        <div class="section-heading centered" data-reveal>
+          <span class="section-kicker" data-i18n="comparison.kicker"></span>
+          <h2 id="comparison-title" data-i18n="comparison.title"></h2>
+          <p data-i18n="comparison.body"></p>
+        </div>
+
+        <div class="comparison-descriptions" data-reveal>
+          <div class="competitor-desc">
+            <div class="competitor-icon chat-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 12h8M8 8h8M8 16h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M4 6c0-1.1.9-2 2-2h12c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H8l-4 4v-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 data-i18n="comparison.chatTitle"></h3>
+            <p data-i18n="comparison.chatDesc"></p>
+          </div>
+
+          <div class="competitor-desc">
+            <div class="competitor-icon notes-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4h16v16H4z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M8 8h8M8 12h8M8 16h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 data-i18n="comparison.notesTitle"></h3>
+            <p data-i18n="comparison.notesDesc"></p>
+          </div>
+        </div>
+
+        <div class="comparison-table-wrapper" data-reveal>
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th data-i18n="comparison.table.feature"></th>
+                <th>MeshWork</th>
+                <th data-i18n="comparison.table.chatApps"></th>
+                <th data-i18n="comparison.table.noteApps"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-i18n="comparison.table.privacy"></td>
+                <td
+                  class="cell-positive"
+                  data-i18n="comparison.table.localFirst"
+                ></td>
+                <td
+                  class="cell-negative"
+                  data-i18n="comparison.table.cloudBased"
+                ></td>
+                <td
+                  class="cell-positive"
+                  data-i18n="comparison.table.localFirst"
+                ></td>
+              </tr>
+              <tr>
+                <td data-i18n="comparison.table.collaboration"></td>
+                <td
+                  class="cell-positive"
+                  data-i18n="comparison.table.gitNative"
+                ></td>
+                <td
+                  class="cell-positive"
+                  data-i18n="comparison.table.realtime"
+                ></td>
+                <td
+                  class="cell-negative"
+                  data-i18n="comparison.table.limited"
+                ></td>
+              </tr>
+              <tr>
+                <td data-i18n="comparison.table.aiDiscussion"></td>
+                <td
+                  class="cell-positive"
+                  data-i18n="comparison.table.multiAgent"
+                ></td>
+                <td
+                  class="cell-partial"
+                  data-i18n="comparison.table.botBased"
+                ></td>
+                <td
+                  class="cell-negative"
+                  data-i18n="comparison.table.singleUser"
+                ></td>
+              </tr>
+              <tr>
+                <td data-i18n="comparison.table.dataControl"></td>
+                <td
+                  class="cell-positive"
+                  data-i18n="comparison.table.fullControl"
+                ></td>
+                <td
+                  class="cell-negative"
+                  data-i18n="comparison.table.platformControl"
+                ></td>
+                <td
+                  class="cell-positive"
+                  data-i18n="comparison.table.fullControl"
+                ></td>
+              </tr>
+              <tr>
+                <td data-i18n="comparison.table.openSource"></td>
+                <td
+                  class="cell-positive"
+                  data-i18n="comparison.table.openFormat"
+                ></td>
+                <td
+                  class="cell-negative"
+                  data-i18n="comparison.table.closedFormat"
+                ></td>
+                <td
+                  class="cell-positive"
+                  data-i18n="comparison.table.openFormat"
+                ></td>
+              </tr>
+              <tr>
+                <td data-i18n="comparison.table.platform"></td>
+                <td
+                  class="cell-neutral"
+                  data-i18n="comparison.table.appleOnly"
+                ></td>
+                <td
+                  class="cell-neutral"
+                  data-i18n="comparison.table.crossPlatform"
+                ></td>
+                <td
+                  class="cell-neutral"
+                  data-i18n="comparison.table.crossPlatform"
+                ></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </section>
     </main>
