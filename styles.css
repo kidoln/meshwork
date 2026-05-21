@@ -1557,3 +1557,39 @@ html[lang="zh-CN"] .feature-copy h2 {
     font-size: 12px;
   }
 }
+
+/* China-friendly feature highlight */
+.china-feature {
+  border-color: rgba(255, 62, 62, 0.3) !important;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 62, 62, 0.12),
+      rgba(255, 62, 62, 0.04)
+    ),
+    rgba(21, 14, 42, 0.56) !important;
+}
+
+.china-feature::before {
+  background:
+    radial-gradient(
+      circle at 18% 18%,
+      rgba(255, 62, 62, 0.18),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 84% 82%,
+      rgba(255, 126, 88, 0.16),
+      transparent 34%
+    ) !important;
+}
+
+.china-feature::after {
+  background: linear-gradient(90deg, #ff3e3e, #ff7e58, #ffb15d) !important;
+}
+
+.china-feature .highlight-tags span {
+  border-color: rgba(255, 62, 62, 0.25);
+  background: rgba(255, 62, 62, 0.1);
+  color: #ffb5b5;
+}

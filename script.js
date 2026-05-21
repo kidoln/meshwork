@@ -92,6 +92,13 @@ const content = {
         title: "Git 同步与隐私边界",
         body: "所有内容通过 Git 同步和共享。数据首先保存在本地，私有知识库和共享空间保持清晰边界，隐私保护建立在开放文件和可控同步之上。",
       },
+      proxy: {
+        title: "中国大陆用户友好",
+        body: "AI 接口、网络搜索和 Git 访问均支持独立代理配置。灵活选择是否通过代理访问海外服务，确保网络环境的稳定与便捷。",
+        tagOne: "AI 代理",
+        tagTwo: "搜索代理",
+        tagThree: "Git 代理",
+      },
     },
     flow: {
       kicker: "Thinking Loop",
@@ -274,6 +281,13 @@ const content = {
       git: {
         title: "Git sync with privacy boundaries",
         body: "All content syncs and shares through Git. Data starts local, private libraries and shared spaces keep clear boundaries, and privacy protection is built on open files plus controlled synchronization.",
+      },
+      proxy: {
+        title: "Friendly for users in mainland China",
+        body: "AI APIs, web search, and Git access all support independent proxy configuration. Choose flexibly whether to use proxies for overseas services, ensuring stable and convenient network access.",
+        tagOne: "AI Proxy",
+        tagTwo: "Search Proxy",
+        tagThree: "Git Proxy",
       },
     },
     flow: {
