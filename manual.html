@@ -3,273 +3,171 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta
-      name="description"
-      content="MeshWork 操作手册：了解私有知识库、共享空间、讨论区、AI 协作和 Git 共享的基本使用方式。"
-    >
+    <meta name="description" content="MeshWork 操作手册：系统设置、私有知识库、共享空间完整使用指南。">
     <title>MeshWork 操作手册</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="apple-touch-icon" href="images/favicon.png">
-    <link rel="stylesheet" href="manual.css">
-    <script src="manual.js" defer></script>
+    <link rel="stylesheet" href="manual-book.css">
   </head>
   <body>
-    <header class="manual-header">
-      <a class="manual-brand" href="index.html">
+    <header class="manual-book-header">
+      <a class="manual-book-brand" href="index.html">
         <span>∞</span>
         <strong>MeshWork</strong>
       </a>
-      <nav>
-        <a href="#start" data-i18n="nav.start">快速开始</a>
-        <a href="#library" data-i18n="nav.library">知识库</a>
-        <a href="#discussion" data-i18n="nav.discussion">讨论</a>
-        <a href="#commands" data-i18n="nav.commands">对话命令</a>
-        <a href="#sharing" data-i18n="nav.sharing">共享</a>
+      <nav class="manual-book-nav">
+        <span>操作手册</span>
       </nav>
-      <div class="language-switch" aria-label="Language switch">
-        <button type="button" class="lang-button is-active" data-lang="zh">中文</button>
-        <button type="button" class="lang-button" data-lang="en">EN</button>
-      </div>
+      <a class="manual-book-home" href="index.html">返回首页</a>
     </header>
 
-    <main>
-      <section class="manual-hero">
-        <p class="manual-kicker" data-i18n="hero.kicker">User Manual</p>
-        <h1 data-i18n="hero.title">MeshWork 操作手册</h1>
-        <p data-i18n="hero.body">
-          MeshWork 是围绕笔记、讨论、AI 与 Git 共享构建的创作工作台。它的使用方式不是先创建一个大型在线团队空间，
-          而是先建立自己的私有知识库，再按需加入共享空间，与团队和 AI 一起把讨论沉淀为长期知识。
-        </p>
-      </section>
-
-      <section id="start" class="manual-section">
-        <aside>
-          <span>01</span>
-          <h2 data-i18n="start.title">快速开始</h2>
-        </aside>
-        <div class="manual-content">
-          <h3 data-i18n="start.heading">首次打开应用</h3>
-          <ol>
-            <li data-i18n="start.stepOne">选择或创建一个私有知识库。这里存放你自己的长期笔记、草稿、资料和未公开想法。</li>
-            <li data-i18n="start.stepTwo">进入主工作台。默认会先打开私有知识库，因为它是最稳定的个人入口。</li>
-            <li data-i18n="start.stepThree">需要团队协作时，再创建或导入共享空间。共享空间可以稍后再配置 Git。</li>
-          </ol>
-          <div class="tip" data-i18n="start.tip">
-            不需要一开始就配置远程仓库。MeshWork 的设计原则是先让你开始写作和整理，再逐步打开共享能力。
-          </div>
-        </div>
-      </section>
-
-      <section id="library" class="manual-section">
-        <aside>
-          <span>02</span>
-          <h2 data-i18n="library.title">私有知识库与共享空间</h2>
-        </aside>
-        <div class="manual-content two-column">
-          <article>
-            <h3 data-i18n="library.privateTitle">私有知识库</h3>
-            <p data-i18n="library.privateBody">
-              私有知识库属于当前用户自己，不从属于任何团队或项目。适合保存个人笔记、研究资料、写作草稿、灵感片段和不应自动进入团队共享的内容。
-            </p>
-            <ul>
-              <li data-i18n="library.privatePointOne">默认长期存在</li>
-              <li data-i18n="library.privatePointTwo">可以不启用远程 Git</li>
-              <li data-i18n="library.privatePointThree">可作为多个共享空间的私有参考素材</li>
+    <div class="manual-book-layout">
+      <aside class="manual-book-sidebar">
+        <nav class="manual-book-toc">
+          <div class="toc-section">
+            <span class="toc-part">第一部分</span>
+            <a href="manual-book-01.html" class="toc-title">系统设置与初始配置</a>
+            <ul class="toc-list">
+              <li><a href="manual-book-01.html#1-1">1.1 首次启动</a></li>
+              <li><a href="manual-book-01.html#1-2">1.2 工作台管理</a></li>
+              <li><a href="manual-book-01.html#1-3">1.3 应用设置</a></li>
+              <li><a href="manual-book-01.html#1-4">1.4 Git 基础配置</a></li>
+              <li><a href="manual-book-01.html#1-5">1.5 GitHub 账号与仓库配置</a></li>
             </ul>
-          </article>
-          <article>
-            <h3 data-i18n="library.sharedTitle">共享空间</h3>
-            <p data-i18n="library.sharedBody">
-              共享空间是团队或项目的数据边界。每个共享空间包含公共知识库、讨论区和共享附件，也可以拥有自己的 Git 历史。
-            </p>
-            <ul>
-              <li data-i18n="library.sharedPointOne">公共知识库沉淀团队文档</li>
-              <li data-i18n="library.sharedPointTwo">讨论区围绕材料进行异步协作</li>
-              <li data-i18n="library.sharedPointThree">每个共享空间独立配置同步边界</li>
+          </div>
+
+          <div class="toc-section">
+            <span class="toc-part">第二部分</span>
+            <a href="manual-book-02.html" class="toc-title">私有知识库</a>
+            <ul class="toc-list">
+              <li><a href="manual-book-02.html#2-1">2.1 私有知识库概述</a></li>
+              <li><a href="manual-book-02.html#2-2">2.2 文档编辑</a></li>
+              <li><a href="manual-book-02.html#2-3">2.3 右侧边栏 AI 辅助</a></li>
+              <li><a href="manual-book-02.html#2-4">2.4 文档组织</a></li>
+              <li><a href="manual-book-02.html#2-5">2.5 私有知识库的 Git 共享</a></li>
             </ul>
-          </article>
-        </div>
-      </section>
-
-      <section id="discussion" class="manual-section">
-        <aside>
-          <span>03</span>
-          <h2 data-i18n="discussion.title">讨论与 AI 协作</h2>
-        </aside>
-        <div class="manual-content">
-          <h3 data-i18n="discussion.heading">从材料发起讨论</h3>
-          <p data-i18n="discussion.body">
-            你可以围绕一个文档、一个片段或一个主题创建讨论。讨论更接近论坛或邮件列表的节奏，适合深度思考，而不是追求即时聊天的速度。
-          </p>
-          <div class="steps">
-            <div><strong data-i18n="discussion.stepOneTitle">提出问题</strong><span data-i18n="discussion.stepOneBody">把待讨论的材料、背景和目标放进话题。</span></div>
-            <div><strong data-i18n="discussion.stepTwoTitle">邀请 AI</strong><span data-i18n="discussion.stepTwoBody">让 AI 总结、补充视角、分析分歧或提出下一步。</span></div>
-            <div><strong data-i18n="discussion.stepThreeTitle">沉淀结论</strong><span data-i18n="discussion.stepThreeBody">把确认后的共识保存回公共知识库或个人笔记。</span></div>
-          </div>
-          <p data-i18n="discussion.aiBoundary">
-            AI 在 MeshWork 中是参与者，而不是自动替代创作者的主体。它可以提出建议，但不会未经确认直接修改你的文档。
-          </p>
-          <div class="tip" data-i18n="discussion.tip">
-            操作细节：当你在讨论中 @ 一个智能体并让它回答后，接下来的两分钟内，你继续发送的消息不需要再次 @ 它。这个智能体会自动跟进并回复，适合连续追问、补充背景或要求它展开上一轮回答。
-          </div>
-        </div>
-      </section>
-
-      <section id="commands" class="manual-section">
-        <aside>
-          <span>04</span>
-          <h2 data-i18n="commands.title">智能对话命令系统</h2>
-        </aside>
-        <div class="manual-content">
-          <h3 data-i18n="commands.heading">三种对话增强命令</h3>
-          <p data-i18n="commands.body">
-            MeshWork 的讨论区支持三类预定义命令，让对话更高效、与知识库连接更紧密。
-          </p>
-
-          <div class="command-block">
-            <h4 data-i18n="commands.atTitle">@ 提及命令</h4>
-            <p data-i18n="commands.atBody">
-              使用 @ 符号可以提及智能体或其他对话参与者，让他们参与到当前对话中。
-            </p>
-            <div class="command-examples">
-              <div class="example-item">
-                <code>@claude</code>
-                <span data-i18n="commands.atExampleOne">邀请 Claude 智能体参与对话</span>
-              </div>
-              <div class="example-item">
-                <code>@张三</code>
-                <span data-i18n="commands.atExampleTwo">提及团队成员张三</span>
-              </div>
-            </div>
-            <div class="tip" data-i18n="commands.atTip">
-              提及智能体后，两分钟内的后续消息会自动发送给该智能体，无需重复 @。
-            </div>
           </div>
 
-          <div class="command-block">
-            <h4 data-i18n="commands.hashTitle"># 文件引用</h4>
-            <p data-i18n="commands.hashBody">
-              使用 # 符号可以直接引用知识库中的文档内容，让 AI 能够基于具体材料进行分析和讨论。
-            </p>
-            <div class="command-examples">
-              <div class="example-item">
-                <code>#产品设计</code>
-                <span data-i18n="commands.hashExampleOne">引用"产品设计"文档</span>
-              </div>
-              <div class="example-item">
-                <code>#会议记录/2024-01</code>
-                <span data-i18n="commands.hashExampleTwo">引用子目录中的文档</span>
-              </div>
-            </div>
-            <div class="tip" data-i18n="commands.hashTip">
-              引用文件时，支持自动补全。输入 # 后会弹出匹配的文件列表供选择。
-            </div>
+          <div class="toc-section">
+            <span class="toc-part">第三部分</span>
+            <a href="manual-book-03.html" class="toc-title">共享空间</a>
+            <ul class="toc-list">
+              <li><a href="manual-book-03.html#3-1">3.1 共享空间概述</a></li>
+              <li><a href="manual-book-03.html#3-2">3.2 创建共享空间</a></li>
+              <li><a href="manual-book-03.html#3-3">3.3 加入共享空间</a></li>
+              <li><a href="manual-book-03.html#3-4">3.4 分享共享空间</a></li>
+              <li><a href="manual-book-03.html#3-5">3.5 公共知识库协作</a></li>
+              <li><a href="manual-book-03.html#3-6">3.6 讨论区使用</a></li>
+              <li><a href="manual-book-03.html#3-7">3.7 共享空间的 Git 配置</a></li>
+              <li><a href="manual-book-03.html#3-8">3.8 小团队合作场景示例</a></li>
+            </ul>
           </div>
 
-          <div class="command-block">
-            <h4 data-i18n="commands.slashTitle">/ 自定义命令</h4>
-            <p data-i18n="commands.slashBody">
-              使用 / 符号触发预定义的自定义命令，快速执行常见操作或调用特定功能。
-            </p>
-            <div class="command-examples">
-              <div class="example-item">
-                <code>/summarize</code>
-                <span data-i18n="commands.slashExampleOne">总结当前讨论内容</span>
-              </div>
-              <div class="example-item">
-                <code>/action</code>
-                <span data-i18n="commands.slashExampleTwo">提取待办事项</span>
-              </div>
-              <div class="example-item">
-                <code>/template</code>
-                <span data-i18n="commands.slashExampleThree">使用预设模板回复</span>
-              </div>
-            </div>
-            <div class="tip" data-i18n="commands.slashTip">
-              自定义命令可以在设置中配置，创建符合团队工作流程的快捷操作。
-            </div>
+          <div class="toc-section">
+            <span class="toc-part">附录</span>
+            <a href="manual-book-appendix.html" class="toc-title">附录</a>
+            <ul class="toc-list">
+              <li><a href="manual-book-appendix.html#a">A. 常见问题</a></li>
+              <li><a href="manual-book-appendix.html#b">B. 快捷键参考</a></li>
+              <li><a href="manual-book-appendix.html#c">C. 术语表</a></li>
+            </ul>
+          </div>
+        </nav>
+      </aside>
+
+      <main class="manual-book-main">
+        <section class="manual-book-intro">
+          <h1>MeshWork 操作手册</h1>
+          <p class="manual-book-subtitle">
+            MeshWork 是围绕笔记、讨论、AI 与 Git 共享构建的创作工作台。
+            本手册将帮助你系统性地了解 MeshWork 的使用方式。
+          </p>
+
+          <div class="manual-book-summary">
+            <h2>手册内容概览</h2>
+
+            <article class="summary-card">
+              <span class="summary-number">01</span>
+              <h3>系统设置与初始配置</h3>
+              <p>了解 MeshWork 的核心概念，完成首次启动配置，设置应用偏好，配置 Git 环境，并学习如何创建和管理 GitHub 仓库。</p>
+              <ul>
+                <li>工作台、私有知识库与共享空间的关系</li>
+                <li>智能体配置与文档助手设置</li>
+                <li>Git 身份信息与 SSH 密钥配置</li>
+                <li>GitHub 仓库创建、共享与认证</li>
+              </ul>
+              <a href="manual-book-01.html" class="summary-link">开始阅读 →</a>
+            </article>
+
+            <article class="summary-card">
+              <span class="summary-number">02</span>
+              <h3>私有知识库</h3>
+              <p>私有知识库是你个人的长期知识沉淀区。学习如何编辑文档、使用 AI 辅助、组织内容，以及可选的 Git 共享配置。</p>
+              <ul>
+                <li>文档编辑基础与 Markdown 格式</li>
+                <li>右侧边栏 AI 助手的完整使用指南</li>
+                <li>@ 提及、# 引用、/ 命令详解</li>
+                <li>文档组织与搜索</li>
+              </ul>
+              <a href="manual-book-02.html" class="summary-link">开始阅读 →</a>
+            </article>
+
+            <article class="summary-card">
+              <span class="summary-number">03</span>
+              <h3>共享空间</h3>
+              <p>共享空间是团队协作的数据边界。了解如何创建和加入共享空间，使用公共知识库和讨论区，并通过 Git 实现团队共享。</p>
+              <ul>
+                <li>创建、加入、分享共享空间</li>
+                <li>公共知识库协作编辑</li>
+                <li>讨论区的话题管理与 AI 协作</li>
+                <li>小团队合作实战场景</li>
+              </ul>
+              <a href="manual-book-03.html" class="summary-link">开始阅读 →</a>
+            </article>
           </div>
 
-          <h3 data-i18n="commands.comboHeading">组合使用技巧</h3>
-          <p data-i18n="commands.comboBody">
-            三种命令可以组合使用，创建更丰富的对话场景：
-          </p>
-          <ul>
-            <li data-i18n="commands.comboPointOne">@claude 请分析 #产品需求 文档中的技术可行性</li>
-            <li data-i18n="commands.comboPointTwo">@产品经理 #设计稿 #原型 基于 #竞品分析 给出建议</li>
-            <li data-i18n="commands.comboPointThree">/summarize 并 @全体成员 确认下一步行动计划</li>
-          </ul>
-        </div>
-      </section>
+          <div class="manual-book-concepts">
+            <h2>核心概念</h2>
+            <dl>
+              <dt>
+                <span class="concept-icon">∞</span>
+                工作台
+              </dt>
+              <dd>工作台是用户进入产品后看到的主使用环境，负责组合私有知识库和多个共享空间。它是一个产品和交互层概念，不是固定磁盘目录，也不是 Git 仓库。</dd>
 
-      <section id="sharing" class="manual-section">
-        <aside>
-          <span>04</span>
-          <h2 data-i18n="sharing.title">Git 与 GitHub 共享</h2>
-        </aside>
-        <div class="manual-content">
-          <h3 data-i18n="sharing.heading">把 Git 当成隐藏的可靠底座</h3>
-          <p data-i18n="sharing.body">
-            MeshWork 使用 Git 承载版本历史、修改追踪、协作共享和恢复能力。你不需要在日常使用中理解 commit、branch、merge 等概念。
-          </p>
-          <ol>
-            <li data-i18n="sharing.pointOne">个人内容保存在私有知识库自己的边界内。</li>
-            <li data-i18n="sharing.pointTwo">团队内容保存在对应共享空间自己的边界内。</li>
-            <li data-i18n="sharing.pointThree">如果需要通过 GitHub 分享，再为对应资源配置远程仓库。</li>
-            <li data-i18n="sharing.pointFour">共享前确认哪些内容进入公共知识库，哪些仍留在私有知识库。</li>
-          </ol>
-          <h3 data-i18n="sharing.branchHeading">用远端分支区分不同知识库</h3>
-          <p data-i18n="sharing.branchBody">
-            MeshWork 允许同类资源共用同一个远端仓库，但不会把多个知识库写进同一条历史线。每个私有知识库或共享空间都会绑定到这个远端仓库中的一个独立分支，用分支来隔离不同知识库的数据。
-          </p>
-          <div class="branch-model">
-            <div>
-              <strong data-i18n="sharing.branchOneTitle">同类资源可以共用远端</strong>
-              <span data-i18n="sharing.branchOneBody">多个私有知识库可以使用同一个远端仓库，多个共享空间也可以使用同一个远端仓库，只要它们使用不同分支。</span>
-            </div>
-            <div>
-              <strong data-i18n="sharing.branchTwoTitle">每个资源对应一个分支</strong>
-              <span data-i18n="sharing.branchTwoBody">分支留空时，MeshWork 会根据资源类型、名称和 ID 自动生成分支名，避免不同知识库互相覆盖。</span>
-            </div>
-            <div>
-              <strong data-i18n="sharing.branchThreeTitle">不同类型资源不混用</strong>
-              <span data-i18n="sharing.branchThreeBody">一个远端仓库如果已经被私有知识库使用，就不会再作为共享空间的绑定目标；反过来也一样。</span>
-            </div>
-          </div>
-          <p data-i18n="sharing.branchSummary">
-            这意味着你可以把一个远端仓库理解成“某一类知识库的远端容器”，而具体的知识库由分支区分。同步时，MeshWork 只会拉取和推送当前资源绑定的那个分支。
-          </p>
-          <div class="tip" data-i18n="sharing.tip">
-            工作台本身不是 Git 仓库。Git 只绑定真实数据边界：私有知识库，或某一个共享空间。远端仓库负责承载这些边界，分支负责区分同类资源下的不同知识库。
-          </div>
-        </div>
-      </section>
+              <dt>
+                <span class="concept-icon">📁</span>
+                私有知识库
+              </dt>
+              <dd>属于当前用户自己的数据边界，存放个人长期知识、不应自动进入团队共享的内容。它独立存在，不从属于任何共享空间。</dd>
 
-      <section class="manual-section">
-        <aside>
-          <span>05</span>
-          <h2 data-i18n="workflow.title">推荐工作流</h2>
-        </aside>
-        <div class="manual-content">
-          <div class="workflow">
-            <span data-i18n="workflow.stepOne">收集资料</span>
-            <span data-i18n="workflow.stepTwo">整理笔记</span>
-            <span data-i18n="workflow.stepThree">发起讨论</span>
-            <span data-i18n="workflow.stepFour">AI 辅助分析</span>
-            <span data-i18n="workflow.stepFive">确认结论</span>
-            <span data-i18n="workflow.stepSix">沉淀为文档</span>
-          </div>
-          <p data-i18n="workflow.body">
-            对个人创作者来说，MeshWork 可以作为长期知识库和写作工作室。对小团队来说，它更适合产品策划、内容创作、研究讨论、世界观设定和项目复盘。
-          </p>
-        </div>
-      </section>
-    </main>
+              <dt>
+                <span class="concept-icon">👥</span>
+                共享空间
+              </dt>
+              <dd>团队或项目级的数据边界。每个共享空间包含公共知识库、讨论区、共享附件，并可选拥有自己的 Git 历史。</dd>
 
-    <footer class="manual-footer">
-      <a href="index.html" data-i18n="footer.home">返回首页</a>
-      <span>MeshWork · Local-first creative workspace</span>
-      <a href="privacy.html" data-i18n="footer.privacy">隐私政策</a>
+              <dt>
+                <span class="concept-icon">💬</span>
+                讨论区
+              </dt>
+              <dd>共享空间内的异步讨论空间，支持话题管理、@ 提及、# 文档引用、/ 命令，以及 AI 智能体协作。</dd>
+
+              <dt>
+                <span class="concept-icon">🤖</span>
+                AI 智能体
+              </dt>
+              <dd>MeshWork 中的 AI 是参与者而非自动替代者。它可以提出建议，但不会未经确认直接修改你的文档。</dd>
+            </dl>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="manual-book-footer">
+      <span>MeshWork 操作手册</span>
+      <span>Local-first creative workspace</span>
+      <a href="privacy.html">隐私政策</a>
     </footer>
   </body>
 </html>

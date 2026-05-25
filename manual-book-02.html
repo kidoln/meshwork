@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="MeshWork 私有知识库使用指南：文档编辑、右侧边栏 AI 辅助、文档组织和 Git 共享配置。">
+    <title>私有知识库 - MeshWork 操作手册</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+    <link rel="stylesheet" href="manual-book.css">
+  </head>
+  <body>
+    <header class="manual-book-header">
+      <a class="manual-book-brand" href="index.html">
+        <span>∞</span>
+        <strong>MeshWork</strong>
+      </a>
+      <nav class="manual-book-nav">
+        <span>操作手册：私有知识库</span>
+      </nav>
+      <a class="manual-book-home" href="manual.html">返回目录</a>
+    </header>
+
+    <div class="manual-book-layout">
+      <aside class="manual-book-sidebar">
+        <nav class="manual-book-toc">
+          <div class="toc-section">
+            <span class="toc-part">第一部分</span>
+            <a href="manual-book-01.html" class="toc-title">系统设置与初始配置</a>
+          </div>
+
+          <div class="toc-section">
+            <span class="toc-part">第二部分</span>
+            <a href="manual-book-02.html" class="toc-title active">私有知识库</a>
+            <ul class="toc-list">
+              <li><a href="#2-1">2.1 私有知识库概述</a></li>
+              <li><a href="#2-2">2.2 文档编辑</a></li>
+              <li><a href="#2-3">2.3 右侧边栏 AI 辅助</a></li>
+              <li><a href="#2-4">2.4 文档组织</a></li>
+              <li><a href="#2-5">2.5 私有知识库的 Git 共享</a></li>
+            </ul>
+          </div>
+
+          <div class="toc-section">
+            <span class="toc-part">第三部分</span>
+            <a href="manual-book-03.html" class="toc-title">共享空间</a>
+          </div>
+
+          <div class="toc-section">
+            <span class="toc-part">附录</span>
+            <a href="manual-book-appendix.html" class="toc-title">附录</a>
+          </div>
+        </nav>
+      </aside>
+
+      <main class="manual-book-main">
+        <article class="manual-book-content">
+          <h1>私有知识库</h1>
+          <p class="subtitle">私有知识库是你个人的长期知识沉淀区。学习如何高效地编辑文档、使用 AI 辅助、组织内容，以及可选的 Git 共享配置。</p>
+
+          <nav class="manual-book-toc-mini">
+            <strong>本章目录</strong>
+            <ol>
+              <li><a href="#2-1">私有知识库概述</a></li>
+              <li><a href="#2-2">文档编辑</a></li>
+              <li><a href="#2-3">右侧边栏 AI 辅助</a></li>
+              <li><a href="#2-4">文档组织</a></li>
+              <li><a href="#2-5">私有知识库的 Git 共享</a></li>
+            </ol>
+          </nav>
+
+          <h2 id="2-1">2.1 私有知识库概述</h2>
+
+          <h3>什么是私有知识库</h3>
+
+          <p>私有知识库是 MeshWork 中属于当前用户自己的数据边界。它是你个人的主知识沉淀区，用于存放：</p>
+
+          <ul>
+            <li>个人长期笔记和知识积累</li>
+            <li>研究资料和学习笔记</li>
+            <li>写作草稿和灵感片段</li>
+            <li>不应自动进入团队共享的内容</li>
+            <li>为多个共享空间提供的私有参考素材</li>
+          </ul>
+
+          <h3>关键特性</h3>
+
+          <p>私有知识库具有以下特性：</p>
+
+          <ul>
+            <li><strong>独立性</strong>：它独立存在，不从属于任何共享空间。不因为加入或退出某个共享空间而迁移。</li>
+            <li><strong>持久性</strong>：默认长期存在，作为你的主私有沉淀区。</li>
+            <li><strong>Git 可选</strong>：可以完全本地使用，也可以后续配置远程仓库进行备份。</li>
+            <li><strong>素材库</strong>：可以作为多个共享空间的私有参考素材来源。</li>
+          </ul>
+
+          <h3>与共享空间的关系</h3>
+
+          <p>私有知识库和共享空间是两个独立的数据边界：</p>
+
+          <ul>
+            <li>私有知识库存放你不希望自动进入团队共享的内容。</li>
+            <li>共享空间存放需要与团队协作的内容。</li>
+            <li>你可以从私有知识库引用内容到共享空间，但需要显式操作。</li>
+            <li>两者可以各自独立配置 Git，互不影响。</li>
+          </ul>
+
+          <div class="info-block">
+            <strong>设计理念</strong>
+            <p>MeshWork 的设计原则是先让你建立私有知识库，开始个人写作和整理，再按需加入共享空间。这样可以保持个人内容的私密性，同时为团队协作提供素材基础。</p>
+          </div>
+
+          <h3>目录结构</h3>
+
+          <p>私有知识库在磁盘上的建议目录结构：</p>
+
+          <pre><code>&lt;private-library&gt;/
+├── .meshwork/          # MeshWork 配置和元数据
+├── private-knowledge/  # 你的文档和笔记
+└── assets/             # 附件和媒体文件</code></pre>
+
+          <div class="tip-block">
+            <strong>提示</strong>
+            <p>私有知识库的目录结构由 MeshWork 管理，你不需要手动操作这些目录。所有操作都可以在应用界面中完成。</p>
+          </div>
+
+          <h2 id="2-2">2.2 文档编辑</h2>
+
+          <h3>创建新文档</h3>
+
+          <p>在私有知识库中创建新文档：</p>
+
+          <ol>
+            <li>在侧边栏中选中私有知识库或其中的某个目录。</li>
+            <li>点击工具栏中的"新建文档"按钮，或使用快捷键 <code>Command+N</code>。</li>
+            <li>输入文档标题，按 Enter 确认。</li>
+            <li>文档会在主内容区打开，你可以开始编辑。</li>
+          </ol>
+
+          <h3>文档格式基础</h3>
+
+          <p>MeshWork 使用 Markdown 作为文档格式。Markdown 是一种轻量级标记语言，易于阅读和编写：</p>
+
+          <h4>标题</h4>
+          <pre><code># 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题</code></pre>
+
+          <h4>文本格式</h4>
+          <pre><code>*斜体文本*
+**粗体文本**
+***粗斜体文本***
+~~删除线~~</code></pre>
+
+          <h4>列表</h4>
+          <pre><code>- 无序列表项 1
+- 无序列表项 2
+  - 嵌套列表项
+
+1. 有序列表项 1
+2. 有序列表项 2</code></pre>
+
+          <h4>链接和图片</h4>
+          <pre><code>[链接文本](https://example.com)
+![图片描述](images/photo.png)</code></pre>
+
+          <h4>代码</h4>
+          <pre><code>`行内代码`
+
+```
+代码块
+```</code></pre>
+
+          <h4>引用</h4>
+          <pre><code>> 引用文本</code></pre>
+
+          <h3>编辑器工具栏使用</h3>
+
+          <p>编辑器顶部有局部工具栏，提供常用的格式化操作：</p>
+
+          <ul>
+            <li><strong>标题下拉菜单</strong>：设置当前行或选中文本的标题级别。</li>
+            <li><strong>粗体/斜体</strong>：快速切换文本格式。</li>
+            <li><strong>列表</strong>：插入无序列表或有序列表。</li>
+            <li><strong>代码块</strong>：插入代码块。</li>
+            <li><strong>引用</strong>：插入引用块。</li>
+            <li><strong>链接/图片</strong>：插入链接或图片。</li>
+          </ul>
+
+          <div class="info-block">
+            <strong>快捷键</strong>
+            <p>大多数格式化操作都有快捷键，如 <code>Command+B</code> 粗体、<code>Command+I</code> 斜体。使用快捷键可以大大提高编辑效率。</p>
+          </div>
+
+          <h3>插入图片、附件与链接</h3>
+
+          <h4>插入图片</h4>
+
+          <ol>
+            <li>将图片文件拖放到编辑器中，或点击工具栏的图片按钮。</li>
+            <li>图片会被复制到私有知识库的 assets 目录。</li>
+            <li>编辑器会自动插入正确的 Markdown 图片语法。</li>
+          </ol>
+
+          <h4>插入附件</h4>
+
+          <ol>
+            <li>将文件拖放到文档中。</li>
+            <li>文件会被复制到 assets 目录。</li>
+            <li>文档中会插入一个文件链接。</li>
+          </ol>
+
+          <h4>插入文档链接</h4>
+
+          <ol>
+            <li>在侧边栏中右键点击要链接的文档。</li>
+            <li>选择"复制文档链接"。</li>
+            <li>在编辑器中粘贴，会自动插入 <code>[文档标题](文档路径)</code> 格式的链接。</li>
+          </ol>
+
+          <h3>文档保存与版本历史</h3>
+
+          <p>MeshWork 会自动保存你的编辑内容：</p>
+
+          <ul>
+            <li>每次编辑会自动保存，无需手动保存。</li>
+            <li>如果启用了 Git，每次保存会生成一个新的提交记录。</li>
+            <li>你可以通过版本历史查看和恢复以前的版本。</li>
+          </ul>
+
+          <div class="warning-block">
+            <strong>注意事项</strong>
+            <p>自动保存意味着你的所有修改都会被记录。如果不想保留某些修改，请在关闭文档前撤销或删除相应内容。</p>
+          </div>
+
+          <h2 id="2-3">2.3 右侧边栏 AI 辅助</h2>
+
+          <h3>打开/关闭 AI 助手面板</h3>
+
+          <p>右侧边栏的 AI 助手可以为你提供智能辅助：</p>
+
+          <ol>
+            <li>在编辑文档时，点击工具栏的 AI 助手按钮，或使用快捷键 <code>Command+Shift+A</code>。</li>
+            <li>右侧边栏会滑出 AI 助手面板。</li>
+            <li>再次点击按钮或使用快捷键可以关闭面板。</li>
+          </ol>
+
+          <h3>基础对话操作</h3>
+
+          <p>在 AI 助手面板中，你可以：</p>
+
+          <ul>
+            <li><strong>发送消息</strong>：在输入框中输入问题或指令，按 Enter 发送。</li>
+            <li><strong>查看回复</strong>：AI 的回复会显示在对话历史中。</li>
+            <li><strong>继续对话</strong>：在 AI 回复后继续输入，保持上下文连续性。</li>
+            <li><strong>清空对话</strong>：点击面板顶部的清空按钮，重新开始对话。</li>
+          </ul>
+
+          <h3>使用 @ 提及智能体</h3>
+
+          <p>你可以使用 <code>@</code> 符号提及特定的 AI 智能体：</p>
+
+          <ol>
+            <li>在输入框中输入 <code>@</code> 符号。</li>
+            <li>系统会显示可用的智能体列表，如 <code>@claude</code>、<code>@gpt4</code> 等。</li>
+            <li>选择你想要的智能体，或继续输入智能体名称。</li>
+            <li>输入你的问题或指令。</li>
+            <li>发送后，指定的智能体会回复你的消息。</li>
+          </ol>
+
+          <div class="info-block">
+            <strong>自动会话窗口</strong>
+            <p>提及智能体后，在接下来的两分钟内（可在设置中调整），你继续发送的消息不需要再次 @。系统会自动将这些消息发送给该智能体，适合连续追问或补充背景信息。</p>
+          </div>
+
+          <h3>使用 # 引用文档内容</h3>
+
+          <p>你可以使用 <code>#</code> 符号引用私有知识库中的文档，让 AI 基于具体内容进行分析：</p>
+
+          <ol>
+            <li>在输入框中输入 <code>#</code> 符号。</li>
+            <li>系统会显示私有知识库中的文档列表，支持搜索和过滤。</li>
+            <li>选择要引用的文档。</li>
+            <li>输入你的问题或指令。</li>
+            <li>AI 会基于引用的文档内容进行回复。</li>
+          </ol>
+
+          <p>示例：</p>
+          <pre><code>#产品需求 请分析这个需求的技术可行性</code></pre>
+
+          <div class="tip-block">
+            <strong>提示</strong>
+            <p>你可以同时引用多个文档，AI 会综合所有引用的内容进行回答。这对于需要对比多个文档的场景非常有用。</p>
+          </div>
+
+          <h3>使用 / 执行自定义命令</h3>
+
+          <p>你可以使用 <code>/</code> 符号触发预定义的自定义命令：</p>
+
+          <ol>
+            <li>在输入框中输入 <code>/</code> 符号。</li>
+            <li>系统会显示可用的命令列表，如 <code>/summarize</code>、<code>/action</code> 等。</li>
+            <li>选择你想要的命令。</li>
+            <li>如果有必要，添加额外的参数或上下文。</li>
+            <li>发送后，命令会被执行。</li>
+          </ol>
+
+          <p>自定义命令需要你自己在应用设置中定义。以下是命令样例，供参考：</p>
+
+          <ul>
+            <li><code>/summarize</code>：总结当前文档内容</li>
+            <li><code>/action</code>：提取待办事项</li>
+            <li><code>/improve</code>：改进当前选中文本的写作</li>
+            <li><code>/translate</code>：翻译选中文本</li>
+          </ul>
+
+          <div class="info-block">
+            <strong>如何自定义命令</strong>
+            <p>自定义命令需要在"设置 → 文档"页面中配置。每个命令由名称和提示词组成，定义命令被触发时 AI 应该如何响应。配置完成后，在文档右边栏输入 <code>/</code> 即可看到你定义的命令列表。</p>
+          </div>
+
+          <div class="tip-block">
+            <strong>提示</strong>
+            <p>如果你输入 <code>/</code> 后没有看到命令列表，说明还没有配置任何自定义命令。请先到"设置 → 文档"页面添加命令，然后再使用。</p>
+          </div>
+
+          <h3>组合使用技巧</h3>
+
+          <p>三种命令可以组合使用，创建更丰富的对话场景：</p>
+
+          <ul>
+            <li><code>@claude 请分析 #产品设计 #技术方案 文档中的风险点</code></li>
+            <li><code>/summarize 并 @claude 给出改进建议</code></li>
+            <li><code>@gpt4 基于 #竞品分析 写一份产品对比报告</code></li>
+          </ul>
+
+          <h3>AI 提案与修改建议</h3>
+
+          <p>AI 助手可以向你提供文档修改建议：</p>
+
+          <ul>
+            <li><strong>提案</strong>：AI 会建议对当前文档的修改，包括增删改内容。</li>
+            <li><strong>预览</strong>：你可以预览应用提案后的文档效果。</li>
+            <li><strong>应用</strong>：点击"应用"按钮，将提案的修改应用到文档。</li>
+            <li><strong>拒绝</strong>：点击"拒绝"按钮，忽略当前提案。</li>
+          </ul>
+
+          <div class="warning-block">
+            <strong>AI 边界</strong>
+            <p>在 MeshWork 中，AI 是参与者而不是自动替代创作者的主体。它可以提出建议，但不会未经确认直接修改你的文档。所有修改都需要你显式确认。</p>
+          </div>
+
+          <h2 id="2-4">2.4 文档组织</h2>
+
+          <h3>文档目录结构</h3>
+
+          <p>在私有知识库中，你可以创建目录来组织文档：</p>
+
+          <ol>
+            <li>在侧边栏中右键点击私有知识库或现有目录。</li>
+            <li>选择"新建目录"。</li>
+            <li>输入目录名称。</li>
+            <li>可以继续在目录中创建子目录。</li>
+          </ol>
+
+          <h4>建议的目录结构</h4>
+
+          <pre><code>私有知识库/
+├── 笔记/
+│   ├── 学习笔记/
+│   ├── 会议记录/
+│   └── 读书笔记/
+├── 项目/
+│   ├── 项目A/
+│   └── 项目B/
+├── 草稿/
+└── 归档/</code></pre>
+
+          <h3>文档移动与重命名</h3>
+
+          <p>你可以随时调整文档的组织结构：</p>
+
+          <ul>
+            <li><strong>移动文档</strong>：在侧边栏中拖拽文档到目标目录。</li>
+            <li><strong>重命名文档</strong>：右键点击文档，选择"重命名"，输入新名称。</li>
+            <li><strong>移动目录</strong>：拖拽目录到其他位置，可以移动整个目录及其内容。</li>
+          </ul>
+
+          <h3>搜索与过滤</h3>
+
+          <p>当文档数量增多时，使用搜索功能：</p>
+
+          <ul>
+            <li><strong>全局搜索</strong>：使用 <code>Command+Shift+F</code> 打开搜索面板，搜索所有文档。</li>
+            <li><strong>当前文档搜索</strong>：使用 <code>Command+F</code> 在当前文档中搜索。</li>
+            <li><strong>路径过滤</strong>：在侧边栏中使用过滤框，快速定位特定目录或文档。</li>
+          </ul>
+
+          <div class="info-block">
+            <strong>搜索技巧</strong>
+            <p>搜索支持模糊匹配和路径搜索。例如输入"笔记/会议"可以快速找到"会议记录"目录下的文档。</p>
+          </div>
+
+          <div class="highlight-block">
+            <p><strong>拼音搜索支持</strong></p>
+            <p>MeshWork 的搜索功能支持拼音搜索，让中文用户可以更方便地查找文档：</p>
+            <ul>
+              <li><strong>全拼搜索</strong>：直接输入完整的拼音来搜索中文内容。例如输入"zhongwen"可以找到包含"中文"的文档。</li>
+              <li><strong>无需切换输入法</strong>：使用英文输入状态即可搜索中文文档，无需频繁切换输入法。</li>
+              <li><strong>混合搜索</strong>：可以同时混合使用汉字、拼音和英文进行搜索。例如输入"产品xuqiu"可以找到包含"产品需求"的文档。</li>
+            </ul>
+            <p>注意：拼音搜索基于系统为文档建立的拼音索引。对于多音字或生僻字，搜索结果可能需要结合上下文进行筛选。</p>
+          </div>
+
+          <h3>标签使用</h3>
+
+          <p>使用标签可以为文档提供另一种组织方式：</p>
+
+          <ol>
+            <li>在文档编辑器中，点击标签区域（通常在文档顶部）。</li>
+            <li>输入标签名称，按 Enter 添加。</li>
+            <li>可以添加多个标签。</li>
+            <li>点击标签可以过滤显示所有带有该标签的文档。</li>
+          </ol>
+
+          <p>常用标签示例：</p>
+
+          <ul>
+            <li><code>#待处理</code>：标记需要进一步处理的文档</li>
+            <li><code>#重要</code>：标记重要文档</li>
+            <li><code>#参考资料</code>：标记参考材料</li>
+            <li><code>#归档</code>：标记已完成或过时的文档</li>
+          </ul>
+
+          <h2 id="2-5">2.5 私有知识库的 Git 共享</h2>
+
+          <h3>启用/禁用 Git</h3>
+
+          <p>私有知识库的 Git 功能是可选的：</p>
+
+          <ul>
+            <li><strong>不启用 Git</strong>：完全本地使用，不涉及版本控制。</li>
+            <li><strong>启用 Git</strong>：可以本地提交历史，也可以配置远程仓库。</li>
+          </ul>
+
+          <div class="tip-block">
+            <strong>建议</strong>
+            <p>即使不需要团队共享，也建议启用 Git。Git 可以提供版本历史和恢复能力，防止意外修改或数据丢失。</p>
+          </div>
+
+          <h3>绑定远程仓库</h3>
+
+          <p>为私有知识库绑定远程仓库：</p>
+
+          <ol>
+            <li>打开私有知识库的设置页面。</li>
+            <li>找到"Git"或"远程仓库"配置部分。</li>
+            <li>输入远程仓库地址（SSH 或 HTTPS 格式）。</li>
+            <li>如果使用 SSH，确保已完成 SSH 密钥配置（参见 1.5 节）。</li>
+            <li>如果使用 HTTPS，需要使用 Personal Access Token 作为密码。</li>
+            <li>点击"连接"或"保存"完成绑定。</li>
+          </ol>
+
+          <h3>推送与拉取</h3>
+
+          <p>绑定远程仓库后，你可以：</p>
+
+          <ul>
+            <li><strong>推送</strong>：将本地修改推送到远程仓库。通常在完成一批编辑后执行。</li>
+            <li><strong>拉取</strong>：从远程仓库获取最新内容。如果你在多台设备上使用，需要先拉取再开始编辑。</li>
+          </ul>
+
+          <h3>处理合并冲突</h3>
+
+          <p>当本地和远程有冲突的修改时，Git 会报告合并冲突：</p>
+
+          <ol>
+            <li>Git 会标记冲突的文件和位置。</li>
+            <li>打开冲突文件，会看到类似下面的标记：</li>
+          </ol>
+
+          <pre><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+本地内容
+=======
+远程内容
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 远程分支名</code></pre>
+
+          <ol start="3">
+            <li>手动编辑，保留需要的部分，删除冲突标记。</li>
+            <li>保存文件。</li>
+            <li>标记冲突已解决。</li>
+            <li>完成合并。</li>
+          </ol>
+
+          <div class="info-block">
+            <strong>自动化版本控制</strong>
+            <p>MeshWork 将 Git 的拉取和推送操作完全自动化，你无需手动控制。每次编辑会自动提交，系统会智能地处理同步操作。这种设计让你专注于内容创作，而不用担心 Git 的技术细节。</p>
+          </div>
+
+          <h3>手动提交策略</h3>
+
+          <p>MeshWork 会对每次编辑自动提交，但你也可以手动控制提交：</p>
+
+          <ul>
+            <li><strong>查看历史</strong>：在文档或目录上右键，选择"查看历史"。</li>
+            <li><strong>创建提交</strong>：完成一批相关修改后，可以创建一个手动提交，附上有意义的提交消息。</li>
+            <li><strong>回退版本</strong>：如果需要，可以回退到以前的版本。</li>
+          </ul>
+
+          <div class="info-block">
+            <strong>最佳实践</strong>
+            <p>对于私有知识库，建议使用自动提交即可。Git 主要作为安全网存在，防止意外修改或数据丢失。手动提交适合在完成某个里程碑时使用。</p>
+          </div>
+
+          <nav class="manual-book-nav-buttons">
+            <a href="manual-book-01.html" class="nav-button prev">
+              <span>上一章</span>
+              <strong>系统设置与初始配置</strong>
+            </a>
+            <a href="manual-book-03.html" class="nav-button next">
+              <span>下一章</span>
+              <strong>共享空间</strong>
+            </a>
+          </nav>
+        </article>
+      </main>
+    </div>
+
+    <footer class="manual-book-footer">
+      <span>MeshWork 操作手册</span>
+      <span>Local-first creative workspace</span>
+      <a href="privacy.html">隐私政策</a>
+    </footer>
+  </body>
+</html>
