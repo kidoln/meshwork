@@ -144,8 +144,13 @@
 
           <h2 id="B">B. 快捷键参考</h2>
 
-          <h3>文档编辑快捷键</h3>
-          <p>MeshWork 遵循 macOS 标准文本编辑快捷键，同时提供一些额外功能：</p>
+          <div class="warning-block">
+            <strong>注意</strong>
+            <p>以下列出的是 MeshWork 当前已实现的快捷键。产品仍在持续开发中，更多快捷键将在后续版本中添加。</p>
+          </div>
+
+          <h3>界面操作快捷键</h3>
+          <p>MeshWork 提供以下界面操作的快捷键：</p>
 
           <table>
             <thead>
@@ -156,73 +161,31 @@
             </thead>
             <tbody>
               <tr>
-                <td><code>Cmd + N</code></td>
-                <td>新建文档</td>
+                <td><code>⌘ ⌥ S</code></td>
+                <td>切换侧边栏显示/隐藏</td>
               </tr>
               <tr>
-                <td><code>Cmd + O</code></td>
-                <td>打开文档</td>
+                <td><code>⌘ ⌥ 0</code></td>
+                <td>切换 AI 助手面板显示/隐藏</td>
               </tr>
               <tr>
-                <td><code>Cmd + S</code></td>
+                <td><code>⌘ S</code></td>
                 <td>保存当前文档</td>
               </tr>
               <tr>
-                <td><code>Cmd + Shift + S</code></td>
-                <td>另存为</td>
+                <td><code>⌘ E</code></td>
+                <td>切换编辑器预览</td>
               </tr>
               <tr>
-                <td><code>Cmd + W</code></td>
-                <td>关闭当前文档标签</td>
-              </tr>
-              <tr>
-                <td><code>Cmd + Option + W</code></td>
-                <td>关闭所有文档标签</td>
-              </tr>
-              <tr>
-                <td><code>Cmd + Z</code></td>
-                <td>撤销</td>
-              </tr>
-              <tr>
-                <td><code>Cmd + Shift + Z</code></td>
-                <td>重做</td>
-              </tr>
-              <tr>
-                <td><code>Cmd + X</code></td>
-                <td>剪切</td>
-              </tr>
-              <tr>
-                <td><code>Cmd + C</code></td>
-                <td>复制</td>
-              </tr>
-              <tr>
-                <td><code>Cmd + V</code></td>
-                <td>粘贴</td>
-              </tr>
-              <tr>
-                <td><code>Cmd + Shift + V</code></td>
-                <td>粘贴并匹配样式</td>
-              </tr>
-              <tr>
-                <td><code>Cmd + A</code></td>
-                <td>全选</td>
-              </tr>
-              <tr>
-                <td><code>Cmd + F</code></td>
-                <td>查找</td>
-              </tr>
-              <tr>
-                <td><code>Cmd + G</code></td>
-                <td>查找下一个</td>
-              </tr>
-              <tr>
-                <td><code>Cmd + Shift + G</code></td>
-                <td>查找上一个</td>
+                <td><code>⌘ ⌥ E</code></td>
+                <td>切换编辑器模式（源代码/所见即所得）</td>
               </tr>
             </tbody>
           </table>
 
-          <h3>导航快捷键</h3>
+          <h3>文本编辑快捷键</h3>
+          <p>在文档编辑器中，MeshWork 支持以下文本格式化快捷键：</p>
+
           <table>
             <thead>
               <tr>
@@ -232,103 +195,84 @@
             </thead>
             <tbody>
               <tr>
-                <td><code>Cmd + 1</code></td>
-                <td>切换到私有知识库</td>
+                <td><code>⌘ B</code></td>
+                <td>切换粗体格式</td>
               </tr>
               <tr>
-                <td><code>Cmd + 2</code> 至 <code>Cmd + 9</code></td>
-                <td>切换到对应编号的共享空间</td>
-              </tr>
-              <tr>
-                <td><code>Cmd + [</code></td>
-                <td>返回上一个文档</td>
-              </tr>
-              <tr>
-                <td><code>Cmd + ]</code></td>
-                <td>前进到下一个文档</td>
-              </tr>
-              <tr>
-                <td><code>Cmd + Shift + O</code></td>
-                <td>快速打开文档（输入文档名搜索）</td>
-              </tr>
-              <tr>
-                <td><code>Ctrl + Tab</code></td>
-                <td>切换到下一个标签</td>
-              </tr>
-              <tr>
-                <td><code>Ctrl + Shift + Tab</code></td>
-                <td>切换到上一个标签</td>
+                <td><code>⌘ I</code></td>
+                <td>切换斜体格式</td>
               </tr>
             </tbody>
           </table>
+
+          <h3>字号和缩放快捷键</h3>
+          <p>MeshWork 支持焦点感知的字号和缩放调整：</p>
+
+          <table>
+            <thead>
+              <tr>
+                <th>快捷键</th>
+                <th>功能</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>⌘ =</code> 或 <code>⌘ +</code></td>
+                <td>增加字号（编辑器焦点）或缩放（预览焦点）</td>
+              </tr>
+              <tr>
+                <td><code>⌘ -</code></td>
+                <td>减小字号（编辑器焦点）或缩放（预览焦点）</td>
+              </tr>
+              <tr>
+                <td><code>⌘ 0</code></td>
+                <td>重置字号（编辑器焦点）或缩放（预览焦点）</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="info-block">
+            <strong>焦点感知</strong>
+            <p>字号和缩放快捷键会根据当前焦点区域自动调整：当编辑器有焦点时调整编辑器字号，当预览区域有焦点时调整预览缩放。</p>
+          </div>
 
           <h3>AI 对话快捷键</h3>
+          <p>在 AI 助手面板中，可以使用以下快捷键和符号：</p>
+
           <table>
             <thead>
               <tr>
-                <th>快捷键</th>
+                <th>快捷键/符号</th>
                 <th>功能</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td><code>Cmd + L</code></td>
-                <td>聚焦到 AI 对话输入框</td>
-              </tr>
-              <tr>
-                <td><code>Cmd + Shift + L</code></td>
-                <td>显示/隐藏 AI 助手面板</td>
-              </tr>
               <tr>
                 <td><code>@</code>（在输入框中）</td>
                 <td>触发智能体选择</td>
+              </tr>
+              <tr>
+                <td><code>#</code>（在输入框中）</td>
+                <td>触发文档引用</td>
               </tr>
               <tr>
                 <td><code>/</code>（在输入框中）</td>
                 <td>触发自定义命令</td>
               </tr>
               <tr>
-                <td><code>Esc</code></td>
-                <td>关闭当前 AI 对话或提示选择</td>
+                <td><code>↩</code>（Enter）</td>
+                <td>发送消息</td>
               </tr>
               <tr>
-                <td><code>Cmd + Enter</code></td>
-                <td>在 AI 对话输入框中发送消息</td>
-              </tr>
-              <tr>
-                <td><code>Cmd + Shift + Enter</code></td>
+                <td><code>⇧ ⌘ ↩</code></td>
                 <td>强制开始新的 AI 会话（忽略自动会话）</td>
               </tr>
             </tbody>
           </table>
 
-          <h3>Git 操作快捷键</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>快捷键</th>
-                <th>功能</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><code>Cmd + Shift + P</code></td>
-                <td>打开 Git 操作面板</td>
-              </tr>
-              <tr>
-                <td><code>Cmd + Option + P</code></td>
-                <td>快速拉取远程更改</td>
-              </tr>
-              <tr>
-                <td><code>Cmd + Option + S</code></td>
-                <td>快速推送本地提交</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <div class="info-block">
-            <strong>自定义快捷键</strong>
-            <p>部分快捷键可以在"设置 → 键盘"中自定义。如果快捷键与其他应用冲突，可以在此修改。</p>
+          <div class="tip-block">
+            <strong>macOS 标准快捷键</strong>
+            <p>MeshWork 遵循 macOS 标准文本编辑快捷键，如 <code>⌘ C</code>（复制）、<code>⌘ V</code>（粘贴）、<code>⌘ Z</code>（撤销）等，这些快捷键在应用中均正常工作。</p>
           </div>
 
           <h2 id="C">C. 术语表</h2>
