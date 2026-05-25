@@ -18,6 +18,10 @@
       <nav class="manual-book-nav">
         <span>操作手册</span>
       </nav>
+      <div class="language-switch">
+        <span class="lang-button is-active">中文</span>
+        <a href="manual-en.html" class="lang-button">EN</a>
+      </div>
       <a class="manual-book-home" href="index.html">返回首页</a>
     </header>
 
@@ -169,5 +173,16 @@
       <span>Local-first creative workspace</span>
       <a href="privacy.html">隐私政策</a>
     </footer>
+
+    <script>
+      // Check URL parameter for language and redirect if needed
+      (function() {
+        const params = new URLSearchParams(window.location.search);
+        const lang = params.get('lang');
+        if (lang === 'en') {
+          window.location.href = 'manual-en.html';
+        }
+      })();
+    </script>
   </body>
 </html>

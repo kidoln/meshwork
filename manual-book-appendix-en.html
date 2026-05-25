@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="MeshWork Manual Appendix: FAQ, keyboard shortcuts reference, and glossary.">
+    <title>Appendix - MeshWork Manual</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="manual-book.css">
+  </head>
+  <body>
+    <header class="manual-book-header">
+      <a class="manual-book-brand" href="index.html">
+        <span>∞</span>
+        <strong>MeshWork</strong>
+      </a>
+      <div class="language-switch">
+        <a href="manual-book-appendix.html" class="lang-button">中文</a>
+        <span class="lang-button is-active">EN</span>
+      </div>
+      <nav class="manual-book-nav">
+        <span>Manual: Appendix</span>
+      </nav>
+      <a class="manual-book-home" href="manual-en.html">Back to TOC</a>
+    </header>
+
+    <div class="manual-book-layout">
+      <aside class="manual-book-sidebar">
+        <nav class="manual-book-toc">
+          <div class="toc-section">
+            <span class="toc-part">Part 1</span>
+            <a href="manual-book-01-en.html" class="toc-title">System Setup</a>
+          </div>
+
+          <div class="toc-section">
+            <span class="toc-part">Part 2</span>
+            <a href="manual-book-02-en.html" class="toc-title">Private Library</a>
+          </div>
+
+          <div class="toc-section">
+            <span class="toc-part">Part 3</span>
+            <a href="manual-book-03-en.html" class="toc-title">Shared Spaces</a>
+          </div>
+
+          <div class="toc-section">
+            <span class="toc-part">Appendix</span>
+            <a href="manual-book-appendix-en.html" class="toc-title active">Appendix</a>
+            <ul class="toc-list">
+              <li><a href="#A">A. FAQ</a></li>
+              <li><a href="#B">B. Keyboard Shortcuts</a></li>
+              <li><a href="#C">C. Glossary</a></li>
+            </ul>
+          </div>
+        </nav>
+      </aside>
+
+      <main class="manual-book-main">
+        <article class="manual-book-content">
+          <h1>Appendix</h1>
+          <p class="subtitle">FAQ, keyboard shortcuts reference, and glossary to help you better use MeshWork.</p>
+
+          <nav class="manual-book-toc-mini">
+            <strong>Chapter Contents</strong>
+            <ol>
+              <li><a href="#A">A. FAQ</a></li>
+              <li><a href="#B">B. Keyboard Shortcuts</a></li>
+              <li><a href="#C">C. Glossary</a></li>
+            </ol>
+          </nav>
+
+          <h2 id="A">A. FAQ</h2>
+
+          <h3>Will private content be accidentally shared?</h3>
+          <p>No. MeshWork protects your private content through clear data boundary design:</p>
+          <ul>
+            <li><strong>Physical Isolation</strong>: Private libraries and shared spaces are completely independent directories in the file system. Private library content won't automatically appear in any shared space.</li>
+            <li><strong>Git Independence</strong>: Even when Git is enabled, private libraries and shared spaces use their own independent Git repositories or branches.</li>
+            <li><strong>Explicit Operations</strong>: Content enters shared boundaries only when you actively copy or move it from private library to shared space.</li>
+            <li><strong>Permission Control</strong>: Shared space remote repository access is managed by Git hosting platforms (like GitHub).</li>
+          </ul>
+
+          <div class="tip-block">
+            <strong>Best Practice</strong>
+            <p>Keep personal notes, drafts, and unpublished ideas in your private library. Only publish organized, team-appropriate content to shared spaces.</p>
+          </div>
+
+          <h3>How to handle Git conflicts?</h3>
+          <p>Git conflicts usually occur when multiple people modify different versions of the same document simultaneously. When MeshWork cannot auto-merge changes, a conflict resolution interface pops up:</p>
+          <ol>
+            <li><strong>Identify conflicts</strong>: The system automatically detects conflicting files and opens the conflict resolution interface.</li>
+            <li><strong>View differences</strong>: The interface lists all conflicting files on the left. After selecting a file, the main area displays local and remote version content side-by-side for easy comparison.</li>
+            <li><strong>Choose resolution</strong>: For each conflicting file, click the button below to choose the retention method:
+              <ul>
+                <li><strong>Keep local version</strong>: Retain your local modifications, discard remote version.</li>
+                <li><strong>Use remote version</strong>: Adopt remote version content, abandon local modifications.</li>
+                <li><strong>Keep both (local first)</strong>: Merge both versions, local version content comes first.</li>
+                <li><strong>Keep both (remote first)</strong>: Merge both versions, remote version content comes first.</li>
+              </ul>
+            </li>
+            <li><strong>Preview results</strong>: After selection, the interface right side displays the final version preview after merging, you can confirm the result meets expectations.</li>
+            <li><strong>Apply resolution</strong>: After confirming correct, click "Apply". The system will write the resolved content to the document and mark the conflict as resolved.</li>
+          </ol>
+          <div class="info-block">
+            <strong>Conflict Prevention</strong>
+            <p>Frequently pulling latest changes, timely pushing local modifications, and maintaining appropriate document granularity can all reduce conflict occurrences. In large teams, it's recommended to coordinate through discussion to avoid multiple people modifying the same document section simultaneously.</p>
+          </div>
+
+          <h3>How to control AI assistant costs?</h3>
+          <p>MeshWork provides multi-layer control mechanisms to manage AI assistant costs:</p>
+          <ul>
+            <li><strong>Tool call count limits</strong>: In "Settings → AI", you can set the maximum number of tool calls an AI agent can make in a single reply. This prevents AI from generating unexpected costs through excessive searching or operations.</li>
+            <li><strong>Auto session duration</strong>: Set the default auto session duration in "Settings → AI" (default 2 minutes). Discussion Area topics can override this separately, inheriting the default when left blank.</li>
+            <li><strong>Model selection</strong>: Different models have different pricing and performance. For simple tasks, choose lower-cost models; for complex reasoning, choose more powerful models.</li>
+            <li><strong>Usage monitoring</strong>: Regularly check AI service usage statistics and bills to understand cost trends and adjust usage strategies.</li>
+          </ul>
+          <div class="warning-block">
+            <strong>Important Notes</strong>
+            <p>API Keys are stored locally. Please ensure they won't be leaked. If you share your MeshWork configuration file or device with others, please remove API Keys first.</p>
+          </div>
+
+          <h3>Multi-device usage considerations</h3>
+          <p>When using MeshWork on multiple devices, please note the following:</p>
+          <ul>
+            <li><strong>Data synchronization</strong>: MeshWork itself doesn't provide inter-device data synchronization services. You need to synchronize data through Git remote repositories or other synchronization mechanisms (such as iCloud Drive, Dropbox).</li>
+            <li><strong>Git configuration</strong>: Each device needs to configure Git identity information. It's recommended to use the same name and email for easy contributor identification.</li>
+            <li><strong>SSH keys</strong>: If using SSH to access remote repositories, each device needs to generate and add its own SSH key to GitHub.</li>
+            <li><strong>API Keys</strong>: AI service API Keys need to be configured separately on each device. Please be safe and don't transmit API Keys insecurely between devices.</li>
+            <li><strong>Workspace configuration</strong>: Workspace configuration (such as added shared space list) is stored locally and needs to be manually configured on each device.</li>
+            <li><strong>Simultaneous editing</strong>: Avoid editing the same document simultaneously on two devices without frequent synchronization, as this easily leads to Git conflicts.</li>
+          </ul>
+          <div class="tip-block">
+            <strong>Recommendation</strong>
+            <p>When using multiple devices, develop the habit of pulling latest changes before starting work and pushing promptly after finishing work. This reduces conflicts and ensures data consistency across devices.</p>
+          </div>
+
+          <h3>How to backup data?</h3>
+          <p>MeshWork adopts a local-first design, all your data is stored on local disk. Here are several backup methods:</p>
+          <ul>
+            <li><strong>Git remote repository</strong>: Configure Git remote repositories (such as GitHub) for private libraries and shared spaces. This is the simplest and most reliable backup method, also providing version history.</li>
+            <li><strong>Time Machine</strong> (macOS): Use macOS's built-in Time Machine to backup the entire disk, including MeshWork's data directory.</li>
+            <li><strong>Cloud storage sync</strong>: Put MeshWork's working directory in sync folders of cloud storage services like iCloud Drive, Dropbox, OneDrive. Note: This may increase Git conflict risks, use with caution.</li>
+            <li><strong>Manual copying</strong>: Regularly manually copy MeshWork's working directory to external storage devices or other locations.</li>
+          </ul>
+          <div class="info-block">
+            <strong>Backup Recommendations</strong>
+            <p>Recommend using Git remote repositories as the primary backup method because it simultaneously provides version control, collaboration sharing, and history recovery capabilities. For particularly important content, combine with Time Machine for dual protection.</p>
+          </div>
+
+          <h2 id="B">B. Keyboard Shortcuts</h2>
+
+          <div class="warning-block">
+            <strong>Note</strong>
+            <p>The following lists currently implemented keyboard shortcuts in MeshWork. The product is still under active development, and more shortcuts will be added in future versions.</p>
+          </div>
+
+          <h3>Interface Operation Shortcuts</h3>
+          <p>MeshWork provides the following keyboard shortcuts for interface operations:</p>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Shortcut</th>
+                <th>Function</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>⌘ ⌥ S</code></td>
+                <td>Toggle sidebar visibility</td>
+              </tr>
+              <tr>
+                <td><code>⌘ ⌥ 0</code></td>
+                <td>Toggle AI assistant panel</td>
+              </tr>
+              <tr>
+                <td><code>⌘ S</code></td>
+                <td>Save current document</td>
+              </tr>
+              <tr>
+                <td><code>⌘ E</code></td>
+                <td>Toggle editor preview</td>
+              </tr>
+              <tr>
+                <td><code>⌘ ⌥ E</code></td>
+                <td>Toggle editor mode (source/WYSIWYG)</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>Text Editing Shortcuts</h3>
+          <p>In the document editor, MeshWork supports the following text formatting shortcuts:</p>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Shortcut</th>
+                <th>Function</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>⌘ B</code></td>
+                <td>Toggle bold formatting</td>
+              </tr>
+              <tr>
+                <td><code>⌘ I</code></td>
+                <td>Toggle italic formatting</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>Font Size and Zoom Shortcuts</h3>
+          <p>MeshWork supports focus-aware font size and zoom adjustment:</p>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Shortcut</th>
+                <th>Function</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>⌘ =</code> or <code>⌘ +</code></td>
+                <td>Increase font size (editor focus) or zoom (preview focus)</td>
+              </tr>
+              <tr>
+                <td><code>⌘ -</code></td>
+                <td>Decrease font size (editor focus) or zoom (preview focus)</td>
+              </tr>
+              <tr>
+                <td><code>⌘ 0</code></td>
+                <td>Reset font size (editor focus) or zoom (preview focus)</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="info-block">
+            <strong>Focus-Aware</strong>
+            <p>Font size and zoom shortcuts automatically adjust based on current focus: when editor has focus, adjust editor font size; when preview area has focus, adjust preview zoom.</p>
+          </div>
+
+          <h3>AI Conversation Shortcuts</h3>
+          <p>In the AI assistant panel, you can use the following shortcuts and symbols:</p>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Shortcut/Symbol</th>
+                <th>Function</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>@</code> (in input box)</td>
+                <td>Trigger agent selection</td>
+              </tr>
+              <tr>
+                <td><code>#</code> (in input box)</td>
+                <td>Trigger document reference</td>
+              </tr>
+              <tr>
+                <td><code>/</code> (in input box)</td>
+                <td>Trigger custom commands</td>
+              </tr>
+              <tr>
+                <td><code>↩</code> (Enter)</td>
+                <td>Send message</td>
+              </tr>
+              <tr>
+                <td><code>⇧ ⌘ ↩</code></td>
+                <td>Force new AI session (ignore auto session)</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="tip-block">
+            <strong>macOS Standard Shortcuts</strong>
+            <p>MeshWork follows macOS standard text editing shortcuts, such as <code>⌘ C</code> (copy), <code>⌘ V</code> (paste), <code>⌘ Z</code> (undo), etc. These shortcuts all work normally in the application.</p>
+          </div>
+
+          <h2 id="C">C. Glossary</h2>
+
+          <dl class="glossary">
+            <dt>Workspace</dt>
+            <dd>The main usage environment of MeshWork, a product and interaction layer concept, not a fixed disk directory or Git repository. The workspace is responsible for combining one private library and multiple shared spaces, providing a unified access entry.</dd>
+
+            <dt>Private Library</dt>
+            <dd>The data boundary belonging to the current user, suitable for storing personal long-term notes, research materials, writing drafts, inspiration fragments, and content that shouldn't automatically enter team sharing. It exists independently and doesn't belong to any shared space.</dd>
+
+            <dt>Shared Space</dt>
+            <dd>A team or project-level data boundary containing a public library, discussion area, shared attachments, and optionally its own Git history. Multiple users can collaborate through shared spaces.</dd>
+
+            <dt>Public Library</dt>
+            <dd>The part of a shared space for storing long-term knowledge, suitable for storing documents, project materials, and decision records maintained together by the team. Content in the Public Library automatically syncs to all members of that space.</dd>
+
+            <dt>Discussion Area</dt>
+            <dd>The place for daily communication and temporary communication in a shared space. Discussion Area content is conversational, suitable for quick communication, brainstorming, and immediate feedback.</dd>
+
+            <dt>Agent</dt>
+            <dd>An AI assistant configured with specific prompts and parameters. MeshWork supports multiple agents, each can have different expertise and behavior patterns. In conversations, specific agents can be selected through @ symbol.</dd>
+
+            <dt>Auto Session Window</dt>
+            <dd>Within a period of time (default 2 minutes) after sending a message to an AI agent, continued messages will automatically be sent to the same agent without needing to repeat @. This time window is called the auto session window.</dd>
+
+            <dt>Topic</dt>
+            <dd>A conversation thread in the Discussion Area. Each topic has a theme and a set of related messages. Topics help organize discussion content and prevent important information from being drowned in numerous messages.</dd>
+
+            <dt>Topic Branch</dt>
+            <dd>A unique feature in MeshWork's Discussion Area that allows creating a new topic starting from any discussion message, achieving infinite extension and subdivision of dialogue. The new topic retains association with the original topic for traceability.</dd>
+
+            <dt>Branch Isolation</dt>
+            <dd>MeshWork uses Git branches to isolate data from different knowledge bases. Even if multiple knowledge bases use the same remote repository, they will bind to different branches without interfering with each other. This allows safely storing multiple related but independent knowledge bases in the same remote repository.</dd>
+
+            <dt>Resource Directory</dt>
+            <dd>The actual storage location on disk for a private library or shared space. The resource directory contains all data files including documents, discussions, and attachments.</dd>
+
+            <dt>Git Commit</dt>
+            <dd>A save point in Git version control, recording the state of files at a certain moment. MeshWork automatically creates commits at appropriate times, and you can also manually create commits to save important states.</dd>
+
+            <dt>Git Push</dt>
+            <dd>The operation of uploading local Git commits to a remote repository. After pushing, other team members can see your modifications.</dd>
+
+            <dt>Git Pull</dt>
+            <dd>The operation of fetching the latest changes from a remote repository and merging them into the local repository. Pulling lets you see other team members' latest modifications.</dd>
+
+            <dt>Git Conflict</dt>
+            <dd>A situation that occurs when Git cannot automatically merge two sets of modifications. Conflicts need to be manually resolved, choosing which content to keep.</dd>
+
+            <dt>API Key</dt>
+            <dd>A key used to access AI services (such as OpenAI, Anthropic Claude). You need to configure API Keys in MeshWork to use AI assistant functions.</dd>
+
+            <dt>AI Provider</dt>
+            <dd>AI service providers, such as OpenAI, Anthropic, Google, etc. MeshWork supports multiple providers, and you can choose according to your needs.</dd>
+
+            <dt>Custom Command</dt>
+            <dd>Quick commands that can be triggered via the / symbol in the document editor. You can customize commands to implement common functions, such as summarizing documents, extracting action items, etc.</dd>
+
+            <dt>Markdown</dt>
+            <dd>A lightweight markup language using simple text format to represent rich text format. MeshWork uses Markdown as the default document format.</dd>
+
+            <dt>Local-first</dt>
+            <dd>A software architecture philosophy emphasizing that data is primarily stored on local devices, with cloud services as auxiliary and backup. MeshWork adopts a local-first design, ensuring you can use it normally even when offline.</dd>
+          </dl>
+
+          <nav class="manual-book-nav-buttons">
+            <a href="manual-book-03-en.html" class="nav-button prev">
+              <span>Previous</span>
+              <strong>Shared Spaces</strong>
+            </a>
+            <a href="manual-en.html" class="nav-button next">
+              <span>Back</span>
+              <strong>Manual Table of Contents</strong>
+            </a>
+          </nav>
+        </article>
+      </main>
+    </div>
+
+    <footer class="manual-book-footer">
+      <span>MeshWork Manual</span>
+      <span>Local-first creative workspace</span>
+      <a href="privacy.html">Privacy Policy</a>
+    </footer>
+
+    <script src="manual-lang-redirect.js"></script>
+  </body>
+</html>

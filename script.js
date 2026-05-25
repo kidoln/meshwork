@@ -464,13 +464,16 @@ function setLanguage(language, options = {}) {
     );
   });
 
-  document.querySelectorAll('a[href^="manual.html"]').forEach((link) => {
-    const url = new URL(link.getAttribute("href"), window.location.href);
-    url.searchParams.set("lang", normalized);
-    link.setAttribute(
-      "href",
-      `${url.pathname.split("/").pop()}${url.search}${url.hash}`,
-    );
+  // Update manual links to point to the correct language version
+  document.querySelectorAll('a[href^="manual"]').forEach((link) => {
+    const currentHref = link.getAttribute("href");
+    if (normalized === "en") {
+      // Change to English version
+      link.setAttribute("href", currentHref.replace("manual.html", "manual-en.html"));
+    } else {
+      // Change to Chinese version
+      link.setAttribute("href", currentHref.replace("manual-en.html", "manual.html"));
+    }
   });
 }
 

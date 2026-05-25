@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="MeshWork Manual: Private Library usage guide - document editing, AI assistant sidebar, document organization, and Git sharing configuration.">
+    <title>Private Library - MeshWork Manual</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+    <link rel="stylesheet" href="manual-book.css">
+  </head>
+  <body>
+    <header class="manual-book-header">
+      <a class="manual-book-brand" href="index.html">
+        <span>∞</span>
+        <strong>MeshWork</strong>
+      </a>
+      <div class="language-switch">
+        <a href="manual-book-02.html" class="lang-button">中文</a>
+        <span class="lang-button is-active">EN</span>
+      </div>
+      <nav class="manual-book-nav">
+        <span>Manual: Private Library</span>
+      </nav>
+      <a class="manual-book-home" href="manual-en.html">Back to TOC</a>
+    </header>
+
+    <div class="manual-book-layout">
+      <aside class="manual-book-sidebar">
+        <nav class="manual-book-toc">
+          <div class="toc-section">
+            <span class="toc-part">Part 1</span>
+            <a href="manual-book-01-en.html" class="toc-title">System Setup & Configuration</a>
+          </div>
+
+          <div class="toc-section">
+            <span class="toc-part">Part 2</span>
+            <a href="manual-book-02-en.html" class="toc-title active">Private Library</a>
+            <ul class="toc-list">
+              <li><a href="#2-1">2.1 Private Library Overview</a></li>
+              <li><a href="#2-2">2.2 Document Editing</a></li>
+              <li><a href="#2-3">2.3 AI Assistant Sidebar</a></li>
+              <li><a href="#2-4">2.4 Document Organization</a></li>
+              <li><a href="#2-5">2.5 Git Sharing for Private Library</a></li>
+            </ul>
+          </div>
+
+          <div class="toc-section">
+            <span class="toc-part">Part 3</span>
+            <a href="manual-book-03-en.html" class="toc-title">Shared Spaces</a>
+          </div>
+
+          <div class="toc-section">
+            <span class="toc-part">Appendix</span>
+            <a href="manual-book-appendix-en.html" class="toc-title">Appendix</a>
+          </div>
+        </nav>
+      </aside>
+
+      <main class="manual-book-main">
+        <article class="manual-book-content">
+          <h1>Private Library</h1>
+          <p class="subtitle">The private library is your personal long-term knowledge storage area. Learn how to efficiently edit documents, use AI assistance, organize content, and configure optional Git sharing.</p>
+
+          <nav class="manual-book-toc-mini">
+            <strong>Chapter Contents</strong>
+            <ol>
+              <li><a href="#2-1">Private Library Overview</a></li>
+              <li><a href="#2-2">Document Editing</a></li>
+              <li><a href="#2-3">AI Assistant Sidebar</a></li>
+              <li><a href="#2-4">Document Organization</a></li>
+              <li><a href="#2-5">Git Sharing for Private Library</a></li>
+            </ol>
+          </nav>
+
+          <h2 id="2-1">2.1 Private Library Overview</h2>
+
+          <h3>What is a Private Library</h3>
+
+          <p>The private library is the data boundary in MeshWork that belongs to you. It's your main knowledge storage area for:</p>
+
+          <ul>
+            <li>Personal long-term notes and knowledge accumulation</li>
+            <li>Research materials and study notes</li>
+            <li>Writing drafts and inspiration fragments</li>
+            <li>Content that shouldn't automatically enter team sharing</li>
+            <li>Private reference materials for multiple shared spaces</li>
+          </ul>
+
+          <h3>Key Features</h3>
+
+          <p>The private library has the following characteristics:</p>
+
+          <ul>
+            <li><strong>Independence</strong>: It exists independently and doesn't belong to any shared space. It doesn't migrate because you join or leave a shared space.</li>
+            <li><strong>Persistence</strong>: Defaults to long-term existence as your main private storage area.</li>
+            <li><strong>Git Optional</strong>: Can be used completely locally, or configured with a remote repository for backup.</li>
+            <li><strong>Material Library</strong>: Can serve as a private reference material source for multiple shared spaces.</li>
+          </ul>
+
+          <h3>Relationship with Shared Spaces</h3>
+
+          <p>The private library and shared spaces are two independent data boundaries:</p>
+
+          <ul>
+            <li>The private library stores content you don't want to automatically enter team sharing.</li>
+            <li>Shared spaces store content that needs team collaboration.</li>
+            <li>You can reference content from the private library to shared spaces, but it requires explicit operations.</li>
+            <li>Both can independently configure Git without affecting each other.</li>
+          </ul>
+
+          <div class="info-block">
+            <strong>Design Philosophy</strong>
+            <p>MeshWork's design principle is to first let you establish a private library, start personal writing and organization, then join shared spaces as needed. This maintains the privacy of personal content while providing a material foundation for team collaboration.</p>
+          </div>
+
+          <h3>Directory Structure</h3>
+
+          <p>The recommended directory structure for the private library on disk:</p>
+
+          <pre><code>&lt;private-library&gt;/
+├── .meshwork/          # MeshWork configuration and metadata
+├── private-knowledge/  # Your documents and notes
+└── assets/             # Attachments and media files</code></pre>
+
+          <div class="tip-block">
+            <strong>Tip</strong>
+            <p>The private library's directory structure is managed by MeshWork. You don't need to manually operate these directories. All operations can be completed in the application interface.</p>
+          </div>
+
+          <h2 id="2-2">2.2 Document Editing</h2>
+
+          <h3>Creating New Documents</h3>
+
+          <p>To create a new document in the private library:</p>
+
+          <ol>
+            <li>Select the private library or a directory within it in the sidebar.</li>
+            <li>Click the "New Document" button in the toolbar, or right-click in the document list and select "New Document".</li>
+            <li>Enter the document title and press Enter to confirm.</li>
+            <li>The document will open in the main content area, and you can start editing.</li>
+          </ol>
+
+          <h3>Document Format Basics</h3>
+
+          <p>MeshWork uses Markdown as the document format. Markdown is a lightweight markup language that is easy to read and write:</p>
+
+          <h4>Headings</h4>
+          <pre><code># Level 1 Heading
+## Level 2 Heading
+### Level 3 Heading
+#### Level 4 Heading</code></pre>
+
+          <h4>Text Formatting</h4>
+          <pre><code>*Italic text*
+**Bold text**
+***Bold italic text***
+~~Strikethrough~~</code></pre>
+
+          <h4>Lists</h4>
+          <pre><code>- Unordered list item 1
+- Unordered list item 2
+  - Nested list item
+
+1. Ordered list item 1
+2. Ordered list item 2</code></pre>
+
+          <h4>Links and Images</h4>
+          <pre><code>[Link text](https://example.com)
+![Image description](images/photo.png)</code></pre>
+
+          <h4>Code</h4>
+          <pre><code>`Inline code`
+
+```
+Code block
+```</code></pre>
+
+          <h4>Blockquotes</h4>
+          <pre><code>> Quoted text</code></pre>
+
+          <h3>Using the Editor Toolbar</h3>
+
+          <p>There is a local toolbar at the top of the editor that provides common formatting operations:</p>
+
+          <ul>
+            <li><strong>Heading dropdown</strong>: Set the heading level for the current line or selected text.</li>
+            <li><strong>Bold/Italic</strong>: Quickly toggle text formatting.</li>
+            <li><strong>Lists</strong>: Insert unordered or ordered lists.</li>
+            <li><strong>Code block</strong>: Insert code blocks.</li>
+            <li><strong>Blockquote</strong>: Insert quote blocks.</li>
+            <li><strong>Link/Image</strong>: Insert links or images.</li>
+          </ul>
+
+          <div class="info-block">
+            <strong>Keyboard Shortcuts</strong>
+            <p>Most formatting operations have keyboard shortcuts, such as <code>Command+B</code> for bold and <code>Command+I</code> for italic. Using shortcuts can greatly improve editing efficiency.</p>
+          </div>
+
+          <h3>Inserting Images, Attachments, and Links</h3>
+
+          <h4>Inserting Images</h4>
+
+          <ol>
+            <li>Drag and drop an image file into the editor, or click the image button in the toolbar.</li>
+            <li>The image will be copied to the assets directory of the private library.</li>
+            <li>The editor will automatically insert the correct Markdown image syntax.</li>
+          </ol>
+
+          <h4>Inserting Attachments</h4>
+
+          <ol>
+            <li>Drag and drop a file into the document.</li>
+            <li>The file will be copied to the assets directory.</li>
+            <li>A file link will be inserted in the document.</li>
+          </ol>
+
+          <h4>Inserting Document Links</h4>
+
+          <ol>
+            <li>Right-click the document you want to link in the sidebar.</li>
+            <li>Select "Copy Document Link".</li>
+            <li>Paste in the editor, and it will automatically insert a link in the format <code>[Document Title](Document Path)</code>.</li>
+          </ol>
+
+          <h3>Document Saving and Version History</h3>
+
+          <p>MeshWork automatically saves your edits:</p>
+
+          <ul>
+            <li>Each edit is automatically saved without manual intervention.</li>
+            <li>If Git is enabled, each save generates a new commit record.</li>
+            <li>You can view and restore previous versions through version history.</li>
+          </ul>
+
+          <div class="warning-block">
+            <strong>Important Note</strong>
+            <p>Auto-save means all your changes will be recorded. If you don't want to keep certain changes, please undo or delete the corresponding content before closing the document.</p>
+          </div>
+
+          <h2 id="2-3">2.3 AI Assistant Sidebar</h2>
+
+          <h3>Opening/Closing the AI Assistant Panel</h3>
+
+          <p>The AI assistant in the right sidebar can provide intelligent assistance for you:</p>
+
+          <ol>
+            <li>When editing a document, click the AI assistant button in the toolbar, or use the keyboard shortcut <code>Command+Option+0</code>.</li>
+            <li>The AI assistant panel will slide out from the right sidebar.</li>
+            <li>Click the button again or use the shortcut to close the panel.</li>
+          </ol>
+
+          <h3>Basic Conversation Operations</h3>
+
+          <p>In the AI assistant panel, you can:</p>
+
+          <ul>
+            <li><strong>Send messages</strong>: Type questions or commands in the input box and press Enter to send.</li>
+            <li><strong>View replies</strong>: AI replies appear in the conversation history.</li>
+            <li><strong>Continue conversation</strong>: Continue inputting after AI replies to maintain context continuity.</li>
+            <li><strong>Clear conversation</strong>: Click the clear button at the top of the panel to restart the conversation.</li>
+          </ul>
+
+          <h3>Using @ to Mention Agents</h3>
+
+          <p>You can use the <code>@</code> symbol to mention specific AI agents:</p>
+
+          <ol>
+            <li>Type the <code>@</code> symbol in the input box.</li>
+            <li>The system will display a list of available agents, such as <code>@claude</code>, <code>@gpt4</code>, etc.</li>
+            <li>Select the agent you want, or continue typing the agent name.</li>
+            <li>Type your question or command.</li>
+            <li>After sending, the specified agent will reply to your message.</li>
+          </ol>
+
+          <div class="info-block">
+            <strong>Auto Session Window</strong>
+            <p>After mentioning an agent, for the next two minutes (adjustable in settings), your continued messages don't need to mention @ again. The system will automatically send these messages to that agent, suitable for continuous follow-up questions or providing supplementary background information.</p>
+          </div>
+
+          <h3>Using # to Reference Document Content</h3>
+
+          <p>You can use the <code>#</code> symbol to reference documents in the private library, allowing AI to analyze based on specific content:</p>
+
+          <ol>
+            <li>Type the <code>#</code> symbol in the input box.</li>
+            <li>The system will display a list of documents in the private library, supporting search and filtering.</li>
+            <li>Select the document you want to reference.</li>
+            <li>Type your question or command.</li>
+            <li>AI will reply based on the referenced document content.</li>
+          </ol>
+
+          <p>Example:</p>
+          <pre><code>#ProductRequirements Please analyze the technical feasibility of this requirement</code></pre>
+
+          <div class="tip-block">
+            <strong>Tip</strong>
+            <p>You can reference multiple documents at the same time. AI will synthesize all referenced content to answer. This is very useful for scenarios that require comparing multiple documents.</p>
+          </div>
+
+          <h3>Using / to Execute Custom Commands</h3>
+
+          <p>You can use the <code>/</code> symbol to trigger predefined custom commands:</p>
+
+          <ol>
+            <li>Type the <code>/</code> symbol in the input box.</li>
+            <li>The system will display a list of available commands, such as <code>/summarize</code>, <code>/action</code>, etc.</li>
+            <li>Select the command you want.</li>
+            <li>If necessary, add additional parameters or context.</li>
+            <li>After sending, the command will be executed.</li>
+          </ol>
+
+          <p>Custom commands need to be defined by yourself in application settings. Here are some command examples for reference:</p>
+
+          <ul>
+            <li><code>/summarize</code>: Summarize current document content</li>
+            <li><code>/action</code>: Extract action items</li>
+            <li><code>/improve</code>: Improve writing of currently selected text</li>
+            <li><code>/translate</code>: Translate selected text</li>
+          </ul>
+
+          <div class="info-block">
+            <strong>How to Customize Commands</strong>
+            <p>Custom commands need to be configured in the "Settings → Documents" page. Each command consists of a name and a prompt, defining how the AI should respond when the command is triggered. After configuration, typing <code>/</code> in the document right sidebar will show your defined command list.</p>
+          </div>
+
+          <div class="tip-block">
+            <strong>Tip</strong>
+            <p>If you type <code>/</code> and don't see the command list, it means no custom commands have been configured yet. Please add commands in "Settings → Documents" page first, then use them.</p>
+          </div>
+
+          <h3>Combination Usage Tips</h3>
+
+          <p>Three command types can be combined to create richer conversation scenarios:</p>
+
+          <ul>
+            <li><code>@claude Please analyze #ProductDesign #TechnicalProposal documents for risk points</code></li>
+            <li><code>/summarize and @claude give improvement suggestions</code></li>
+            <li><code>@gpt4 Write a product comparison report based on #CompetitorAnalysis</code></li>
+          </ul>
+
+          <h3>AI Proposals and Modification Suggestions</h3>
+
+          <p>The AI assistant can provide document modification suggestions to you:</p>
+
+          <ul>
+            <li><strong>Proposal</strong>: AI will suggest modifications to the current document, including additions, deletions, and changes.</li>
+            <li><strong>Preview</strong>: You can preview the document effect after applying the proposal.</li>
+            <li><strong>Apply</strong>: Click the "Apply" button to apply the proposed modifications to the document.</li>
+            <li><strong>Reject</strong>: Click the "Reject" button to ignore the current proposal.</li>
+          </ul>
+
+          <div class="warning-block">
+            <strong>AI Boundaries</strong>
+            <p>In MeshWork, AI is a participant rather than an automatic replacement creator. It can make suggestions, but will not modify your documents without explicit confirmation. All modifications require your explicit confirmation.</p>
+          </div>
+
+          <h2 id="2-4">2.4 Document Organization</h2>
+
+          <h3>Document Directory Structure</h3>
+
+          <p>In the private library, you can create directories to organize documents:</p>
+
+          <ol>
+            <li>Right-click the private library or an existing directory in the sidebar.</li>
+            <li>Select "New Directory".</li>
+            <li>Enter the directory name.</li>
+            <li>You can continue to create subdirectories within the directory.</li>
+          </ol>
+
+          <h4>Recommended Directory Structure</h4>
+
+          <pre><code>Private Library/
+├── Notes/
+│   ├── Study Notes/
+│   ├── Meeting Notes/
+│   └── Reading Notes/
+├── Projects/
+│   ├── Project A/
+│   └── Project B/
+├── Drafts/
+└── Archive/</code></pre>
+
+          <h3>Moving and Renaming Documents</h3>
+
+          <p>You can adjust the document organization structure at any time:</p>
+
+          <ul>
+            <li><strong>Move documents</strong>: Drag documents to the target directory in the sidebar.</li>
+            <li><strong>Rename documents</strong>: Right-click the document, select "Rename", and enter a new name.</li>
+            <li><strong>Move directories</strong>: Drag directories to other locations, which can move the entire directory and its contents.</li>
+          </ul>
+
+          <h3>Search and Filtering</h3>
+
+          <p>When the number of documents increases, use the search function:</p>
+
+          <ul>
+            <li><strong>Global search</strong>: Use <code>Command+Shift+F</code> to open the search panel and search all documents.</li>
+            <li><strong>Current document search</strong>: Use <code>Command+F</code> to search within the current document.</li>
+            <li><strong>Path filtering</strong>: Use the filter box in the sidebar to quickly locate specific directories or documents.</li>
+          </ul>
+
+          <div class="info-block">
+            <strong>Search Tips</strong>
+            <p>Search supports fuzzy matching and path search. For example, typing "notes/meeting" can quickly find documents under the "Meeting Notes" directory.</p>
+          </div>
+
+          <div class="highlight-block">
+            <p><strong>Pinyin Search Support</strong></p>
+            <p>MeshWork's search function supports Pinyin search, making it more convenient for Chinese users to find documents:</p>
+            <ul>
+              <li><strong>Full Pinyin search</strong>: Directly input complete Pinyin to search Chinese content. For example, inputting "zhongwen" can find documents containing "中文".</li>
+              <li><strong>No need to switch input methods</strong>: Use English input state to search Chinese documents, no need to frequently switch input methods.</li>
+              <li><strong>Mixed search</strong>: Can mix Chinese characters, Pinyin, and English for search. For example, inputting "chanpinxuqiu" can find documents containing "产品需求".</li>
+            </ul>
+            <p>Note: Pinyin search is based on Pinyin indexes established by the system for documents. For polyphonic characters or rare characters, search results may need to be filtered in combination with context.</p>
+          </div>
+
+          <h3>Using Tags</h3>
+
+          <p>Using tags provides another way to organize documents:</p>
+
+          <ol>
+            <li>Click the tag area in the document editor (usually at the top of the document).</li>
+            <li>Enter a tag name and press Enter to add.</li>
+            <li>You can add multiple tags.</li>
+            <li>Clicking a tag filters to display all documents with that tag.</li>
+          </ol>
+
+          <p>Common tag examples:</p>
+
+          <ul>
+            <li><code>#Todo</code>: Mark documents that need further processing</li>
+            <li><code>#Important</code>: Mark important documents</li>
+            <li><code>#Reference</code>: Mark reference materials</li>
+            <li><code>#Archive</code>: Mark completed or outdated documents</li>
+          </ul>
+
+          <h2 id="2-5">2.5 Git Sharing for Private Library</h2>
+
+          <h3>Enabling/Disabling Git</h3>
+
+          <p>Git functionality for the private library is optional:</p>
+
+          <ul>
+            <li><strong>Don't enable Git</strong>: Use completely locally without version control.</li>
+            <li><strong>Enable Git</strong>: Can have local commit history and can configure remote repositories.</li>
+          </ul>
+
+          <div class="tip-block">
+            <strong>Recommendation</strong>
+            <p>Even if you don't need team sharing, it's recommended to enable Git. Git can provide version history and recovery capabilities, preventing accidental modifications or data loss.</p>
+          </div>
+
+          <h3>Binding Remote Repository</h3>
+
+          <p>To bind a remote repository for the private library:</p>
+
+          <ol>
+            <li>Open the private library's settings page.</li>
+            <li>Find the "Git" or "Remote Repository" configuration section.</li>
+            <li>Enter the remote repository address (SSH or HTTPS format).</li>
+            <li>If using SSH, ensure SSH key configuration is complete (see section 1.5).</li>
+            <li>If using HTTPS, you need to use Personal Access Token as the password.</li>
+            <li>Click "Connect" or "Save" to complete the binding.</li>
+          </ol>
+
+          <h3>Pushing and Pulling</h3>
+
+          <p>After binding a remote repository, you can:</p>
+
+          <ul>
+            <li><strong>Push</strong>: Upload local modifications to the remote repository. Usually executed after completing a batch of edits.</li>
+            <li><strong>Pull</strong>: Get the latest content from the remote repository. If you use multiple devices, you need to pull first before starting to edit.</li>
+          </ul>
+
+          <h3>Handling Merge Conflicts</h3>
+
+          <p>When there are conflicting modifications locally and remotely, Git will report merge conflicts:</p>
+
+          <ol>
+            <li>Git will mark the conflicting files and locations.</li>
+            <li>Open the conflicting file, and you will see markers similar to the following:</li>
+          </ol>
+
+          <pre><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+Local content
+=======
+Remote content
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; remote-branch-name</code></pre>
+
+          <ol start="3">
+            <li>Edit manually, keep the parts you need, and delete conflict markers.</li>
+            <li>Save the file.</li>
+            <li>Mark the conflict as resolved.</li>
+            <li>Complete the merge.</li>
+          </ol>
+
+          <div class="info-block">
+            <strong>Automated Version Control</strong>
+            <p>MeshWork completely automates Git pull and push operations, you don't need manual control. Each edit automatically commits, and the system intelligently handles synchronization operations. This design allows you to focus on content creation without worrying about Git technical details.</p>
+          </div>
+
+          <h3>Manual Commit Strategy</h3>
+
+          <p>MeshWork automatically commits for each edit, but you can also manually control commits:</p>
+
+          <ul>
+            <li><strong>View history</strong>: Right-click on a document or directory and select "View History".</li>
+            <li><strong>Create commit</strong>: After completing a batch of related modifications, you can create a manual commit with a meaningful commit message.</li>
+            <li><strong>Revert version</strong>: If needed, you can revert to a previous version.</li>
+          </ul>
+
+          <div class="info-block">
+            <strong>Best Practice</strong>
+            <p>For the private library, it's recommended to use auto-commit. Git mainly serves as a safety net to prevent accidental modifications or data loss. Manual commits are suitable for use when completing a milestone.</p>
+          </div>
+
+          <nav class="manual-book-nav-buttons">
+            <a href="manual-book-01-en.html" class="nav-button prev">
+              <span>Previous</span>
+              <strong>System Setup & Configuration</strong>
+            </a>
+            <a href="manual-book-03-en.html" class="nav-button next">
+              <span>Next</span>
+              <strong>Shared Spaces</strong>
+            </a>
+          </nav>
+        </article>
+      </main>
+    </div>
+
+    <footer class="manual-book-footer">
+      <span>MeshWork Manual</span>
+      <span>Local-first creative workspace</span>
+      <a href="privacy.html">Privacy Policy</a>
+    </footer>
+
+    <script src="manual-lang-redirect.js"></script>
+  </body>
+</html>

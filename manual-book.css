@@ -469,6 +469,11 @@ a:hover {
   border-radius: 999px;
 }
 
+/* English version override */
+html[lang="en"] .manual-book-content .highlight-block::before {
+  content: "✨ Feature Highlight";
+}
+
 .manual-book-content .highlight-block p {
   margin: 0;
   font-size: 15px;

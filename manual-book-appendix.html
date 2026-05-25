@@ -15,18 +15,50 @@
         <span>∞</span>
         <strong>MeshWork</strong>
       </a>
+      <div class="language-switch">
+        <span class="lang-button is-active">中文</span>
+        <a href="manual-book-appendix-en.html" class="lang-button">EN</a>
+      </div>
       <nav class="manual-book-nav">
         <span>操作手册：附录</span>
       </nav>
       <a class="manual-book-home" href="manual.html">返回目录</a>
     </header>
 
+    <style>
+      .language-switch {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-right: 16px;
+      }
+      .lang-button {
+        padding: 4px 12px;
+        font-size: 13px;
+        border-radius: 4px;
+        border: 1px solid #d2d2d7;
+        background: #f5f5f7;
+        color: #6e6e73;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.2s;
+      }
+      .lang-button:hover {
+        background: #e5e5ea;
+      }
+      .lang-button.is-active {
+        background: #007aff;
+        color: white;
+        border-color: #007aff;
+      }
+    </style>
+
     <div class="manual-book-layout">
       <aside class="manual-book-sidebar">
         <nav class="manual-book-toc">
           <div class="toc-section">
             <span class="toc-part">第一部分</span>
-            <a href="manual-book-01.html" class="toc-title">系统设置与初始配置</a>
+            <a href="manual-book-01.html" class="toc-title">系统设置与初始配置</a><div style="margin-top: 8px; padding-left: 20px;"><a href="manual-book-01-en.html" style="font-size: 12px; color: #6e6e73;">🇬🇧 English</a></div>
           </div>
 
           <div class="toc-section">
@@ -355,6 +387,8 @@
       <span>Local-first creative workspace</span>
       <a href="privacy.html">隐私政策</a>
     </footer>
+
+    <script src="manual-lang-redirect.js"></script>
 
     <style>
       /* Additional styles for appendix */

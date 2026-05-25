@@ -1,0 +1,1132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="MeshWork Manual: Shared Spaces usage guide - create shared spaces, join shared spaces, share shared spaces, public library collaboration, discussion area usage, and Git configuration.">
+    <title>Shared Spaces - MeshWork Manual</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+    <link rel="stylesheet" href="manual-book.css">
+  </head>
+  <body>
+    <header class="manual-book-header">
+      <a class="manual-book-brand" href="index.html">
+        <span>∞</span>
+        <strong>MeshWork</strong>
+      </a>
+      <div class="language-switch">
+        <a href="manual-book-03.html" class="lang-button">中文</a>
+        <span class="lang-button is-active">EN</span>
+      </div>
+      <nav class="manual-book-nav">
+        <span>Manual: Shared Spaces</span>
+      </nav>
+      <a class="manual-book-home" href="manual-en.html">Back to TOC</a>
+    </header>
+
+    <div class="manual-book-layout">
+      <aside class="manual-book-sidebar">
+        <nav class="manual-book-toc">
+          <div class="toc-section">
+            <span class="toc-part">Part 1</span>
+            <a href="manual-book-01-en.html" class="toc-title">System Setup & Configuration</a>
+          </div>
+
+          <div class="toc-section">
+            <span class="toc-part">Part 2</span>
+            <a href="manual-book-02-en.html" class="toc-title">Private Library</a>
+          </div>
+
+          <div class="toc-section">
+            <span class="toc-part">Part 3</span>
+            <a href="manual-book-03-en.html" class="toc-title active">Shared Spaces</a>
+            <ul class="toc-list">
+              <li><a href="#3-1">3.1 Shared Space Overview</a></li>
+              <li><a href="#3-2">3.2 Creating Shared Spaces</a></li>
+              <li><a href="#3-3">3.3 Joining Shared Spaces</a></li>
+              <li><a href="#3-4">3.4 Sharing Shared Spaces</a></li>
+              <li><a href="#3-5">3.5 Public Library Collaboration</a></li>
+              <li><a href="#3-6">3.6 Using Discussion Area</a></li>
+              <li><a href="#3-7">3.7 Git Configuration for Shared Spaces</a></li>
+              <li><a href="#3-8">3.8 Small Team Collaboration Example</a></li>
+            </ul>
+          </div>
+
+          <div class="toc-section">
+            <span class="toc-part">Appendix</span>
+            <a href="manual-book-appendix-en.html" class="toc-title">Appendix</a>
+          </div>
+        </nav>
+      </aside>
+
+      <main class="manual-book-main">
+        <article class="manual-book-content">
+          <h1>Shared Spaces</h1>
+          <p class="subtitle">Learn how to create and manage shared spaces, collaborate on documents with team members, use discussion areas for asynchronous communication, and enable version control and multi-person collaboration through Git.</p>
+
+          <nav class="manual-book-toc-mini">
+            <strong>Chapter Contents</strong>
+            <ol>
+              <li><a href="#3-1">Shared Space Overview</a></li>
+              <li><a href="#3-2">Creating Shared Spaces</a></li>
+              <li><a href="#3-3">Joining Shared Spaces</a></li>
+              <li><a href="#3-4">Sharing Shared Spaces</a></li>
+              <li><a href="#3-5">Public Library Collaboration</a></li>
+              <li><a href="#3-6">Using Discussion Area</a></li>
+              <li><a href="#3-7">Git Configuration for Shared Spaces</a></li>
+              <li><a href="#3-8">Small Team Collaboration Example</a></li>
+            </ol>
+          </nav>
+
+          <h2 id="3-1">3.1 Shared Space Overview</h2>
+
+          <div class="warning-block">
+            <strong>Important Security Notice</strong>
+            <p>Shared space permission control is not implemented by MeshWork, but is determined by the access permissions of the remote Git repository (such as GitHub) you bind.</p>
+            <p>Specifically:</p>
+            <ul>
+              <li>Data being stored locally does not mean it is shared. Only when you bind a remote repository for the shared space and share the repository address with others will the data be shared.</li>
+              <li>Who can access this shared space depends on the permission settings of the remote repository platform. On GitHub, only people invited as collaborators can access private repositories.</li>
+              <li>If you unbind the remote repository or remove someone from the collaborators list, they will no longer be able to access the shared space content.</li>
+              <li>Please manage remote repository permissions carefully to ensure only trusted personnel can access your shared spaces.</li>
+            </ul>
+          </div>
+
+          <h3>What is a Shared Space</h3>
+
+          <p>A shared space is a team or project-level data boundary, the core unit for multi-person collaboration in MeshWork. Each shared space contains the following key parts:</p>
+
+          <ul>
+            <li><strong>Public Library</strong>: Stores team-shared documents, knowledge, resources, and long-term settled content.</li>
+            <li><strong>Discussion Area</strong>: Place for asynchronous discussion around shared content, supporting topic tags, status management, and intelligent dialogue.</li>
+            <li><strong>Shared Attachments</strong>: Images, files, and other media resources shared by the team.</li>
+            <li><strong>Git Configuration</strong>: Optional version control and remote collaboration features.</li>
+          </ul>
+
+          <div class="info-block">
+            <strong>Core Design Philosophy</strong>
+            <p>The shared space design philosophy is to first establish your own private library, then join shared spaces as needed. This maintains the independence of personal thinking while discussing and settling long-term knowledge with the team and AI.</p>
+          </div>
+
+          <h3>Relationship Between Shared Spaces and Private Library</h3>
+
+          <p>In MeshWork, the private library and shared spaces are two independent data boundaries:</p>
+
+          <ul>
+            <li><strong>Private Library</strong>: Belongs to the current user, storing personal long-term notes, research materials, writing drafts, inspiration fragments, and content that shouldn't automatically enter team sharing.</li>
+            <li><strong>Shared Space</strong>: Belongs to a team or project, storing team-shared knowledge, discussions, and collaboration content.</li>
+          </ul>
+
+          <p>The workspace is responsible for combining one private library and multiple shared spaces. You can simultaneously participate in multiple different shared spaces, such as your company's product planning space, open source project documentation space, friends' content creation space, etc.</p>
+
+          <h3>Shared Space Application Scenarios</h3>
+
+          <p>Shared spaces are suitable for various team collaboration scenarios:</p>
+
+          <ul>
+            <li><strong>Product Planning Team</strong>: Collect market research, competitive analysis, requirement documents, and product planning.</li>
+            <li><strong>Content Creation Team</strong>: Collaborative writing of articles, books, video scripts, and marketing content.</li>
+            <li><strong>Research Discussion Group</strong>: Academic paper discussions, research note sharing, and opinion exchange.</li>
+            <li><strong>Open Source Project Maintenance</strong>: Project documentation, development guides, and community discussions.</li>
+            <li><strong>Education and Training</strong>: Course material sharing, learning discussions, and assignment collaboration.</li>
+          </ul>
+
+          <h3>Shared Spaces in the Sidebar</h3>
+
+          <p>In the workspace main interface, shared spaces are located in the lower half of the sidebar:</p>
+
+          <ul>
+            <li><strong>Private Library</strong>: Fixed in the upper half of the sidebar, always visible.</li>
+            <li><strong>Shared Space List</strong>: Located in the lower half of the sidebar, multiple shared spaces can be added.</li>
+            <li><strong>Add Button</strong>: Below the shared space area is a <code>+</code> button for creating or joining new shared spaces.</li>
+          </ul>
+
+          <p>Under each shared space, two sub-items can be expanded: Public Library and Discussion Area. Clicking the corresponding sub-item displays the related content in the main content area.</p>
+
+          <h2 id="3-2">3.2 Creating Shared Spaces</h2>
+
+          <h3>Preparation Before Creating</h3>
+
+          <p>Before creating a shared space, it's recommended to clarify the following points:</p>
+
+          <ul>
+            <li><strong>Team size</strong>: Determine the number of members and role division in the participating team.</li>
+            <li><strong>Collaboration goals</strong>: Clarify the main purpose of the shared space, such as product documentation, content creation, research discussion, etc.</li>
+            <li><strong>Git requirements</strong>: Consider whether version control and remote collaboration are needed. For small teams, you can use it locally first and configure Git later.</li>
+            <li><strong>Directory location</strong>: Choose an appropriate disk directory location to store shared space data.</li>
+          </ul>
+
+          <div class="tip-block">
+            <strong>Recommendation</strong>
+            <p>For teams using MeshWork for the first time, it's recommended to first create a shared space without Git, become familiar with the product functions, and then configure version control. This reduces the learning curve and allows quick onboarding to collaboration.</p>
+          </div>
+
+          <h3>Creation Steps</h3>
+
+          <p>To create a new shared space:</p>
+
+          <ol>
+            <li><strong>Open creation interface</strong>: In the workspace main interface, click the <code>+</code> button below the sidebar.</li>
+            <li><strong>Select creation type</strong>: In the pop-up menu, select "Create Shared Space".</li>
+            <li><strong>Enter basic information</strong>:
+              <ul>
+                <li>Enter the shared space name, such as "Product Planning Team" or "Content Creation Studio".</li>
+                <li>Select the local storage directory. MeshWork will create the shared space's data structure under the specified directory.</li>
+                <li>Choose whether to use a template. If creating for the first time, it's recommended to select "Empty Template", and you can add content later according to actual needs.</li>
+              </ul>
+            </li>
+            <li><strong>Configure Git (optional)</strong>:
+              <ul>
+                <li>If version control is needed, you can select "Configure Git".</li>
+                <li>Enter the remote repository address (such as GitHub repository address).</li>
+                <li>Enter the branch name. When left blank, MeshWork will automatically generate a branch name based on the shared space name and ID.</li>
+                <li>If version control is not needed for now, you can select "Configure Later".</li>
+              </ul>
+            </li>
+            <li><strong>Complete creation</strong>: Click the "Create" button, and MeshWork will create the complete directory structure of the shared space in the specified directory.</li>
+          </ol>
+
+          <h3>Directory Structure</h3>
+
+          <p>After creation is complete, the shared space directory structure is as follows:</p>
+
+          <pre><code>&lt;shared-space&gt;/
+├── .meshwork/           # MeshWork metadata and configuration
+├── public-knowledge/    # Public library documents
+├── discussions/         # Discussion area data
+└── assets/             # Shared attachments and media resources</code></pre>
+
+          <div class="info-block">
+            <strong>Directory Description</strong>
+            <p>The <code>.meshwork</code> directory contains the shared space's configuration information, Git settings, and metadata. Do not manually edit files in this directory unless you clearly understand their structure and impact.</p>
+          </div>
+
+          <h3>Initial Interface</h3>
+
+          <p>After creation is complete, you will see the following interface changes:</p>
+
+          <ul>
+            <li>The new shared space will appear in the shared space list in the sidebar.</li>
+            <li>You can expand the shared space to see two sub-items: "Public Library" and "Discussion Area".</li>
+            <li>By default, the Public Library will open, displaying an empty document tree.</li>
+            <li>You can start creating documents, organizing folder structures, and inviting team members to join.</li>
+          </ul>
+
+          <h2 id="3-3">3.3 Joining Shared Spaces</h2>
+
+          <h3>Getting Invitation Information</h3>
+
+          <p>To join an existing shared space, you first need to obtain that shared space's invitation information. Invitation information is usually provided by the shared space's creator or administrator and contains the following key information:</p>
+
+          <ul>
+            <li><strong>Remote repository URL</strong>: The Git remote repository address bound by the shared space.</li>
+            <li><strong>Branch name</strong>: The branch name of the shared space in the remote repository.</li>
+            <li><strong>Shared space name</strong>: Suggested name for local directory naming.</li>
+          </ul>
+
+          <div class="info-block">
+            <strong>Invitation Text Format</strong>
+            <p>MeshWork uses a standardized invitation text format containing both human-readable instructions and machine-parsable JSON data. After receiving the invitation text, you can directly paste it into the join interface, and the system will automatically parse and fill in the relevant information.</p>
+          </div>
+
+          <h3>Joining Steps</h3>
+
+          <p>To join an existing shared space:</p>
+
+          <ol>
+            <li><strong>Open join interface</strong>: In the workspace main interface, click the <code>+</code> button below the sidebar.</li>
+            <li><strong>Select join type</strong>: In the pop-up menu, select "Join Shared Space".</li>
+            <li><strong>Enter invitation information</strong>:
+              <ul>
+                <li>If you received a MeshWork invitation text, directly press <code>Command+V</code> to paste it into the interface. The system will automatically parse and fill the following fields:
+                  <ul>
+                    <li>Remote repository URL</li>
+                    <li>Branch name</li>
+                    <li>Local name (if not yet entered)</li>
+                  </ul>
+                </li>
+                <li>If there is no invitation text, manually enter the remote repository address and branch name.</li>
+                <li>Enter the local directory name for storing shared space data locally.</li>
+                <li>Select the local storage directory location.</li>
+              </ul>
+            </li>
+            <li><strong>Clone remote content</strong>:
+              <ul>
+                <li>After clicking the "Join" button, MeshWork will clone the specified branch's content from the remote repository.</li>
+                <li>First-time joining may take some time, depending on network speed and remote repository size.</li>
+                <li>After cloning is complete, the local system will have the complete shared space history and current content.</li>
+              </ul>
+            </li>
+            <li><strong>Start collaborating</strong>:
+              <ul>
+                <li>After successful joining, the shared space will appear in the sidebar.</li>
+                <li>You can view documents in the Public Library, participate in Discussion Area topics, and collaborate with team members in real time.</li>
+              </ul>
+            </li>
+          </ol>
+
+          <h3>Permissions and Access Control</h3>
+
+          <p>After joining a shared space, your permissions depend on the remote repository's access settings:</p>
+
+          <ul>
+            <li><strong>Write permission</strong>: Can edit documents, create discussions, and push changes to the remote repository.</li>
+            <li><strong>Read-only permission</strong>: Can view content but cannot modify or push changes.</li>
+            <li><strong>Admin permission</strong>: In addition to write permission, can manage team members, adjust settings, and configure Git.</li>
+          </ul>
+
+          <div class="warning-block">
+            <strong>Permission Description</strong>
+            <p>If you find you cannot edit or push changes, it may be due to insufficient permissions. Please contact the shared space administrator and request appropriate access permissions.</p>
+          </div>
+
+          <h3>Troubleshooting Join Issues</h3>
+
+          <p>When joining a shared space, you may encounter some common problems:</p>
+
+          <ul>
+            <li><strong>Authentication failed</strong>: Check whether the SSH key or Personal Access Token is correctly configured.</li>
+            <li><strong>Repository doesn't exist</strong>: Confirm whether the remote repository URL is correct and whether the repository has been deleted.</li>
+            <li><strong>Branch doesn't exist</strong>: Confirm whether the branch name is correct, case-sensitive.</li>
+            <li><strong>Insufficient permissions</strong>: Confirm whether you have permission to access the repository.</li>
+          </ul>
+
+          <div class="tip-block">
+            <strong>Troubleshooting</strong>
+            <p>If you encounter problems, it's recommended to first try connecting using SSH. SSH is usually more stable than HTTPS and doesn't require managing Token expiration.</p>
+          </div>
+
+          <h2 id="3-4">3.4 Sharing Shared Spaces</h2>
+
+          <h3>Preparation Before Sharing</h3>
+
+          <p>Before sharing a shared space, you need to ensure the following points:</p>
+
+          <ul>
+            <li><strong>Git configured</strong>: The shared space must be bound to a remote Git repository to be shared.</li>
+            <li><strong>Content pushed</strong>: Ensure local changes have been pushed to the remote repository so team members can see the latest content.</li>
+            <li><strong>Permissions set</strong>: In the remote repository hosting service (such as GitHub), ensure target users have been granted appropriate permissions.</li>
+          </ul>
+
+          <div class="warning-block">
+            <strong>Important Reminder</strong>
+            <p>If the shared space is not bound to a remote repository, the sharing function will be unavailable. Please configure Git in the shared space settings first, then proceed with sharing.</p>
+          </div>
+
+          <h3>Generating Invitation Text</h3>
+
+          <p>To generate invitation text for a shared space:</p>
+
+          <ol>
+            <li><strong>Open share interface</strong>: Right-click the shared space you want to share in the sidebar and select "Share".</li>
+            <li><strong>View invitation information</strong>: The system will open a Sheet displaying the following information:
+              <ul>
+                <li>Remote repository URL</li>
+                <li>Branch name</li>
+                <li>Shared space name</li>
+                <li>Auto-generated invitation text</li>
+              </ul>
+            </li>
+            <li><strong>Copy invitation text</strong>: Click the "Copy Invitation" button to copy the invitation text to the clipboard.</li>
+          </ol>
+
+          <h3>Invitation Text Format</h3>
+
+          <p>MeshWork's invitation text uses a standardized format containing both human-readable instructions and machine-parsable JSON data:</p>
+
+          <pre><code>-----BEGIN MESHWORK SHARED SPACE INVITE-----
+{
+  "type": "com.meshwork.shared-space-invite",
+  "version": 1,
+  "name": "Product Planning Team",
+  "remoteURL": "git@github.com:example/product-docs.git",
+  "branch": "meshwork/shared/product-team"
+}
+-----END MESHWORK SHARED SPACE INVITE-----</code></pre>
+
+          <p>Advantages of this format:</p>
+
+          <ul>
+            <li><strong>Human-readable</strong>: Even when pasted into chat applications or email, recipients can understand this is a MeshWork invitation.</li>
+            <li><strong>Machine-parsable</strong>: Recipients can directly paste into MeshWork, and the system will automatically extract necessary information.</li>
+            <li><strong>Version-compatible</strong>: Includes a version number for future format upgrades and compatibility handling.</li>
+          </ul>
+
+          <h3>Sharing Methods</h3>
+
+          <p>After generating invitation text, you can share it with team members through various methods:</p>
+
+          <ul>
+            <li><strong>System sharing</strong>: Use macOS's system share function to send via AirDrop, Messages, Mail, etc.</li>
+            <li><strong>Copy and paste</strong>: Copy the invitation text and paste it into team communication tools like Slack, WeChat, DingTalk.</li>
+            <li><strong>Email sending</strong>: Send the invitation text as email content to target users.</li>
+            <li><strong>Document sharing</strong>: Put the invitation text in a team collaboration document for members to access at any time.</li>
+          </ul>
+
+          <h3>Setting Remote Repository Permissions</h3>
+
+          <p>Just sending invitation text is not enough; you also need to ensure target users have permission to access the remote repository:</p>
+
+          <ol>
+            <li>Visit the remote repository hosting service (such as GitHub).</li>
+            <li>Enter the repository's "Settings" page.</li>
+            <li>Click "Collaborators" in the left menu.</li>
+            <li>Click the "Add people" button.</li>
+            <li>Enter the team member's GitHub username or email address.</li>
+            <li>Select the permission level (recommend selecting "Write" permission).</li>
+            <li>Click "Add" to send the invitation.</li>
+          </ol>
+
+          <div class="tip-block">
+            <strong>Permission Recommendation</strong>
+            <p>For most team members, "Write" permission is sufficient. Admin permissions are only needed when managing repository settings and team members.</p>
+          </div>
+
+          <h3>Post-Sharing Management</h3>
+
+          <p>After sharing a shared space, as creator or administrator, you need to:</p>
+
+          <ul>
+            <li><strong>Regularly push updates</strong>: Ensure local changes are pushed to the remote repository in a timely manner.</li>
+            <li><strong>Resolve conflicts</strong>: When multiple members modify the same document simultaneously, assist in resolving merge conflicts.</li>
+            <li><strong>Maintain document quality</strong>: Ensure document structure in the Public Library is clear and content is accurate.</li>
+            <li><strong>Guide new members</strong>: Help newly joined members understand the shared space's usage guidelines and best practices.</li>
+          </ul>
+
+          <h2 id="3-5">3.5 Public Library Collaboration</h2>
+
+          <h3>Public Library Overview</h3>
+
+          <p>The Public Library is the core area for storing team-shared documents in a shared space. Similar to the private library, it supports document editing, folder organization, AI assistance, and other functions, but content is visible and editable to all team members.</p>
+
+          <div class="info-block">
+            <strong>Collaboration Principles</strong>
+            <p>Documents in the Public Library should have long-term value and need team sharing. Temporary discussions, personal ideas, and unformed content are more suitable for placement in the private library.</p>
+          </div>
+
+          <h3>Creating and Editing Documents</h3>
+
+          <p>To create and edit documents in the Public Library:</p>
+
+          <ol>
+            <li><strong>Open Public Library</strong>: Expand the shared space in the sidebar and click "Public Library".</li>
+            <li><strong>Create new document</strong>: Click the "New Document" button in the document tree and enter the document title.</li>
+            <li><strong>Organize document structure</strong>:
+              <ul>
+                <li>Create folders to organize related documents.</li>
+                <li>Use meaningful folder and document names.</li>
+                <li>Follow team naming conventions and directory structure standards.</li>
+              </ul>
+            </li>
+            <li><strong>Edit document content</strong>:
+              <ul>
+                <li>Use the rich text editor to write content.</li>
+                <li>Insert images, links, and code blocks.</li>
+                <li>Use the AI assistant to assist with writing and optimizing content.</li>
+              </ul>
+            </li>
+            <li><strong>Save changes</strong>: Edits are automatically saved, or you can manually press <code>Command+S</code> to save.</li>
+          </ol>
+
+          <h3>Collaborative Editing Best Practices</h3>
+
+          <p>When collaborating on document editing with a team, it's recommended to follow these best practices:</p>
+
+          <ul>
+            <li><strong>Avoid simultaneous editing of the same document</strong>: Try to coordinate with team members to avoid multiple people editing the same document simultaneously, reducing conflicts.</li>
+            <li><strong>Small, frequent commits</strong>: Push small changes frequently instead of accumulating many changes before pushing once. This makes it easier to track history and resolve conflicts.</li>
+            <li><strong>Clear commit messages</strong>: When pushing, provide concise, clear change descriptions to help team members understand your modifications.</li>
+            <li><strong>Communicate major changes</strong>: Before large-scale document restructuring or deletion operations, inform other members in the Discussion Area or team communication tools.</li>
+            <li><strong>Regular synchronization</strong>: Develop the habit of regularly pulling remote updates to ensure local content stays synchronized with the team.</li>
+          </ul>
+
+          <div class="tip-block">
+            <strong>Collaboration Tips</strong>
+            <p>Use the Discussion Area to discuss around documents rather than making extensive comments directly in documents. This keeps document content clean while preserving discussion history.</p>
+          </div>
+
+          <h3>Document Version History</h3>
+
+          <p>Through Git's version history functionality, you can:</p>
+
+          <ul>
+            <li><strong>View history</strong>: View all modification history of a document, including who made what changes when.</li>
+            <li><strong>Compare versions</strong>: Compare differences between versions to understand specific changes.</li>
+            <li><strong>Restore old versions</strong>: If important content is accidentally deleted or modified, you can restore from historical versions.</li>
+            <li><strong>Trace contributions</strong>: Understand each team member's contributions to the document.</li>
+          </ul>
+
+          <h3>Handling Edit Conflicts</h3>
+
+          <p>When multiple team members modify the same document simultaneously, edit conflicts may occur. Steps to resolve conflicts:</p>
+
+          <ol>
+            <li><strong>Identify conflict</strong>: When you try to push changes, if the remote repository has new commits, MeshWork will prompt that a conflict exists.</li>
+            <li><strong>Pull remote changes</strong>: First pull the latest remote changes, and MeshWork will attempt to auto-merge.</li>
+            <li><strong>Manually resolve conflicts</strong>:
+              <ul>
+                <li>If auto-merge fails, conflicts need to be resolved manually.</li>
+                <li>MeshWork will display the conflicting content, letting you choose which version to keep or merge both versions.</li>
+                <li>Carefully check each conflict area to ensure the final content is correct.</li>
+              </ul>
+            </li>
+            <li><strong>Push resolved version</strong>: After conflicts are resolved, push changes to the remote repository again.</li>
+          </ol>
+
+          <div class="warning-block">
+            <strong>Conflict Prevention</strong>
+            <p>The best conflict resolution method is prevention. Through good communication, reasonable task division, and frequent synchronization, conflict occurrences can be greatly reduced.</p>
+          </div>
+
+          <h3>Document Templates and Standards</h3>
+
+          <p>To maintain consistency and readability in the Public Library, it's recommended to:</p>
+
+          <ul>
+            <li><strong>Use document templates</strong>: Create templates for common document types, such as meeting notes, requirement documents, technical proposals, etc.</li>
+            <li><strong>Establish writing standards</strong>: Agree on document formats, structures, naming rules, and language style.</li>
+            <li><strong>Build review mechanisms</strong>: For important documents, establish review processes to ensure content quality.</li>
+            <li><strong>Regular maintenance</strong>: Regularly clean up outdated documents, update incorrect information, and optimize directory structure.</li>
+          </ul>
+
+          <h2 id="3-6">3.6 Using Discussion Area</h2>
+
+          <h3>Discussion Area Overview</h3>
+
+          <p>The Discussion Area is the core tool for asynchronous communication within a shared space. It supports topic discussion, status management, tag classification, and AI intelligent dialogue, helping team members conduct in-depth discussions around shared content.</p>
+
+          <div class="info-block">
+            <strong>Discussion Area Characteristics</strong>
+            <p>The Discussion Area uses an asynchronous communication mode similar to mailing lists and forums, different from real-time chat tools. This mode is more suitable for deep thinking, long-form discussion, and cross-timezone collaboration.</p>
+          </div>
+
+          <h3>Creating and Managing Topics</h3>
+
+          <p>To create and manage topics in the Discussion Area:</p>
+
+          <ol>
+            <li><strong>Open Discussion Area</strong>: Expand the shared space in the sidebar and click "Discussion Area".</li>
+            <li><strong>Create new topic</strong>:
+              <ul>
+                <li>Click the "New Topic" button.</li>
+                <li>Enter a topic title that concisely and clearly describes the discussion theme.</li>
+                <li>Select topic tags (such as "Requirement Discussion", "Technical Proposal", "Issue Feedback", etc.).</li>
+                <li>Set topic status (such as "Open", "In Progress", "Resolved", etc.).</li>
+                <li>Write the topic's initial content, clearly explaining background, issues, and expected discussion direction.</li>
+                <li>Associate related documents (optional), linking the discussion to specific Public Library documents.</li>
+              </ul>
+            </li>
+            <li><strong>Manage topics</strong>:
+              <ul>
+                <li>Update topic status to reflect current progress.</li>
+                <li>Adjust tags to help with categorization and retrieval.</li>
+                <li>Edit topic titles and content to correct errors or supplement information.</li>
+                <li>Close resolved or no longer relevant topics.</li>
+              </ul>
+            </li>
+          </ol>
+
+          <h3>Participating in Discussions</h3>
+
+          <p>To participate in topic discussions in the Discussion Area:</p>
+
+          <ol>
+            <li><strong>Browse topics</strong>: View all discussions in the topic list, filtering by status, tags, time, etc.</li>
+            <li><strong>Reply to topics</strong>:
+              <ul>
+                <li>Click a topic to enter its detail page.</li>
+                <li>Enter your opinions, suggestions, or questions in the reply box.</li>
+                <li>Supports rich text format, can insert links, code blocks, and images.</li>
+                <li>Can @ mention other team members to draw their attention.</li>
+                <li>Use the AI assistant to help organize viewpoints, generate summaries, or provide intelligent suggestions.</li>
+              </ul>
+            </li>
+            <li><strong>Follow topics</strong>: For important topics, you can choose to "Follow" so you receive notifications when there are new replies.</li>
+            <li><strong>Quote replies</strong>: Can quote specific messages for replies, making discussion structure clearer.</li>
+          </ol>
+
+          <h3>Using AI Assistant</h3>
+
+          <p>The Discussion Area integrates an AI intelligent assistant providing the following functions:</p>
+
+          <ul>
+            <li><strong>Auto-summarize</strong>: AI can automatically summarize key points of long discussions, helping team members quickly understand discussion progress.</li>
+            <li><strong>Viewpoint extraction</strong>: Extract different viewpoints and positions from messy discussions, helping to understand everyone's opinions.</li>
+            <li><strong>Issue identification</strong>: Automatically identify issues and controversy points in discussions, helping focus on key topics.</li>
+            <li><strong>Suggestion generation</strong>: Provide possible solutions or next action suggestions based on discussion content.</li>
+            <li><strong>Intelligent reply</strong>: AI can generate reply drafts based on context, reducing repetitive work.</li>
+          </ul>
+
+          <div class="tip-block">
+            <strong>AI Usage Tips</strong>
+            <p>The AI assistant is particularly suitable for processing summaries and organization of long topics. When a topic has dozens of replies, you can ask AI to generate a structured summary, helping newly participating members quickly understand background and current status.</p>
+          </div>
+
+          <h3>Topic Branches: Possibilities for Infinite Dialogue</h3>
+
+          <p>MeshWork's Discussion Area supports a unique feature: <strong>Topic Branches</strong>. This feature allows you to create a new topic starting from any discussion message, achieving infinite extension and subdivision of dialogue.</p>
+
+          <div class="highlight-block">
+            <p><strong>✨ Feature Highlight: Topic Branches</strong></p>
+            <p>Topic branches are one of the core innovative features of MeshWork's Discussion Area. Unlike traditional chat tools, our dialogue is not linear but can branch and extend like a mind map.</p>
+            <ul>
+              <li><strong>Arbitrary starting point</strong>: Can create branches from any completed user message, no need to start from scratch</li>
+              <li><strong>AI-assisted summarization</strong>: Automatically uses AI agents to generate discussion summaries at branch points, ensuring context continuity</li>
+              <li><strong>Lossless traceability</strong>: New topics retain association with the original topic, can trace dialogue source at any time</li>
+              <li><strong>Unlimited levels</strong>: Supports creating multi-level branches, allowing discussion to continuously deepen and subdivide</li>
+            </ul>
+          </div>
+
+          <h4>Why Do We Need Topic Branches?</h4>
+
+          <p>In team collaboration, discussions often evolve into multiple parallel sub-topics. Traditional chat tools can only linearly stack messages, leading to:</p>
+
+          <ul>
+            <li><strong>Scattered focus</strong>: One topic mixes multiple related but not identical issues, making it hard to focus</li>
+            <li><strong>Information drowning</strong>: Important sub-discussions are drowned by many other messages, hard to review</li>
+            <li><strong>Repeated communication</strong>: To help new members understand background, need to repeatedly explain previously discussed content</li>
+            <li><strong>Lack of structure</strong>: Discussion becomes a messy message flow, unable to form clear knowledge structure</li>
+          </ul>
+
+          <div class="info-block">
+            <strong>Actual Scenario Example</strong>
+            <p>Imagine this scenario: The team is discussing "New Product Feature Planning" when someone raises a question about pricing strategy. This question triggers in-depth discussion but deviates from the original product feature planning theme. At this point, continuing to discuss in the original topic would confuse the main line; creating a new topic would lose the previous discussion context. The topic branch feature perfectly solves this problem—you can create a branch from the pricing strategy question message, letting both discussions proceed in parallel without interference.</p>
+          </div>
+
+          <h4>How to Use Topic Branches?</h4>
+
+          <p>Creating a topic branch is very simple:</p>
+
+          <ol>
+            <li><strong>Select branch point</strong>: In a topic, find the message you want as the starting point for the new topic. This message must be a completed user message (not a system message).</li>
+            <li><strong>Click branch button</strong>: Hover over the target message and click the "Branch" icon (arrow branch icon) in the toolbar.</li>
+            <li><strong>AI generates summary</strong>: The system will call an AI agent to analyze discussion content from this message to the topic's end, generating a structured summary.</li>
+            <li><strong>Confirm branch information</strong>: In the pop-up branch confirmation interface, you can:
+              <ul>
+                <li>View the AI-generated discussion summary</li>
+                <li>Edit the new topic title (can be based on AI suggestion or customized)</li>
+                <li>Modify summary content (if needed)</li>
+              </ul>
+            </li>
+            <li><strong>Create branch</strong>: After confirming, click "Create Branch". The system will generate a new topic containing:
+              <ul>
+                <li>System message showing branch source (original topic title and link)</li>
+                <li>AI-generated discussion summary as the first message</li>
+                <li>Association information with the original topic for future traceability</li>
+              </ul>
+            </li>
+          </ol>
+
+          <h4>Topic Branch Best Practices</h4>
+
+          <ul>
+            <li><strong>Branch promptly</strong>: When you find discussion starting to deviate from the original theme, promptly create a branch to keep the original topic focused</li>
+            <li><strong>Meaningful titles</strong>: Give branch topics clear titles that accurately reflect the branch discussion theme</li>
+            <li><strong>Utilize summaries</strong>: AI-generated summaries contain key context, ensuring new participants can quickly understand background</li>
+            <li><strong>Maintain associations</strong>: Branch topics retain association with the original topic, can quickly trace back to original discussion when necessary</li>
+            <li><strong>Moderate branching</strong>: Although unlimited branching is supported, it's recommended to only create branches when truly needed to avoid topic fragmentation</li>
+          </ul>
+
+          <h4>Technical Implementation of Topic Branches</h4>
+
+          <p>The technical implementation of the topic branch feature reflects MeshWork's careful design of data structures:</p>
+
+          <ul>
+            <li><strong>Message-level association</strong>: Each message can become a branch starting point, achieving fine-grained dialogue organization</li>
+            <li><strong>Metadata tracking</strong>: Branch messages contain complete metadata, recording branch source, creator, creation time, etc.</li>
+            <li><strong>Context window</strong>: When generating summaries, AI considers context window limitations, ensuring summary completeness and accuracy</li>
+            <li><strong>Git integration</strong>: Topic branch data syncs to all team members according to Git rules</li>
+          </ul>
+
+          <div class="tip-block">
+            <strong>Professional Tip</strong>
+            <p>The topic branch feature is particularly suitable for discussion management in complex projects. Product teams can use it to separate feature discussions from implementation details, technical teams can use it to separate solution discussions from code reviews, marketing teams can use it to handle feedback from different channels in parallel. Each branch is an independent discussion space but maintains connection with the main line, forming an organic discussion network.</p>
+          </div>
+
+          <h3>Association Between Topics and Documents</h3>
+
+          <p>The Discussion Area is closely integrated with the Public Library, supporting association between topics and documents:</p>
+
+          <ul>
+            <li><strong>Create associations</strong>: When creating or editing topics, can link to specific documents in the Public Library.</li>
+            <li><strong>Initiate discussions from documents</strong>: When reading documents, can directly initiate discussions targeting those documents.</li>
+            <li><strong>Bi-directional navigation</strong>: Can jump from topics to associated documents, and can also view related discussions from documents.</li>
+            <li><strong>Discussion settling</strong>: When discussions form consensus or conclusions, can organize discussion content into documents and settle them in the Public Library.</li>
+          </ul>
+
+          <h3>Discussion Area Status Management</h3>
+
+          <p>Discussion Area topics have two simple states to help you manage the discussion lifecycle:</p>
+
+          <ul>
+            <li><strong>Open</strong>: Active discussion state. All open topics display in the topic list, and team members can continue participating in discussion. This is the default state for newly created topics.</li>
+            <li><strong>Archived</strong>: Closed or no longer active topics. After archiving, topics don't display in the default topic list but can still view history. Archiving is used to clean up the topic list while preserving discussion history.</li>
+          </ul>
+
+          <div class="info-block">
+            <strong>Status Usage Recommendations</strong>
+            <p>When a topic's discussion has ended or issues have been resolved, it's recommended to archive it. This keeps the topic list clean and lets team members focus on active discussions. Archived topics can be reopened at any time if continued discussion is needed.</p>
+          </div>
+
+          <h3>Discussion Area Content and Git</h3>
+
+          <p>Whether content in the Discussion Area enters Git follows these principles:</p>
+
+          <ul>
+            <li><strong>Content entering Git</strong>:
+              <ul>
+                <li>Topic titles and status</li>
+                <li>Participants and tags</li>
+                <li>Associated public documents</li>
+                <li>Message body text</li>
+                <li>Sharable render structures directly related to messages</li>
+              </ul>
+            </li>
+            <li><strong>Content not entering Git</strong>:
+              <ul>
+                <li>Current user's own session state</li>
+                <li>Current user's own unread status</li>
+                <li>Current user's own drafts</li>
+                <li>Current user's own collapse state</li>
+                <li>Current user's own AI auto-reply window state</li>
+              </ul>
+            </li>
+          </ul>
+
+          <p>This design ensures content that team members should see together and synchronize enters the shared Git, while personal preferences and local state don't affect other members.</p>
+
+          <h2 id="3-7">3.7 Git Configuration for Shared Spaces</h2>
+
+          <h3>Git Configuration Overview</h3>
+
+          <p>Git configuration for shared spaces is similar to the private library but has some special considerations:</p>
+
+          <ul>
+            <li><strong>Multi-person collaboration</strong>: Need to consider situations where multiple members push changes simultaneously.</li>
+            <li><strong>Permission management</strong>: Ensure team members have appropriate repository access permissions.</li>
+            <li><strong>Branch strategy</strong>: Multiple shared spaces may use different branches of the same repository.</li>
+            <li><strong>Conflict resolution</strong>: Need to establish clear conflict resolution processes.</li>
+          </ul>
+
+          <div class="info-block">
+            <strong>Optional Feature</strong>
+            <p>Git configuration is optional for shared spaces. Small teams can use it locally first and configure version control after becoming familiar with product functions. However, for teams with remote collaboration needs, Git configuration is essential.</p>
+          </div>
+
+          <h3>Initializing Git Repository</h3>
+
+          <p>To initialize a Git repository for a shared space:</p>
+
+          <ol>
+            <li><strong>Open shared space settings</strong>: Right-click the shared space in the sidebar and select "Settings".</li>
+            <li><strong>Enter Git configuration</strong>: Find the "Git" section in the settings page.</li>
+            <li><strong>Initialize local repository</strong>:
+              <ul>
+                <li>If the shared space was created in MeshWork, a Git repository may have been automatically initialized.</li>
+                <li>If imported from an external directory, manual initialization may be needed.</li>
+              </ul>
+            </li>
+            <li><strong>Configure remote repository</strong>:
+              <ul>
+                <li>Enter the remote repository URL (such as GitHub repository address).</li>
+                <li>Select connection method (SSH or HTTPS).</li>
+                <li>Enter branch name. When left blank, MeshWork will automatically generate a branch name based on the shared space name and ID.</li>
+              </ul>
+            </li>
+            <li><strong>First push</strong>:
+              <ul>
+                <li>Click the "Push" button to push local content to the remote repository.</li>
+                <li>If the remote repository is empty, this will create the initial commit and specified branch.</li>
+                <li>If the remote repository already has content, it will attempt to merge with local content.</li>
+              </ul>
+            </li>
+          </ol>
+
+          <h3>Branch Strategy</h3>
+
+          <p>MeshWork uses branches to isolate data from different shared spaces:</p>
+
+          <ul>
+            <li><strong>Automatic branch naming</strong>: If no branch name is specified, MeshWork will automatically generate a branch name based on the shared space name and ID, such as <code>meshwork/shared/product-team</code>.</li>
+            <li><strong>Branch isolation</strong>: Even if multiple shared spaces use the same remote repository, they will bind to different branches without interfering with each other.</li>
+            <li><strong>Custom branches</strong>: Teams can customize branch names according to their own branch strategies.</li>
+          </ul>
+
+          <div class="tip-block">
+            <strong>Branch Recommendations</strong>
+            <p>For small teams, it's recommended that each shared space use an independent remote repository. This simplifies permission management and reduces the risk of accidental operations. For large organizations, multiple branches of a single repository can be used to manage multiple shared spaces.</p>
+          </div>
+
+          <h3>Synchronization and Pushing</h3>
+
+          <p>In a multi-person collaboration environment, correctly use Git synchronization and push functions:</p>
+
+          <ol>
+            <li><strong>Regular pulling</strong>:
+              <ul>
+                <li>Develop the habit of regularly pulling remote updates.</li>
+                <li>Pull the latest changes before starting important work.</li>
+                <li>This reduces conflict occurrences.</li>
+              </ul>
+            </li>
+            <li><strong>Frequent pushing</strong>:
+              <ul>
+                <li>Push immediately after completing small tasks instead of accumulating many changes.</li>
+                <li>Small step pushing reduces conflict complexity.</li>
+                <li>Frequent pushing also helps team members understand each other's progress.</li>
+              </ul>
+            </li>
+            <li><strong>Pre-push checks</strong>:
+              <ul>
+                <li>Pull remote updates before pushing.</li>
+                <li>Check if there are conflicts that need resolution.</li>
+                <li>Ensure local content can push to remote normally.</li>
+              </ul>
+            </li>
+          </ol>
+
+          <h3>Viewing History and Versions</h3>
+
+          <p>Utilize Git's history functions to understand the shared space's evolution:</p>
+
+          <ul>
+            <li><strong>View commit history</strong>: View all members' commit records to understand the shared space's development history.</li>
+            <li><strong>Compare version differences</strong>: Compare differences between different time points to understand specific changes.</li>
+            <li><strong>Trace responsibility</strong>: View the author and time of specific changes for communication and collaboration.</li>
+            <li><strong>Restore historical versions</strong>: If important content is accidentally deleted, restore from historical versions.</li>
+          </ul>
+
+          <h3>Git Configuration Best Practices</h3>
+
+          <p>When configuring Git for shared spaces, it's recommended to follow these best practices:</p>
+
+          <ul>
+            <li><strong>Unified Git identity</strong>: Ensure team members use correct Git usernames and email addresses for identifying contributors.</li>
+            <li><strong>Clear commit messages</strong>: Encourage team members to provide concise, clear commit messages describing the purpose and content of changes.</li>
+            <li><strong>Reasonable branch strategy</strong>: Choose appropriate branch strategies based on team size and project characteristics.</li>
+            <li><strong>Regular backups</strong>: Besides remote repositories, regularly backup important shared space data.</li>
+            <li><strong>Permission control</strong>: Reasonably distribute team members' repository access permissions based on roles and responsibilities.</li>
+            <li><strong>Conflict resolution process</strong>: Establish clear conflict resolution processes, including negotiation mechanisms and arbitration methods.</li>
+          </ul>
+
+          <div class="warning-block">
+            <strong>Important Notes</strong>
+            <p>Don't manually modify Git configuration files in the <code>.meshwork</code> directory unless you clearly know what you're doing. Incorrect configuration may lead to data loss or synchronization issues.</p>
+          </div>
+
+          <h2 id="3-8">3.8 Small Team Collaboration Example</h2>
+
+          <h3>Scenario 1: Product Planning Team</h3>
+
+          <h4>Team Background</h4>
+
+          <p>A product planning team of 5 people, including product manager, designer, development engineer, and marketing specialist. The team needs to jointly manage product requirement documents, competitive analysis, user research, and product roadmaps.</p>
+
+          <h4>Shared Space Setup</h4>
+
+          <ol>
+            <li><strong>Create shared space</strong>:
+              <ul>
+                <li>Product manager creates a shared space named "Product Planning Team".</li>
+                <li>Create a private repository <code>product-planning-2024</code> on GitHub.</li>
+                <li>Configure Git, using the auto-generated branch name.</li>
+              </ul>
+            </li>
+            <li><strong>Organize Public Library</strong>:
+              <ul>
+                <li>Create folder structure:
+                  <ul>
+                    <li><code>Requirements/</code>: Store feature requirements, user stories, and acceptance criteria.</li>
+                    <li><code>Competitive Analysis/</code>: Store competitive research reports and market analysis.</li>
+                    <li><code>User Research/</code>: Store user interview records and research data.</li>
+                    <li><code>Product Roadmap/</code>: Store long-term planning and milestones.</li>
+                    <li><code>Design Resources/</code>: Store design specs, prototypes, and visual guidelines.</li>
+                  </ul>
+                </li>
+                <li>Create templates for each document type to ensure format consistency.</li>
+              </ul>
+            </li>
+            <li><strong>Invite team members</strong>:
+              <ul>
+                <li>Generate invitation text and send to members via team communication tools.</li>
+                <li>Add collaborators on GitHub, granting "Write" permission.</li>
+                <li>Provide new members with shared space usage guidelines.</li>
+              </ul>
+            </li>
+          </ol>
+
+          <h4>Collaboration Process</h4>
+
+          <ol>
+            <li><strong>Requirement discussions</strong>:
+              <ul>
+                <li>Product manager creates "New Feature Requirement Discussion" topic in Discussion Area.</li>
+                <li>Team members raise opinions, suggestions, and concerns in the discussion.</li>
+                <li>Use AI assistant to summarize discussion points and extract core requirements.</li>
+              </ul>
+            </li>
+            <li><strong>Document writing</strong>:
+              <ul>
+                <li>Product manager writes requirement documents based on discussion results.</li>
+                <li>Designer adds design spec links, development engineer evaluates technical feasibility.</li>
+                <li>Use comment function in documents to raise modification suggestions.</li>
+              </ul>
+            </li>
+            <li><strong>Review and confirmation</strong>:
+              <ul>
+                <li>Create "Requirement Review" topic in Discussion Area.</li>
+                <li>Team members confirm consistent understanding of requirements, clarify next steps.</li>
+                <li>Mark approved requirements as "Confirmed" status.</li>
+              </ul>
+            </li>
+            <li><strong>Progress tracking</strong>:
+              <ul>
+                <li>Update feature status in product roadmap.</li>
+                <li>Regularly sync product progress and changes in Discussion Area.</li>
+                <li>Use Git history to trace requirement change timeline and responsibility.</li>
+              </ul>
+            </li>
+          </ol>
+
+          <h4>Best Practices</h4>
+
+          <ul>
+            <li><strong>Regular synchronization</strong>: Publish product progress summaries in Discussion Area weekly.</li>
+            <li><strong>Version marking</strong>: Use Git tags to mark important milestones.</li>
+            <li><strong>Decision records</strong>: Form records of major decisions in Discussion Area for future traceability.</li>
+            <li><strong>Cross-team collaboration</strong>: Share necessary requirement documents with development team but maintain independence of product discussions.</li>
+          </ul>
+
+          <div class="info-block">
+            <strong>Collaboration Effects</strong>
+            <p>Through this collaboration model, the product planning team can maintain real-time updates of requirement documents, reduce communication costs, and improve decision efficiency. New members can quickly understand product background and decision processes through historical documents and discussions.</p>
+          </div>
+
+          <h3>Scenario 2: Content Creation Studio</h3>
+
+          <h4>Team Background</h4>
+
+          <p>A content creation studio composed of 3 freelance writers creating articles, blog content, marketing copy, and video scripts for different clients. Team members are distributed in different cities and need efficient remote collaboration tools.</p>
+
+          <h4>Shared Space Setup</h4>
+
+          <ol>
+            <li><strong>Create shared space</strong>:
+              <ul>
+                <li>Team members take turns creating shared spaces, named according to client projects.</li>
+                <li>Create private repositories on GitHub, repository names include client name and project type.</li>
+                <li>Configure Git for team member content synchronization.</li>
+              </ul>
+            </li>
+            <li><strong>Organize Public Library</strong>:
+              <ul>
+                <li>Create folder structure:
+                  <ul>
+                    <li><code>Client Materials/</code>: Store client background, brand guidelines, and past cases.</li>
+                    <li><code>Project Planning/</code>: Store content calendars, publishing schedules, and project progress.</li>
+                    <li><code>Article Drafts/</code>: Store articles currently being written.</li>
+                    <li><code>Published Content/</code>: Store final published versions.</li>
+                    <li><code>Media Resources/</code>: Store images, videos, and reference materials.</li>
+                  </ul>
+                </li>
+                <li>Create writing templates and checklists for different content types.</li>
+              </ul>
+            </li>
+            <li><strong>Shared resource library</strong>:
+              <ul>
+                <li>Create a general "Writing Resources" shared space.</li>
+                <li>Store writing guides, reference materials, tool recommendations, and best practices.</li>
+                <li>All team members can contribute to and maintain this resource library.</li>
+              </ul>
+            </li>
+          </ol>
+
+          <h4>Collaboration Process</h4>
+
+          <ol>
+            <li><strong>Project kickoff</strong>:
+              <ul>
+                <li>Create "New Project Kickoff" topic in Discussion Area.</li>
+                <li>Share client requirements and project goals.</li>
+                <li>Assign tasks and set deadlines.</li>
+              </ul>
+            </li>
+            <li><strong>Content creation</strong>:
+              <ul>
+                <li>Each member is responsible for different content parts.</li>
+                <li>Create article drafts in Public Library.</li>
+                <li>Use AI assistant for grammar checking, style optimization, and SEO suggestions.</li>
+              </ul>
+            </li>
+            <li><strong>Mutual review</strong>:
+              <ul>
+                <li>After completion, create "Review Request" topic in Discussion Area.</li>
+                <li>Other members provide modification suggestions and feedback.</li>
+                <li>Use comment function to directly mark issues and improvement points in documents.</li>
+              </ul>
+            </li>
+            <li><strong>Client delivery</strong>:
+              <ul>
+                <li>After final confirmation, move content to "Published Content" folder.</li>
+                <li>Record publishing channels and publication dates.</li>
+                <li>Summarize project experience and client feedback in Discussion Area.</li>
+              </ul>
+            </li>
+          </ol>
+
+          <h4>Best Practices</h4>
+
+          <ul>
+            <li><strong>Unified style</strong>: Maintain style guides to ensure consistent content style from different authors.</li>
+            <li><strong>Version control</strong>: Use Git history to track content modifications, facilitating rollback and version comparison.</li>
+            <li><strong>Resource sharing</strong>: Build reusable material libraries to avoid duplicate data collection.</li>
+            <li><strong>Quality assurance</strong>: Establish checklists to ensure all content meets quality standards before delivery.</li>
+          </ul>
+
+          <div class="tip-block">
+            <strong>Collaboration Tips</strong>
+            <p>For remote creative teams, it's recommended to establish a "Virtual Office" topic in the Discussion Area for daily chat and informal communication. This maintains team cohesion and compensates for the social lack of remote collaboration.</p>
+          </div>
+
+          <h3>Scenario 3: Research Discussion Group</h3>
+
+          <h4>Team Background</h4>
+
+          <p>An academic discussion group composed of graduate students and researchers, researching AI ethics. Members are distributed in different universities and need to regularly share research progress, discuss paper viewpoints, and collaboratively write academic papers.</p>
+
+          <h4>Shared Space Setup</h4>
+
+          <ol>
+            <li><strong>Create shared space</strong>:
+              <ul>
+                <li>Group leader creates "AI Ethics Research" shared space.</li>
+                <li>Create private repository on GitHub for long-term maintenance.</li>
+                <li>Configure Git to save research materials and discussion history.</li>
+              </ul>
+            </li>
+            <li><strong>Organize Public Library</strong>:
+              <ul>
+                <li>Create folder structure:
+                  <ul>
+                    <li><code>Literature Review/</code>: Store reading notes and summaries of important papers in the field.</li>
+                    <li><code>Research Ideas/</code>: Store initial thoughts and exploration of research questions.</li>
+                    <li><code>Experimental Design/</code>: Store experimental protocols and data collection plans.</li>
+                    <li><code>Paper Drafts/</code>: Store collaboratively written academic paper drafts.</li>
+                    <li><code>Meeting Notes/</code>: Store records of online meetings and action items.</li>
+                    <li><code>Resource Links/</code>: Store valuable websites, databases, and tool links.</li>
+                  </ul>
+                </li>
+                <li>Create unified templates for paper reading, including research questions, methods, results, and critical thinking.</li>
+              </ul>
+            </li>
+            <li><strong>Setup Discussion Area</strong>:
+              <ul>
+                <li>Create tag categories:
+                  <ul>
+                    <li>"Paper Discussion": In-depth discussion on specific papers.</li>
+                    <li>"Research Ideas": Preliminary exploration and feedback on new ideas.</li>
+                    <li>"Method Exchange": Discussion on research methods and experimental design.</li>
+                    <li>"Writing Collaboration": Specific issues and division of labor in paper writing.</li>
+                  </ul>
+                </li>
+                <li>Establish topic status norms:
+                  <ul>
+                    <li>"Discussing": Topics actively under discussion.</li>
+                    <li>"Needs Feedback": Topics waiting for member feedback.</li>
+                    <li>"Consensus Reached": Discussions completed and forming conclusions.</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ol>
+
+          <h4>Collaboration Process</h4>
+
+          <ol>
+            <li><strong>Regular paper sharing</strong>:
+              <ul>
+                <li>Weekly rotation in Discussion Area sharing an important paper.</li>
+                <li>Sharer creates reading notes in Public Library.</li>
+                <li>Other members raise questions and viewpoints in Discussion Area.</li>
+                <li>Use AI assistant to summarize similarities and differences in different viewpoints, promoting deep thinking.</li>
+              </ul>
+            </li>
+            <li><strong>Research idea incubation</strong>:
+              <ul>
+                <li>Members can propose new research ideas in Discussion Area at any time.</li>
+                <li>Other members provide feedback, related literature, and improvement suggestions.</li>
+                <li>Mature ideas transfer to "Research Ideas" folder for further development.</li>
+              </ul>
+            </li>
+            <li><strong>Collaborative paper writing</strong>:
+              <ul>
+                <li>Determine paper theme and outline.</li>
+                <li>Create writing plan topic in Discussion Area, clarifying division of labor and progress.</li>
+                <li>Each member responsible for different sections, collaboratively editing in Public Library.</li>
+                <li>Regularly sync progress in Discussion Area, resolving writing issues.</li>
+                <li>Use Git history to track each person's contributions.</li>
+              </ul>
+            </li>
+            <li><strong>Meeting record organization</strong>:
+              <ul>
+                <li>After online meetings, create meeting record topic in Discussion Area.</li>
+                <li>Record discussion points, decisions, and action items.</li>
+                <li>Use AI assistant to extract to-do items from meeting records.</li>
+                <li>Organize mature meeting records into documents, store in Public Library.</li>
+              </ul>
+            </li>
+          </ol>
+
+          <h4>Best Practices</h4>
+
+          <ul>
+            <li><strong>Deep discussion</strong>: Leverage asynchronous discussion advantages, encourage members to spend time thinking deeply before replying, pursuing quality over speed.</li>
+            <li><strong>Knowledge settling</strong>: Regularly organize insights from discussions into documents, forming the group's knowledge base.</li>
+            <li><strong>Academic norms</strong>: When citing literature in discussions, follow academic citation standards for easy future retrieval and citation.</li>
+            <li><strong>Open and inclusive</strong>: Encourage expression of different viewpoints, creating a safe discussion environment.</li>
+            <li><strong>Cross-timezone collaboration</strong>: Consider members may be distributed across different time zones, avoid requiring real-time online presence.</li>
+          </ul>
+
+          <div class="info-block">
+            <strong>Academic Collaboration Value</strong>
+            <p>This collaboration model is particularly suitable for academic research groups. The Discussion Area's asynchronous characteristics allow members to participate at different times, fitting researchers' flexible work schedules. Git history provides complete contribution records for paper writing, facilitating determination of author order.</p>
+          </div>
+
+          <h4>Research Achievement Management</h4>
+
+          <ul>
+            <li><strong>Version tracking</strong>: Use Git tags to mark important versions of papers (such as first draft, revised draft, submission version).</li>
+            <li><strong>Feedback integration</strong>: Discuss peer review opinions one by one in Discussion Area, then integrate into the paper.</li>
+            <li><strong>Publication records</strong>: Maintain paper publication list in Public Library, including journals, conferences, and citations.</li>
+            <li><strong>Data sharing</strong>: For publicly shareable data and code, maintain in shared space to facilitate research reproduction.</li>
+          </ul>
+
+          <div class="warning-block">
+            <strong>Academic Integrity</strong>
+            <p>In academic collaboration, pay special attention to intellectual property and academic integrity. Clearly identify each member's contributions, correctly cite others' viewpoints, and avoid academic misconduct. All statements in the Discussion Area should follow academic ethical norms.</p>
+          </div>
+
+          <nav class="manual-book-nav-buttons">
+            <a href="manual-book-02-en.html" class="nav-button prev">
+              <span>Previous</span>
+              <strong>Private Library</strong>
+            </a>
+            <a href="manual-book-appendix-en.html" class="nav-button next">
+              <span>Next</span>
+              <strong>Appendix</strong>
+            </a>
+          </nav>
+        </article>
+      </main>
+    </div>
+
+    <footer class="manual-book-footer">
+      <span>MeshWork Manual</span>
+      <span>Local-first creative workspace</span>
+      <a href="privacy.html">Privacy Policy</a>
+    </footer>
+
+    <script src="manual-lang-redirect.js"></script>
+  </body>
+</html>
