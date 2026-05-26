@@ -106,6 +106,10 @@ const content = {
         tagTwo: "搜索代理",
         tagThree: "Git 代理",
       },
+      linkedDocuments: {
+        title: "讨论话题关联文档",
+        body: "讨论区话题可以关联公共知识库中的文档或文件夹，为 AI 智能体提供明确的上下文范围。关联的文档会在提示中渲染为路径引用，AI 可以根据需要深入阅读内容。",
+      },
     },
     flow: {
       kicker: "Thinking Loop",
@@ -302,6 +306,10 @@ const content = {
         tagOne: "AI Proxy",
         tagTwo: "Search Proxy",
         tagThree: "Git Proxy",
+      },
+      linkedDocuments: {
+        title: "Link documents to discussion topics",
+        body: "Discussion topics can link to specific documents or folders from the public knowledge base, providing AI agents with a clear context scope. Linked documents render as path references in prompts, and AI can read deeper into content when needed.",
       },
     },
     flow: {
