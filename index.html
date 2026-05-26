@@ -28,6 +28,8 @@
         <a href="#flow" data-i18n="nav.flow"></a>
         <a href="#gallery" data-i18n="nav.gallery"></a>
         <a href="#comparison" data-i18n="nav.comparison"></a>
+        <a href="#roadmap" data-i18n="nav.roadmap"></a>
+        <a href="#pricing" data-i18n="nav.pricing"></a>
         <a href="manual.html" data-i18n="nav.manual"></a>
       </nav>
       <div class="language-switch" aria-label="Language switch">
@@ -232,16 +234,24 @@
           </article>
           <article class="highlight-card" data-reveal>
             <span class="card-index">07</span>
+            <h3 data-i18n="highlights.knowledgeTools.title"></h3>
+            <p data-i18n="highlights.knowledgeTools.body"></p>
+            <div class="highlight-tools-grid" aria-label="Knowledge tools">
+              <!-- 工具列表将通过 JavaScript 动态生成 -->
+            </div>
+          </article>
+          <article class="highlight-card" data-reveal>
+            <span class="card-index">08</span>
             <h3 data-i18n="highlights.search.title"></h3>
             <p data-i18n="highlights.search.body"></p>
           </article>
           <article class="highlight-card" data-reveal>
-            <span class="card-index">08</span>
+            <span class="card-index">09</span>
             <h3 data-i18n="highlights.git.title"></h3>
             <p data-i18n="highlights.git.body"></p>
           </article>
           <article class="highlight-card china-feature" data-reveal>
-            <span class="card-index">09</span>
+            <span class="card-index">10</span>
             <h3 data-i18n="highlights.proxy.title"></h3>
             <p data-i18n="highlights.proxy.body"></p>
             <div class="highlight-tags" aria-label="Proxy capabilities">
@@ -251,7 +261,7 @@
             </div>
           </article>
           <article class="highlight-card" data-reveal>
-            <span class="card-index">10</span>
+            <span class="card-index">11</span>
             <h3 data-i18n="highlights.linkedDocuments.title"></h3>
             <p data-i18n="highlights.linkedDocuments.body"></p>
           </article>
@@ -512,6 +522,95 @@
                   class="cell-neutral"
                   data-i18n="comparison.table.crossPlatform"
                 ></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section
+        id="roadmap"
+        class="roadmap-section section-wrap"
+        aria-labelledby="roadmap-title"
+      >
+        <div class="section-heading centered" data-reveal>
+          <span class="section-kicker" data-i18n="roadmap.kicker"></span>
+          <h2 id="roadmap-title" data-i18n="roadmap.title"></h2>
+          <p class="section-body" data-i18n="roadmap.body"></p>
+        </div>
+
+        <div class="roadmap-grid" data-reveal>
+          <article class="roadmap-card">
+            <div class="roadmap-icon plugin-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 data-i18n="roadmap.pluginTitle"></h3>
+            <p data-i18n="roadmap.pluginBody"></p>
+          </article>
+
+          <article class="roadmap-card">
+            <div class="roadmap-icon apple-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 data-i18n="roadmap.nativeTitle"></h3>
+            <p data-i18n="roadmap.nativeBody"></p>
+          </article>
+        </div>
+      </section>
+
+      <section
+        id="pricing"
+        class="pricing-section section-wrap"
+        aria-labelledby="pricing-title"
+      >
+        <div class="section-heading centered" data-reveal>
+          <span class="section-kicker" data-i18n="pricing.kicker"></span>
+          <h2 id="pricing-title" data-i18n="pricing.title"></h2>
+          <p class="section-body" data-i18n="pricing.body"></p>
+        </div>
+
+        <div class="pricing-table-wrapper" data-reveal>
+          <table class="pricing-table">
+            <thead>
+              <tr>
+                <th data-i18n="pricing.table.feature"></th>
+                <th class="tier-free">
+                  <span class="tier-name" data-i18n="pricing.table.free"></span>
+                  <span class="tier-price">$0</span>
+                </th>
+                <th class="tier-creator">
+                  <span class="tier-name" data-i18n="pricing.table.creator"></span>
+                  <span class="tier-price">$3.99</span>
+                </th>
+                <th class="tier-studio">
+                  <span class="tier-name" data-i18n="pricing.table.studio"></span>
+                  <span class="tier-price">$9.99</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-i18n="pricing.features.privateKnowledgeBase.name"></td>
+                <td class="feature-included" data-i18n="pricing.features.privateKnowledgeBase.free"></td>
+                <td class="feature-included" data-i18n="pricing.features.privateKnowledgeBase.creator"></td>
+                <td class="feature-included" data-i18n="pricing.features.privateKnowledgeBase.studio"></td>
+              </tr>
+              <tr>
+                <td data-i18n="pricing.features.documentAssistant.name"></td>
+                <td class="feature-excluded">—</td>
+                <td class="feature-included" data-i18n="pricing.features.documentAssistant.creator"></td>
+                <td class="feature-included" data-i18n="pricing.features.documentAssistant.studio"></td>
+              </tr>
+              <tr>
+                <td data-i18n="pricing.features.sharedSpace.name"></td>
+                <td class="feature-excluded">—</td>
+                <td class="feature-excluded">—</td>
+                <td class="feature-included" data-i18n="pricing.features.sharedSpace.studio"></td>
               </tr>
             </tbody>
           </table>

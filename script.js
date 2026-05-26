@@ -9,6 +9,8 @@ const content = {
       flow: "工作流",
       gallery: "知识沉淀",
       comparison: "产品对比",
+      roadmap: "发展计划",
+      pricing: "版本价格",
       manual: "操作手册",
     },
     hero: {
@@ -88,8 +90,26 @@ const content = {
         slashExample: "/命令名 — 执行预定义的自定义命令",
       },
       shell: {
-        title: "AI 友好的安全工具环境",
-        body: "MeshWork 为文档处理构建了原生应用内的虚拟 Shell。它保留 Apple 生态的安全边界，同时提供大模型熟悉的工具接口，让 AI 更可靠地读取、整理和操作知识材料。",
+        title: "虚拟 Shell：极致安全，释放 AI 能力",
+        body: "专门为 AI 智能体设计的虚拟 Shell 环境，在 Apple 原生应用安全沙箱内运行。既保留系统级安全边界，又提供大模型熟悉的命令行工具接口，让 AI 能够可靠地读取、整理和操作知识材料，同时确保所有操作都在可控范围内执行。",
+      },
+      knowledgeTools: {
+        title: "专门为知识库检索设计的 AI 工具集",
+        body: "提供一组专门为知识库文档检索查询访问定制的工具接口，极大提高智能体访问知识库的效率。AI 可以精准定位文档、快速检索内容、智能关联相关知识，让知识检索从模糊匹配升级为精准访问。",
+        tools: [
+          { name: "search_documents", desc: "BM25 本地搜索" },
+          { name: "read_document_section", desc: "按章节读取" },
+          { name: "read_outline", desc: "提取大纲结构" },
+          { name: "get_links", desc: "文档链接分析" },
+          { name: "get_backlinks", desc: "反向链接查询" },
+          { name: "get_related_documents", desc: "相关文档推荐" },
+          { name: "grep", desc: "全文检索" },
+          { name: "find", desc: "文件查找" },
+          { name: "ls", desc: "目录浏览" },
+          { name: "cat", desc: "文件读取" },
+          { name: "tree", desc: "树形结构" },
+          { name: "summary", desc: "文档摘要" },
+        ],
       },
       search: {
         title: "全局拼音搜索",
@@ -182,6 +202,46 @@ const content = {
         crossPlatform: "跨平台",
       },
     },
+    roadmap: {
+      kicker: "Product Roadmap",
+      title: "未来发展规划",
+      body: "我们计划开发 Obsidian 插件版本，让 Windows 和 Linux 用户也能使用 MeshWork。但 Apple 原生应用将始终提供最完整、最流畅的体验——深度融合系统特性、更优的性能和更自然的交互。",
+      pluginTitle: "Obsidian 插件",
+      pluginBody: "为 Windows 和 Linux 用户提供完整的 MeshWork 核心功能，包括 AI 讨论参与、知识库检索和 Git 同步。",
+      nativeTitle: "Apple 原生优先",
+      nativeBody: "macOS、iPadOS 和 iOS 版本将始终优先获得新功能，并保持最佳的系统集成和用户体验。",
+    },
+    pricing: {
+      kicker: "Pricing Plans",
+      title: "选择适合你的版本",
+      body: "MeshWork 采用一次性购买模式，无需订阅。从个人笔记创作到团队协作，总有一个版本适合你的需求。",
+      table: {
+        feature: "功能",
+        free: "Free 免费版",
+        creator: "Creator 创作者",
+        studio: "Studio 工作室",
+      },
+      features: {
+        privateKnowledgeBase: {
+          name: "私有知识库",
+          free: "✓ 完整功能",
+          creator: "✓ 完整功能",
+          studio: "✓ 完整功能",
+        },
+        documentAssistant: {
+          name: "文档 AI 辅助",
+          free: "—",
+          creator: "✓ AI 写作、分析与总结",
+          studio: "✓ AI 写作、分析与总结",
+        },
+        sharedSpace: {
+          name: "共享空间",
+          free: "—",
+          creator: "—",
+          studio: "✓ 团队协作与讨论",
+        },
+      },
+    },
     footer: {
       note: "Local-first creative workspace for notes, discussions, AI participation, and Git-native sharing.",
       privacy: "隐私政策",
@@ -209,6 +269,8 @@ const content = {
       flow: "Workflow",
       gallery: "Knowledge",
       comparison: "Compare",
+      roadmap: "Roadmap",
+      pricing: "Pricing",
       manual: "Manual",
     },
     hero: {
@@ -289,8 +351,26 @@ const content = {
         slashExample: "/command — Execute predefined custom commands",
       },
       shell: {
-        title: "Safe tools built for AI",
-        body: "MeshWork provides a virtual Shell inside the native app for document work. It keeps Apple-platform safety boundaries while exposing a tool interface that language models understand well.",
+        title: "Virtual Shell: Ultimate security, unleashed AI capabilities",
+        body: "A purpose-built virtual Shell environment designed specifically for AI agents, running within Apple's native app security sandbox. It maintains system-level security boundaries while providing the familiar command-line tool interface that language models understand, enabling AI to reliably read, organize, and manipulate knowledge materials while ensuring all operations remain within controllable limits.",
+      },
+      knowledgeTools: {
+        title: "AI tools purpose-built for knowledge base retrieval",
+        body: "Provides a specialized set of tool interfaces designed specifically for knowledge base document retrieval and access, dramatically improving agent efficiency in accessing knowledge bases. AI can precisely locate documents, rapidly retrieve content, and intelligently correlate related knowledge, upgrading knowledge retrieval from fuzzy matching to precision access.",
+        tools: [
+          { name: "search_documents", desc: "BM25 local search" },
+          { name: "read_document_section", desc: "read by section" },
+          { name: "read_outline", desc: "extract outline" },
+          { name: "get_links", desc: "link analysis" },
+          { name: "get_backlinks", desc: "backlink query" },
+          { name: "get_related_documents", desc: "related docs" },
+          { name: "grep", desc: "full-text search" },
+          { name: "find", desc: "file discovery" },
+          { name: "ls", desc: "directory browse" },
+          { name: "cat", desc: "file read" },
+          { name: "tree", desc: "tree structure" },
+          { name: "summary", desc: "document summary" },
+        ],
       },
       search: {
         title: "Pinyin-aware search",
@@ -383,6 +463,46 @@ const content = {
         closedFormat: "Closed format ✗",
         appleOnly: "Apple only",
         crossPlatform: "Cross-platform",
+      },
+    },
+    roadmap: {
+      kicker: "Product Roadmap",
+      title: "What's coming next",
+      body: "We plan to develop an Obsidian plugin to bring MeshWork to Windows and Linux users. However, the native Apple app will always deliver the most complete and fluid experience—with deeper system integration, better performance, and more natural interactions.",
+      pluginTitle: "Obsidian Plugin",
+      pluginBody: "Brings core MeshWork features to Windows and Linux users, including AI discussion participation, knowledge base retrieval, and Git sync.",
+      nativeTitle: "Apple-First",
+      nativeBody: "macOS, iPadOS, and iOS versions will always receive new features first and maintain the best system integration and user experience.",
+    },
+    pricing: {
+      kicker: "Pricing Plans",
+      title: "Choose your edition",
+      body: "MeshWork uses a one-time purchase model—no subscriptions. From personal note-taking to team collaboration, there's a version that fits your needs.",
+      table: {
+        feature: "Features",
+        free: "Free",
+        creator: "Creator",
+        studio: "Studio",
+      },
+      features: {
+        privateKnowledgeBase: {
+          name: "Private knowledge base",
+          free: "✓ Full features",
+          creator: "✓ Full features",
+          studio: "✓ Full features",
+        },
+        documentAssistant: {
+          name: "Document AI assistance",
+          free: "—",
+          creator: "✓ AI writing, analysis & summary",
+          studio: "✓ AI writing, analysis & summary",
+        },
+        sharedSpace: {
+          name: "Shared spaces",
+          free: "—",
+          creator: "—",
+          studio: "✓ Team collaboration & discussion",
+        },
       },
     },
     footer: {
@@ -483,6 +603,18 @@ function setLanguage(language, options = {}) {
       link.setAttribute("href", currentHref.replace("manual-en.html", "manual.html"));
     }
   });
+
+  // Update knowledge tools grid
+  const toolsGrid = document.querySelector(".highlight-tools-grid");
+  if (toolsGrid) {
+    const tools = dictionary.highlights.knowledgeTools.tools;
+    toolsGrid.innerHTML = tools.map(tool => `
+      <div class="highlight-tool-item">
+        <code>${tool.name}</code>
+        <span>${tool.desc}</span>
+      </div>
+    `).join("");
+  }
 }
 
 langButtons.forEach((button) => {
