@@ -203,9 +203,10 @@
             <li>您创建的文档和笔记内容</li>
             <li>讨论区的消息和话题</li>
             <li>应用设置和偏好配置</li>
-            <li>AI 提供商配置信息（API 密钥等）</li>
-            <li>网络搜索提供商配置信息</li>
-            <li>Git 仓库的访问凭据</li>
+            <li>AI 提供商配置；API 密钥存储在 macOS 钥匙串中</li>
+            <li>网络搜索提供商配置；搜索服务 API 密钥存储在 macOS 钥匙串中</li>
+            <li>Git 仓库配置；令牌、口令和粘贴的 SSH 私钥内容存储在 macOS 钥匙串中</li>
+            <li>网络代理配置；代理密码存储在 macOS 钥匙串中</li>
           </ul>
           <p>所有这些数据都存储在您的本地设备上，MeshWork 不会将这些数据上传到我们的服务器。</p>
 
@@ -253,7 +254,8 @@
           <h2>数据安全</h2>
           <p>我们采取以下措施保护您的数据安全：</p>
           <ul>
-            <li>所有敏感配置信息（如 API 密钥）均加密存储在本地钥匙串中</li>
+            <li>应用保存的 API 密钥、Git 令牌/口令/私钥内容和代理密码存储在 macOS 钥匙串中</li>
+            <li>服务名称、模型、URL、端口、用户名和界面偏好等非敏感配置仅存储在本地</li>
             <li>应用运行在 macOS 应用沙盒中，限制了文件系统访问</li>
             <li>网络通信仅用于您明确配置的服务</li>
           </ul>
@@ -315,9 +317,10 @@
             <li>Documents and notes you create</li>
             <li>Discussion messages and topics</li>
             <li>App settings and preferences</li>
-            <li>AI provider configurations (API keys, etc.)</li>
-            <li>Web search provider configurations</li>
-            <li>Git repository access credentials</li>
+            <li>AI provider configurations; API keys are stored in the macOS keychain</li>
+            <li>Web search provider configurations; search API keys are stored in the macOS keychain</li>
+            <li>Git repository configurations; tokens, passphrases, and pasted SSH private key content are stored in the macOS keychain</li>
+            <li>Network proxy configurations; proxy passwords are stored in the macOS keychain</li>
           </ul>
           <p>
             All this data is stored on your local device. MeshWork does not upload
@@ -377,7 +380,8 @@
           <h2>Data Security</h2>
           <p>We take the following measures to protect your data:</p>
           <ul>
-            <li>All sensitive configuration information (such as API keys) is encrypted and stored in the local keychain</li>
+            <li>API keys, Git tokens/passphrases/private key content, and proxy passwords saved by the app are stored in the macOS keychain</li>
+            <li>Non-sensitive settings such as service names, models, URLs, ports, usernames, and interface preferences are stored locally</li>
             <li>The app runs within the macOS application sandbox, limiting file system access</li>
             <li>Network communication is only used for services you explicitly configure</li>
           </ul>
