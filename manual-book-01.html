@@ -548,19 +548,14 @@ User Email: zhangsan@example.com</code></pre>
             <li>当提示输入密码时，可以输入密码也可以直接按 Enter 跳过（跳过密码更方便，但安全性较低）。</li>
           </ol>
 
-          <h5>添加 SSH 密钥到 ssh-agent</h5>
+          <h5>在 Meshwork 中配置 SSH Key</h5>
 
-          <p>为了方便使用，可以将 SSH 密钥添加到 ssh-agent：</p>
+          <p>Meshwork 的 SSH 仓库认证使用 SSH Key，不使用 SSH Agent。你可以在 Git 仓库设置中选择私钥文件，或粘贴 OpenSSH 私钥内容。</p>
 
           <ol>
-            <li>启动 ssh-agent：<code>eval "$(ssh-agent -s)"</code></li>
-            <li>添加私钥：<code>ssh-add --apple-use-keychain ~/.ssh/id_ed25519</code></li>
+            <li>私钥文件通常位于 <code>~/.ssh/id_ed25519</code>。</li>
+            <li>如果粘贴私钥内容，Meshwork 会将内容保存到系统钥匙串。</li>
           </ol>
-
-          <div class="warning-block">
-            <strong>注意事项</strong>
-            <p>如果你的设备 macOS 版本较旧，可能需要使用 <code>ssh-add -K ~/.ssh/id_ed25519</code> 命令。</p>
-          </div>
 
           <h5>复制 SSH 公钥</h5>
 
