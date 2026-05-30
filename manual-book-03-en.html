@@ -644,100 +644,15 @@
             <p>The topic branch feature is particularly suitable for discussion management in complex projects. Product teams can use it to separate feature discussions from implementation details, technical teams can use it to separate solution discussions from code reviews, marketing teams can use it to handle feedback from different channels in parallel. Each branch is an independent discussion space but maintains connection with the main line, forming an organic discussion network.</p>
           </div>
 
-          <h3>Association Between Topics and Documents</h3>
+          <h3>Message-Level Document References</h3>
 
-          <p>The Discussion Area is closely integrated with the Public Library, supporting association between topics and documents:</p>
-
-          <ul>
-            <li><strong>Create associations</strong>: When creating or editing topics, can link to specific documents in the Public Library.</li>
-            <li><strong>Initiate discussions from documents</strong>: When reading documents, can directly initiate discussions targeting those documents.</li>
-            <li><strong>Bi-directional navigation</strong>: Can jump from topics to associated documents, and can also view related discussions from documents.</li>
-            <li><strong>Discussion settling</strong>: When discussions form consensus or conclusions, can organize discussion content into documents and settle them in the Public Library.</li>
-          </ul>
-
-          <h3>Linked Documents Management</h3>
-
-          <div class="highlight-block">
-            <p><strong>✨ Feature Highlight: Linked Documents Management</strong></p>
-            <p>The MeshWork Discussion Area provides powerful linked documents management, allowing each discussion topic to maintain persistent associations with documents or folders from the Public Library. This not only provides AI agents with clear context scope but also makes team collaboration more focused and efficient.</p>
-          </div>
-
-          <h4>What are Linked Documents?</h4>
-
-          <p>Linked documents refer to Public Library content that has established long-term associations with discussion topics. These associations have the following characteristics:</p>
+          <p>The Discussion Area is closely integrated with the Public Library. When you need AI to focus on a specific document, reference that file in the message instead of maintaining long-term topic-level path associations.</p>
 
           <ul>
-            <li><strong>Persistent</strong>: Associations are saved in topic metadata and won't change due to message history</li>
-            <li><strong>Explicit management</strong>: Users can add or remove linked documents or folders at any time</li>
-            <li><strong>Context provision</strong>: AI agents include linked document paths and names in conversation context</li>
-            <li><strong>Flexible</strong>: Can link to individual documents or entire folders</li>
+            <li><strong>Explicit references</strong>: Reference concrete files in the message to show which materials matter for the current turn.</li>
+            <li><strong>On-demand reading</strong>: If the answer depends on file content, AI must read or search the referenced document with tools before answering.</li>
+            <li><strong>Discussion settling</strong>: When discussions form consensus or conclusions, you can organize discussion content into documents and settle them in the Public Library.</li>
           </ul>
-
-          <div class="info-block">
-            <strong>Difference from in-message references</strong>
-            <p>Linked documents are different from <code>#file references</code> within messages. In-message references are temporary, per-message context hints, while linked documents are topic-level persistent context hints. Linked documents are better suited for scenarios requiring ongoing discussion around certain materials.</p>
-          </div>
-
-          <h4>How to Manage Linked Documents?</h4>
-
-          <p>In the discussion topic toolbar, click the "Linked Documents" button (link icon, with current association count displayed next to it) to open the linked documents management interface:</p>
-
-          <ol>
-            <li><strong>View current links</strong>: Left panel shows documents and folders currently linked to the topic</li>
-            <li><strong>Browse Public Library</strong>: Right panel displays the Public Library file tree structure</li>
-            <li><strong>Search documents</strong>: Use search box to quickly locate needed documents or folders</li>
-            <li><strong>Add links</strong>: Click <code>+</code> button in the file tree to add documents or folders to the linked list</li>
-            <li><strong>Remove links</strong>: Click <code>-</code> button in current links panel to remove unwanted associations</li>
-            <li><strong>Confirm changes</strong>: Click "Confirm" button to save changes, or "Cancel" to discard changes</li>
-          </ol>
-
-          <div class="tip-block">
-            <strong>Usage Tip</strong>
-            <p>Linking folders is particularly suitable for continuous discussion scenarios around a project or topic. For example, a product planning topic can link the "Requirements Documents" folder, allowing AI to understand and analyze content within this scope without needing to explicitly specify context each time.</p>
-          </div>
-
-          <h4>How Does AI Use Linked Documents?</h4>
-
-          <p>When a topic has linked documents, AI agent behavior changes:</p>
-
-          <ul>
-            <li><strong>Prompt rendering</strong>: Linked documents appear in AI prompts as <code>document: file path</code> or <code>directory: folder path</code></li>
-            <li><strong>Context scope</strong>: AI knows which documents are relevant to the current discussion and can proactively reference these materials</li>
-            <li><strong>On-demand deep reading</strong>: AI can use tools (like <code>read_document_section</code> or <code>search_documents</code>) to deeply read specific content from linked documents</li>
-            <li><strong>Cross-document association</strong>: AI can discover connections between different linked documents and provide deeper analysis</li>
-          </ul>
-
-          <div class="warning-block">
-            <strong>Important Note</strong>
-            <p>Linked documents don't automatically embed entire file content into every AI prompt. MeshWork only provides document paths and names, and AI proactively reads relevant content based on conversation needs. This design ensures context relevance while avoiding Token waste.</p>
-          </div>
-
-          <h4>Best Practices for Linked Documents</h4>
-
-          <ul>
-            <li><strong>Precise linking</strong>: Only link documents truly relevant to the topic, avoiding associating too much content that would scatter context</li>
-            <li><strong>Use folders</strong>: For related groups of documents, consider linking the entire folder rather than individual files</li>
-            <li><strong>Timely updates</strong>: Adjust linked document list promptly as discussion direction evolves</li>
-            <li><strong>Team collaboration</strong>: Team members can jointly maintain topic-linked documents, keeping context consistent</li>
-            <li><strong>Document organization</strong>: Good Public Library organization makes linked document management more efficient</li>
-          </ul>
-
-          <h4>Practical Application Scenarios</h4>
-
-          <p>The linked documents feature is valuable in various collaboration scenarios:</p>
-
-          <ul>
-            <li><strong>Product requirement discussion</strong>: Link requirement documents, competitive analysis folders, letting AI provide product suggestions based on these materials</li>
-            <li><strong>Technical solution review</strong>: Link technical design documents, architecture diagrams, letting AI analyze feasibility and potential issues</li>
-            <li><strong>Content creation collaboration</strong>: Link asset folders, style guides, letting AI maintain consistent content style</li>
-            <li><strong>Academic research discussion</strong>: Link literature notes, experimental data, letting AI help analyze and summarize research findings</li>
-            <li><strong>Project progress tracking</strong>: Link project plans, meeting notes, letting AI help track progress and identify risks</li>
-          </ul>
-
-          <div class="info-block">
-            <strong>Pro Tip</strong>
-            <p>Linked documents management is one of MeshWork Discussion Area's core innovations. It solves the context loss problem in traditional discussion tools, allowing every conversation to build upon complete knowledge background. Combined with topic branching, teams can build clearly structured, knowledge-rich discussion networks.</p>
-          </div>
 
           <h3>Discussion Area Status Management</h3>
 
@@ -762,7 +677,6 @@
               <ul>
                 <li>Topic titles and status</li>
                 <li>Participants and tags</li>
-                <li>Associated public documents</li>
                 <li>Message body text</li>
                 <li>Sharable render structures directly related to messages</li>
               </ul>
