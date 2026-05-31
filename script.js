@@ -71,8 +71,11 @@ const content = {
         tagTwo: "WYSIWYG",
       },
       rendering: {
-        title: "丰富的文档渲染",
-        body: "渲染层支持 Mermaid、Graphviz 等图形表达，也支持数学公式，让架构图、流程图、关系图和推导内容都能直接进入文档。",
+        title: "PlantUML、Mermaid 与公式渲染",
+        body: "渲染层支持 PlantUML、Mermaid、Graphviz 等图形表达，也支持数学公式，让时序图、架构图、流程图、关系图和推导内容都能直接进入文档。",
+        tagOne: "PlantUML",
+        tagTwo: "Mermaid",
+        tagThree: "Graphviz",
       },
       links: {
         title: "WikiLink 文件引用",
@@ -328,8 +331,11 @@ const content = {
         tagTwo: "WYSIWYG",
       },
       rendering: {
-        title: "Rich document rendering",
-        body: "The rendering layer supports visual formats such as Mermaid and Graphviz, plus mathematical formulas, so diagrams, flows, relationships, and derivations can live directly inside documents.",
+        title: "PlantUML, Mermaid, and formula rendering",
+        body: "The rendering layer supports visual formats such as PlantUML, Mermaid, and Graphviz, plus mathematical formulas, so sequence diagrams, architecture diagrams, flows, relationships, and derivations can live directly inside documents.",
+        tagOne: "PlantUML",
+        tagTwo: "Mermaid",
+        tagThree: "Graphviz",
       },
       links: {
         title: "WikiLink file references",

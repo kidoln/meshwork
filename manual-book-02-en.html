@@ -176,6 +176,29 @@
 Code block
 ```</code></pre>
 
+          <h4>Diagram Code Blocks</h4>
+          <p>MeshWork can render common diagram code blocks directly. For product design, system architecture, and process notes, keep readable diagram source in Markdown so documents remain durable while previews render them as diagrams. For the full PlantUML syntax, see the <a href="https://plantuml.com/" target="_blank" rel="noopener">official PlantUML website</a>.</p>
+
+          <p><strong>PlantUML sequence diagram</strong></p>
+          <pre><code>```plantuml
+@startuml
+Alice -> Bob: Authentication Request
+Bob --> Alice: Authentication Response
+@enduml
+```</code></pre>
+
+          <p><strong>Mermaid flowchart</strong></p>
+          <pre><code>```mermaid
+flowchart TD
+  A[Idea] --> B[Discussion]
+  B --> C[Preserved as a document]
+```</code></pre>
+
+          <div class="info-block">
+            <strong>Diagram Support</strong>
+            <p>Preview and WYSIWYG editing render <code>plantuml</code>, <code>puml</code>, <code>mermaid</code>, <code>graphviz</code>, and <code>dot</code> code blocks. PlantUML is useful for sequence diagrams, component relationships, and technical design; Mermaid is useful for quick flowcharts and lightweight relationship diagrams.</p>
+          </div>
+
           <h4>Blockquotes</h4>
           <pre><code>> Quoted text</code></pre>
 

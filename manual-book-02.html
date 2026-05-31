@@ -204,6 +204,29 @@
 代码块
 ```</code></pre>
 
+          <h4>图表代码块</h4>
+          <p>MeshWork 可以直接渲染常用图表代码块。对于产品设计、系统架构和流程说明，推荐在 Markdown 中保留可读的图表源码，让文档既能长期保存，也能在预览中显示为图形。PlantUML 的完整语法可以参考 <a href="https://plantuml.com/" target="_blank" rel="noopener">PlantUML 官方网站</a>。</p>
+
+          <p><strong>PlantUML 时序图</strong></p>
+          <pre><code>```plantuml
+@startuml
+Alice -> Bob: Authentication Request
+Bob --> Alice: Authentication Response
+@enduml
+```</code></pre>
+
+          <p><strong>Mermaid 流程图</strong></p>
+          <pre><code>```mermaid
+flowchart TD
+  A[想法] --> B[讨论]
+  B --> C[沉淀为文档]
+```</code></pre>
+
+          <div class="info-block">
+            <strong>图表支持</strong>
+            <p>预览和所见即所得编辑会渲染 <code>plantuml</code>、<code>puml</code>、<code>mermaid</code>、<code>graphviz</code> 和 <code>dot</code> 代码块。PlantUML 适合表达时序图、组件关系和技术设计；Mermaid 适合快速绘制流程图和轻量关系图。</p>
+          </div>
+
           <h4>引用</h4>
           <pre><code>> 引用文本</code></pre>
 
